@@ -14,6 +14,7 @@ new Vue({
                 remember: ''
             },
             loading: {}, //loading动画
+            activeIndex: '1'
         };
     },
     methods: {
