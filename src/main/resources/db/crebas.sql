@@ -39,7 +39,7 @@ drop table if exists tb_userpass;
 /*==============================================================*/
 create table tb_airport
 (
-   airport_id           bigint not null comment '机场编号',
+   airport_id           bigint auto_increment not null comment '机场编号',
    city_id              bigint comment '城市编号',
    airport_name         varchar(10) comment '机场名称',
    primary key (airport_id)
@@ -52,7 +52,7 @@ alter table tb_airport comment '机场';
 /*==============================================================*/
 create table tb_airroute
 (
-   airroute_id          bigint not null comment '航线编号',
+   airroute_id          bigint auto_increment not null comment '航线编号',
    airport_up           bigint comment '起飞机场',
    airport_down         bigint comment '终点机场',
    airroute_length      smallint comment '航线长度（公里）',
@@ -66,7 +66,7 @@ alter table tb_airroute comment '航线';
 /*==============================================================*/
 create table tb_city
 (
-   city_id              bigint not null comment '城市编号',
+   city_id              bigint auto_increment not null comment '城市编号',
    city_name            varchar(10) comment '城市名称',
    primary key (city_id)
 )CHARSET=utf8 ENGINE=InnoDB;
@@ -127,7 +127,7 @@ alter table tb_mdsp comment '机型-舱位';
 /*==============================================================*/
 create table tb_model
 (
-   model_id             bigint not null comment '机型编号',
+   model_id             bigint auto_increment not null comment '机型编号',
    model_name           varchar(8) comment '机型名称',
    model_speed          smallint comment '速度（公里/小时）',
    primary key (model_id)
@@ -161,7 +161,7 @@ alter table tb_order comment '订单';
 /*==============================================================*/
 create table tb_passenger
 (
-   passenger_id         bigint not null comment '乘客人编号',
+   passenger_id         bigint auto_increment not null comment '乘客人编号',
    ticket_id            varchar(20) comment '机票编号',
    passenger_name       varchar(10) comment '乘客人姓名',
    passenger_cerid      varchar(30) comment '证件号',
@@ -236,7 +236,7 @@ alter table tb_tickets comment '航班售票';
 /*==============================================================*/
 create table tb_user
 (
-   user_id              bigint not null comment '用户编号',
+   user_id              bigint auto_increment not null comment '用户编号',
    user_tel 			varchar(20) not null unique comment '手机号',
    user_cerid           varchar(30) not null unique comment '证件号',
    user_certype         varchar(10) comment '证件类型',
@@ -254,7 +254,7 @@ alter table tb_user comment '用户';
 /*==============================================================*/
 create table tb_userpass
 (
-   userpass_id          bigint not null comment '常用乘机人编号',
+   userpass_id          bigint auto_increment not null comment '常用乘机人编号',
    user_id              bigint comment '用户编号',
    userpass_name        varchar(10) comment '乘机人姓名', 
    userpass_cerid       varchar(30) comment '乘机人证件号',
