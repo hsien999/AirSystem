@@ -3,71 +3,131 @@ package cn.wyx.entity;
 import java.io.Serializable;
 
 /**
- * @Author: wyx
- * @Date: 2019/7/2 17:21
- * @Version 1.0
+ * 用户
  */
 public class User implements Serializable {
-
-    //用户id
-    private Long id;
-    //用户登录名
-    private String username;
-    //用户密码
-    private String password;
-    private String salt; //盐
+    /**
+     *用户编号
+     */
+    private Long userId;
+    /**
+     *手机号
+     */
+    private String userTel;
+    /**
+     *证件号
+     */
+    private String userCerid;
+    /**
+     *证件类型
+     */
+    private String userCerType;
+    /**
+     *中文名
+     */
+    private String userChname;
+    /**
+     *英文名
+     */
+    private String userEnname;
+    /**
+     *盐值
+     */
+    private String userSalt;
+    /**
+     *密码
+     */
+    private String userPass;
 
     public User() {
     }
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public User(Long userId, String userTel, String userCerid, String userCerType, String userChname, String userEnname, String userSalt, String userPass) {
+        this.userId = userId;
+        this.userTel = userTel;
+        this.userCerid = userCerid;
+        this.userCerType = userCerType;
+        this.userChname = userChname;
+        this.userEnname = userEnname;
+        this.userSalt = userSalt;
+        this.userPass = userPass;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserTel() {
+        return userTel;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserTel(String userTel) {
+        this.userTel = userTel;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserCerid() {
+        return userCerid;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserCerid(String userCerid) {
+        this.userCerid = userCerid;
     }
 
-    public String getSalt() {
-        return salt;
+    public String getUserCerType() {
+        return userCerType;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setUserCerType(String userCerType) {
+        this.userCerType = userCerType;
     }
 
-    public String getCredentialsSalt() {
-        return username + salt;
+    public String getUserChname() {
+        return userChname;
+    }
+
+    public void setUserChname(String userChname) {
+        this.userChname = userChname;
+    }
+
+    public String getUserEnname() {
+        return userEnname;
+    }
+
+    public void setUserEnname(String userEnname) {
+        this.userEnname = userEnname;
+    }
+
+    public String getUserSalt() {
+        return userSalt;
+    }
+
+    public void setUserSalt(String userSalt) {
+        this.userSalt = userSalt;
+    }
+
+    public String getUserPass() {
+        return userPass;
+    }
+
+    public void setUserPass(String userPass) {
+        this.userPass = userPass;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
+                "userId=" + userId +
+                ", userTel='" + userTel + '\'' +
+                ", userCerid='" + userCerid + '\'' +
+                ", userCerType='" + userCerType + '\'' +
+                ", userChname='" + userChname + '\'' +
+                ", userEnname='" + userEnname + '\'' +
+                ", userSalt='" + userSalt + '\'' +
+                ", userPass='" + userPass + '\'' +
                 '}';
     }
 }
