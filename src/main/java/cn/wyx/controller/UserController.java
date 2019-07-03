@@ -1,13 +1,19 @@
 package cn.wyx.controller;
 
 import cn.wyx.entity.Result;
+import cn.wyx.entity.User;
+import cn.wyx.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Scanner;
 
 /**
  * @Author: wyx
@@ -15,7 +21,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @Version 1.0
  */
 @RestController
-public class LoginController {
+public class UserController {
+
+    @Autowired
+    private UserService userService;
 
     /**
      * 用户登录的入口
@@ -76,6 +85,74 @@ public class LoginController {
         }
         //登录失败
         return new Result(false, error);
+    }
+
+    /**
+     * 注册接口
+     *
+     * @param user
+     * @return
+     */
+    @RequestMapping("register.do")
+    public Result Register(@RequestBody User user) {
+        boolean success = false;
+        String message = "error";
+        try {
+            this.userService.create(user);
+            success = true;
+            message = "注册成功";
+        } catch (Exception e) {
+            success = true;
+            message = "出现错误,注册失败";
+            e.printStackTrace();
+        }
+        return new Result(success, message);
+    }
+
+    /**
+     * 手机号校验接口
+     *
+     * @param tel
+     * @return
+     */
+    @RequestMapping("validateTel.do")
+    public Result validateTel(@RequestParam(value = "tel") String tel) {
+        boolean success = false;
+        String message = "error";
+        try {
+            if (this.userService.validateTel(tel)) {
+                success = true;
+                message = "校验成功";
+            } else {
+                success = false;
+                message = "该手机号已存在";
+            }
+        } catch (Exception e) {
+            success = false;
+            message = "未知错误";
+            e.printStackTrace();
+        }
+        return new Result(success, message);
+    }
+
+    /**
+     * 证件号校验接口
+     *
+     * @param cerId
+     * @return
+     */
+    @RequestMapping("validateCerId.do")
+    public Result validateCerId(@RequestParam(value = "cerId") String cerId) {
+        try {
+            if (this.userService.validateCerId(cerId)) {
+                return new Result(true, "校验成功");
+            } else {
+                return new Result(false, "该手机号已存在");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "未知错误");
     }
 
     /**
