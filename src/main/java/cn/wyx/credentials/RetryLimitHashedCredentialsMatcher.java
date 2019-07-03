@@ -11,9 +11,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Author: wyx
- * @Date: 2019/7/2 17:15
+ * @Date: 2019/7/2 17:50
  * @Version 1.0
-
+ * <p>
  * 密码重试次数限制
  * HashedCredentialsMatcher只用于密码验证，且可以提供自己的salt，而不是随机生成salt，且生成密码散列值的算法需要自己写.
  */
@@ -36,7 +36,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
             retryCount = new AtomicInteger(0);
             passwordRetryCache.put(username, retryCount);
         }
-        //超过5次锁定
+        //尝试登陆次数超过5次锁定
         if (retryCount.incrementAndGet() > 5) {
             throw new ExcessiveAttemptsException();
         }

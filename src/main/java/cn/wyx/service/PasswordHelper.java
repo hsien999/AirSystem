@@ -48,21 +48,22 @@ public class PasswordHelper {
 
     /**
      * 自定义的密码加密算法(MD5(MD5(pass)+salt))
+     *
      * @param user
      */
     public void encryptPassword(User user) {
-        if (user.getPassword() != null) {
-            //对user对象设置盐：salt；这个盐值是randomNumberGenerator生成的随机数，所以盐值并不需要我们指定
-            user.setSalt(randomNumberGenerator.nextBytes().toHex());
+        if (user.getUserPass() != null) {
+            //对user对象设置salt盐值,是randomNumberGenerator生成的随机数
+            user.setUserSalt(randomNumberGenerator.nextBytes().toHex());
 
             //调用SimpleHash指定散列算法参数：1、算法名称；2、用户输入的密码；3、盐值（随机生成的）；4、迭代次数
             String newPassword = new SimpleHash(
                     algorithmName,
-                    user.getPassword(),
+                    user.getUserPass(),
                     ByteSource.Util.bytes(user.getCredentialsSalt()),
                     hashInterations).toHex();
-
-            user.setPassword(newPassword);
+            System.out.println("newpass = " + newPassword);
+            user.setUserPass(newPassword);
         }
     }
 }

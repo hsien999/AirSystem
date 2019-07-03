@@ -8,13 +8,11 @@ new Vue({
     el: '#app',
     data() {
         return {
-            checked: false,
             login: {
                 username: '',
                 password: '',
                 remember: ''
             },
-            flag: true,
             loading: {}, //loading动画
         };
     },
@@ -22,7 +20,7 @@ new Vue({
         /**
          * loading加载动画
          */
-        loadings(){
+        loadings() {
             this.loading = this.$loading({
                 lock: true,
                 text: '拼命加载中',
@@ -35,15 +33,16 @@ new Vue({
 
         submitForm(login) {
             this.$refs[login].validate((valid) => {
+                /*通过表单验证*/
                 if (valid) {
                     this.loadings(); //加载动画
                     //提交表单
-                    this.$http.post('/ssm_redis_solr_war/login.do', {
+                    this.$http.post('/AirSystem_war_exploded/login.do', {
                         username: this.login.username,
                         password: this.login.password,
                         remember: this.login.remember
                     }).then(result => {
-                        // 判断用户是否登录成功，后端返回JSON格式数据，不然娶不到数据
+                        // 判断用户是否登录成功，后端返回JSON数据
                         if (result.body.success) {
                             window.location.href = "index.html";
                             this.loading.close(); //关闭动画加载
@@ -52,7 +51,7 @@ new Vue({
                             this.$emit(
                                 'submit-form',
                                 this.$message({
-                                    message: '用户名或密码错误！',
+                                    message: result.body.message,
                                     type: 'warning',
                                     duration: 6000
                                 }),
@@ -74,7 +73,7 @@ new Vue({
                 }
             });
         },
-        loginEnter(login){
+        loginEnter(login) {
             this.submitForm(login);
         },
 

@@ -54,22 +54,22 @@ public class LoginController {
                 return new Result(true, "success");
             } catch (UnknownAccountException e) {
                 e.printStackTrace();
-                error = "用户账户不存在，错误信息：" + e.getMessage();
+                error = "用户账户不存在!";
             } catch (IncorrectCredentialsException e) {
                 e.printStackTrace();
-                error = "用户名或密码错误，错误信息：" + e.getMessage();
+                error = "用户名或密码错误!";
             } catch (LockedAccountException e) {
                 e.printStackTrace();
-                error = "该账号已锁定，错误信息：" + e.getMessage();
+                error = "该账号已锁定!";
             } catch (DisabledAccountException e) {
                 e.printStackTrace();
-                error = "该账号已禁用，错误信息：" + e.getMessage();
+                error = "该账号已禁用!";
             } catch (ExcessiveAttemptsException e) {
                 e.printStackTrace();
-                error = "该账号登录失败次数过多，错误信息：" + e.getMessage();
+                error = "该账号登录失败次数过多!";
             } catch (Exception e) {
                 e.printStackTrace();
-                error = "未知错误，错误信息：" + e.getMessage();
+                error = "未知错误!";
             }
         } else {
             error = "请输入用户名和密码";
@@ -79,8 +79,8 @@ public class LoginController {
     }
 
     /**
-     * 退出登录，我们不需要实现，Shiro的Filter过滤器会帮我们生成一个logout请求，
-     *    当浏览器访问`/logout`请求时，Shiro会自动清空缓存并重定向到配置好的loginUrl页面
+     * 退出登录==>Shiro的Filter过滤器会帮我们生成一个logout请求，
+     * 当浏览器访问`/logout`请求时，Shiro会自动清空缓存并重定向到配置好的loginUrl页面
      *
      * @return
      */

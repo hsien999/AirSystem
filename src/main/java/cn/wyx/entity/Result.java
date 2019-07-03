@@ -3,6 +3,8 @@ package cn.wyx.entity;
 import java.io.Serializable;
 
 /**
+ * 封装提示信息
+ *
  * @Author: wyx
  * @Date: 2019/7/2 17:21
  * @Version 1.0

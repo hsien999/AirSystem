@@ -620,6 +620,7 @@
       <Comment>机场编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="162" parent="146" name="city_id">
@@ -654,6 +655,7 @@
       <Comment>航线编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="168" parent="147" name="airport_up">
@@ -704,6 +706,7 @@
       <Comment>城市编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="177" parent="148" name="city_name">
@@ -902,6 +905,7 @@ space_id</ColNames>
       <Comment>机型编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="211" parent="152" name="model_name">
@@ -1008,6 +1012,7 @@ space_id</ColNames>
       <Comment>乘客人编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="229" parent="154" name="ticket_id">
@@ -1245,6 +1250,7 @@ space_id</ColNames>
       <Comment>用户编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="270" parent="159" name="user_tel">
@@ -1319,6 +1325,7 @@ space_id</ColNames>
       <Comment>常用乘机人编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="283" parent="160" name="user_id">

@@ -1,6 +1,8 @@
 package cn.wyx.entity;
 
+
 import java.io.Serializable;
+
 
 /**
  * 用户
@@ -117,6 +119,9 @@ public class User implements Serializable {
         this.userPass = userPass;
     }
 
+    public String getCredentialsSalt() {
+        return userTel + userSalt;
+    }
     @Override
     public String toString() {
         return "User{" +

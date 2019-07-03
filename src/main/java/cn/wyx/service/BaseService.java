@@ -14,7 +14,7 @@ public interface BaseService<T> {
     /**
      * 查询所有
      *
-     * @return
+     * @return all T
      */
     List<T> findAll();
 
@@ -22,9 +22,17 @@ public interface BaseService<T> {
      * 根据id查询
      *
      * @param id
-     * @return
+     * @return T
      */
-    List<T> findById(Long id);
+    T findById(Long id);
+
+    /**
+     * 根据id查询
+     *
+     * @param id
+     * @return T
+     */
+    T findById(String id);
 
     /**
      * 新增
@@ -41,9 +49,16 @@ public interface BaseService<T> {
     void update(T t);
 
     /**
-     * 批量删除
+     * 批量删除 by long id
      *
      * @param ids
      */
     void delete(Long... ids);
+
+    /**
+     * 批量删除 by string id
+     *
+     * @param ids
+     */
+    void delete(String... ids);
 }
