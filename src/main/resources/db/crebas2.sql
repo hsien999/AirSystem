@@ -323,4 +323,13 @@ and tb_airroute.airport_down = y.airport_id
 and x.city_id = a.city_id
 and y.city_id = b.city_id  ;
 
-select * from v_airroute_airport_city
+select * from v_airroute_airport_city;
+
+alter table tb_city
+    add  column city_alp char(1) not null ;/*添加城市首字母*/
+
+alter table tb_city
+    add  constraint  unique_name unique(city_name);
+
+alter table tb_ticket
+    add column ticket_seat int;/*添加座位号*/

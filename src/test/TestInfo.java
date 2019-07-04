@@ -1,12 +1,12 @@
 import cn.wyx.entity.InfoOfOldFlight;
 import cn.wyx.entity.InfoOfTickets;
-import cn.wyx.service.InfoService;
+import cn.wyx.service.InfoOfFlightService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import java.lang.Long;
+
 import java.sql.Date;
 import java.util.List;
 
@@ -21,7 +21,7 @@ import cn.wyx.entity.InfoOfFlight;
 public class TestInfo {
 
     @Autowired
-    private InfoService infoService;
+    private InfoOfFlightService infoOfFlightService;
 
     @Test
     public void select()
@@ -31,7 +31,7 @@ public class TestInfo {
         Date date = Date.valueOf("2019-1-1");
 
 
-       List<InfoOfFlight> infoOfFlights = this.infoService.findFlightByCityDate(startCityId,endCityId,date);
+       List<InfoOfFlight> infoOfFlights = this.infoOfFlightService.findFlightByCityDate(startCityId,endCityId,date);
         for (InfoOfFlight o: infoOfFlights) {
             System.out.println(o.getFilghtId()+":"+o.getFlightsId());
             for (InfoOfTickets o2: o.getTickets()) {
@@ -40,6 +40,8 @@ public class TestInfo {
         }
        //System.out.println(infoOfFlights);
     }
+
+
     @Test
     public void selectOld()
     {
@@ -47,7 +49,8 @@ public class TestInfo {
         String endCityId = "上海";
         Date date = Date.valueOf("2019-1-1");
 
-        List<InfoOfOldFlight> infoOfOldFlights = this.infoService.findOldFlightByCityDate(startCityId,endCityId,date);
+        List<InfoOfOldFlight> infoOfOldFlights = this.infoOfFlightService.findOldFlightByCityDate(startCityId,endCityId,date);
         System.out.println(infoOfOldFlights);
     }
+
 }

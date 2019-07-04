@@ -1,41 +1,58 @@
 package cn.wyx.service.impl;
 
-import cn.wyx.entity.InfoOfFlight;
 import cn.wyx.entity.InfoOfOldFlight;
-import cn.wyx.mapper.InfoOfFlightMapper;
+import cn.wyx.service.InfoOfOldFlightService;
 import cn.wyx.mapper.InfoOfOldFlightMapper;
-import cn.wyx.service.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
 
 /**
  * @Author: czt
- * @Date: 2019/7/3 21:27
+ * @Date: 2019/7/4 16:15
  * @Version 1.0
  */
-@Service
-public class InfoServiceIml implements InfoService {
+public class InfoOfOldFlightServiceIml implements InfoOfOldFlightService {
 
-    @Autowired
-    private InfoOfFlightMapper infoOfFlightMapper;
+
     @Autowired
     private InfoOfOldFlightMapper infoOfOldFlightMapper;
 
-    /**
-     * 航班订票查询
-     * @param cityStartName
-     * @param cityEndName
-     * @param date
-     * @return
-     */
     @Override
-    public List<InfoOfFlight> findFlightByCityDate(String cityStartName, String cityEndName, Date date) {
-        return this.infoOfFlightMapper.findByCityDate(cityStartName, cityEndName, date);
+    public List<InfoOfOldFlight> findAll() {
+        return null;
     }
 
+    @Override
+    public InfoOfOldFlight findById(Long id) {
+        return null;
+    }
+
+    @Override
+    public InfoOfOldFlight findById(String id) {
+        return null;
+    }
+
+    @Override
+    public void create(InfoOfOldFlight infoOfOldFlight) {
+
+    }
+
+    @Override
+    public void update(InfoOfOldFlight infoOfOldFlight) {
+
+    }
+
+    @Override
+    public void delete(Long... ids) {
+
+    }
+
+    @Override
+    public void delete(String... ids) {
+
+    }
     /**
      * 动态航班查询
      * @param cityStartName
