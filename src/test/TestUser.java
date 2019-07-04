@@ -35,7 +35,7 @@ public class TestUser {
 
     @Test
     public void changePass() {
-        userService.changePassword(1L, "123");
+        this.userService.changePassword(1L, "123");
         System.out.println("pass=" + this.userService.findById(1L));
     }
 

@@ -1,3 +1,5 @@
+import cn.wyx.entity.InfoOfOldFlight;
+import cn.wyx.entity.InfoOfTickets;
 import cn.wyx.service.InfoService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,7 +8,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.lang.Long;
 import java.sql.Date;
+import java.util.List;
 
+import cn.wyx.entity.InfoOfFlight;
 /**
  * @Author: czt
  * @Date: 2019/7/3 21:37
@@ -22,10 +26,28 @@ public class TestInfo {
     @Test
     public void select()
     {
-        Long startCityId = 1L;
-        Long endCityId = 2L;
-        Date date = new Date(20170201);
-        System.out.println(date);
-       //List<InfoOfFlight> infoOfFlights = this.infoService.findFlightByCityDate(startCityId)
+        String startCityId = "北京";
+        String endCityId = "上海";
+        Date date = Date.valueOf("2019-1-1");
+
+
+       List<InfoOfFlight> infoOfFlights = this.infoService.findFlightByCityDate(startCityId,endCityId,date);
+        for (InfoOfFlight o: infoOfFlights) {
+            System.out.println(o.getFilghtId()+":"+o.getFlightsId());
+            for (InfoOfTickets o2: o.getTickets()) {
+                System.out.println("---- "+ o2);
+            }
+        }
+       //System.out.println(infoOfFlights);
+    }
+    @Test
+    public void selectOld()
+    {
+        String startCityId = "北京";
+        String endCityId = "上海";
+        Date date = Date.valueOf("2019-1-1");
+
+        List<InfoOfOldFlight> infoOfOldFlights = this.infoService.findOldFlightByCityDate(startCityId,endCityId,date);
+        System.out.println(infoOfOldFlights);
     }
 }

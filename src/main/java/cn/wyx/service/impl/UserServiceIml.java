@@ -52,10 +52,9 @@ public class UserServiceIml implements UserService {
          * 不存在相同的证件号或手机号
          */
         if (validateTel(user.getUserTel()) && validateCerId(user.getUserCerid())) {
-            return;
+            passwordHelper.encryptPassword(user);
+            this.userMapper.create(user);
         }
-        passwordHelper.encryptPassword(user);
-        this.userMapper.create(user);
     }
 
     /**
