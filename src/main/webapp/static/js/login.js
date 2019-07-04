@@ -44,7 +44,7 @@ new Vue({
                     }).then(result => {
                         // 判断用户是否登录成功，后端返回JSON数据
                         if (result.body.success) {
-                            window.location.href = "index.html";
+                            window.location.href = "register.html";
                             this.loading.close(); //关闭动画加载
                         } else {
                             // 弹出错误信息框

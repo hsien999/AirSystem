@@ -21,57 +21,60 @@
     </el-menu>
 
     <div id="main">
-        <el-card>
-            <el-col>
-                <el-card shadow="hover">
-                    <!-- 搜索框 -->
-                    <el-form :inline="true"  class="demo-form-inline">
-                        <el-form-item label="品牌">
-                            <el-input  placeholder="品牌"></el-input>
-                        </el-form-item>
-                        <el-form-item label="卖家">
-                            <el-input  placeholder="卖家"></el-input>
-                        </el-form-item>
-                        <el-form-item>
-                            <el-button
-                                    type="primary"
-                                    icon="el-icon-search"
-                                    @click="reloadList">查询
-                            </el-button>
-                            <el-button
-                                    icon="el-icon-delete"
-
-                                    type="primary" plain>清空
-                            </el-button>
-                        </el-form-item>
-                    </el-form>
-                    <!-- 功能按钮 -->
-                    <div>
-                        <el-row>
-                            <el-button @click="saveBtn" type="primary" icon="el-icon-plus">新增</el-button>
-                            <el-button type="primary" plain icon="el-icon-edit" @click="editSelect">编辑</el-button>
-                            <el-button type="danger" plain icon="el-icon-delete"
-                                       @click="deleteSelect(multipleSelection)">删除
-                            </el-button>
-                            <el-button icon="el-icon-refresh"
-                                       @click="search(pageConf.pageCode,pageConf.pageSize)">刷新
-                            </el-button>
-                        </el-row>
-                        <span class="el-tag avue-tip">
-                    <i class="el-icon-info"></i>
-                    <span class="name">
-                        当前表格已选择
-                        <span class="count">{{count}}</span>
-                        项
-                    </span>
-                    <span @click.prevent="clearSelect()" style="cursor:pointer">&nbsp;&nbsp;清空</span>
-                </span>
-                    </div>
-
-                </el-card>
-            </el-col>
-
-        </el-card>
+        <el-col>
+            <el-card shadow="always">
+                <el-steps :active="activeStep" finish-status="success" simple
+                          style="margin-top:20px;margin-left:20%;margin-right:20%;">
+                    <el-step title="基本信息"></el-step>
+                    <el-step title="联系信息"></el-step>
+                    <el-step title="注册成功"></el-step>
+                </el-steps>
+                <el-form :model="user" :rules="rules" ref="baseInfoForm" label-width="150px"
+                         class="inputForm">
+                    <el-form-item label="中文姓名" prop="userChname" required>
+                        <el-input v-model="user.userChname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="拼音/英文姓名" prop="userEnname" required>
+                        <el-input v-model="user.userEnname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="身份证件" required>
+                        <el-col :span="8">
+                            <el-form-item prop="cerType">
+                                <el-select placeholder="请选择证件类型" v-model="cerType">
+                                    <el-option v-for="item in types"
+                                               :key="item.value"
+                                               :label="item.label"
+                                               :value="item.value"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="2" style="width: 20px">&nbsp;&nbsp;-&nbsp;&nbsp;</el-col>
+                        <el-col :span="15">
+                            <el-form-item prop="userCerid">
+                                <el-input v-model="user.userCerid"></el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-form-item>
+                    <el-form-item label="注册同意条件" required prop="commit" :show-message=false>
+                        <el-radio-group v-model="commit">
+                            <el-radio border label=" 我同意遵守JM航空会员手册的条款与条件
+                                  请您认真查看JM航空会相关规定!">
+                            </el-radio>
+                        </el-radio-group>
+                    </el-form-item>
+                </el-form>
+                <el-button-group style="margin-top:20px;margin-left:20%;margin-right:20%">
+                    <el-button-group>
+                        <el-button type="primary" icon="el-icon-arrow-left" @click="stepPrev" v-if="activeStep==1">
+                            上一步
+                        </el-button>
+                        <el-button type="primary">下一步<i class="el-icon-arrow-right el-icon--right" @click="stepNext"
+                                                        v-if="activeStep==0||activeStep==1"></i>
+                        </el-button>
+                    </el-button-group>
+                </el-button-group>
+            </el-card>
+        </el-col>
     </div>
 </div>
 </body>

@@ -7,6 +7,11 @@ a {
     text-decoration: none;
 }
 
+#app {
+
+    margin: auto;
+}
+
 #user {
     float: right;
     border-bottom: none;
@@ -33,10 +38,11 @@ a {
 
 #main {
     margin-top: 3%;
-    margin-left: 3%;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
-#main > .el-container {
+#main > .el-row {
     width: 80%;
     height: 100%;
 }
@@ -111,4 +117,10 @@ a {
 
 .waring > div .el-form-item {
     margin-bottom: 0px;
+}
+
+.inputForm {
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 30%;
 }

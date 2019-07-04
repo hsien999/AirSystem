@@ -3,6 +3,8 @@ package cn.wyx.service;
 import cn.wyx.entity.User;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * 用户业务逻辑接口
  *
@@ -31,4 +33,5 @@ public interface UserService extends BaseService<User> {
      * 验证该证件号是否存在
      */
     boolean validateCerId(String CerId);
+
 }
