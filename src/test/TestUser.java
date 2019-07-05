@@ -21,6 +21,7 @@ public class TestUser {
     @Test
     public void create() {
         User user = new User(1L, "13774831008", "123", "身份证", "王永贤", "wyx", "123", "123");
+        //User user = new User(2L, "15160306353", "350524199804016518", "身份证", "王永贤", "WangYongXina", "", "software201721122050");
         this.userService.create(user);
     }
 
@@ -50,6 +51,11 @@ public class TestUser {
     public void validate() {
         System.out.println(this.userService.validateTel("13774831008"));
         System.out.println(this.userService.validateCerId("123"));
+    }
+
+    @Test
+    public void delete() {
+        this.userService.delete(2L);
     }
 
 }

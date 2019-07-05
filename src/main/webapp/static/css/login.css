@@ -6,7 +6,7 @@ body {
 }
 
 #login {
-    background-image: url("../image/login.png");
+    background-image: url("../image/login_bottmbg.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -5,7 +5,7 @@
     <artifactId>ssm-redis-solr</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>TyCoding Maven Webapp</name>
+    <name>AirSystem Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <build>

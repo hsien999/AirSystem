@@ -690,7 +690,7 @@
 }
 
 .el-dialog__title {
-    line-height: 24px;
+    el-icon--right-height: 24px;
     font-size: 18px;
     color: #303133
 }
