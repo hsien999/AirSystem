@@ -18,23 +18,46 @@
             <img class="el-tooltip" src="static/image/flag.png"/>
             <a href="logout">登陆</a>
         </el-menu-item>
-
-        <div id="main">
-            <el-col>
-                <el-card shadow="always">
-                    <el-steps :active="activeStep" finish-status="success" simple
-                              style="margin-top:20px;margin-left:20%;margin-right:20%;">
-                        <el-step title="选择航班"></el-step>
-                        <el-step title="填写订单"></el-step>
-                        <el-step title="确认并支付"></el-step>
-                        <el-step title="出票成功"></el-step>
-                    </el-steps>
-
-                </el-card>
-            </el-col>
-        </div>
-
     </el-menu>
+    <div id="main">
+        <el-col type="flex">
+            <el-card shadow="always">
+                <el-steps :active="activeStep" finish-status="success" simple>
+                    <el-step title="Step1" description="选择航班"></el-step>
+                    <el-step title="Step2" description="填写订单"></el-step>
+                    <el-step title="Step3" description="确认并支付"></el-step>
+                    <el-step title="Step4" description="出票成功"></el-step>
+                </el-steps>
+            </el-card>
+        </el-col>
+
+        <el-col type="flex">
+            <el-card shadow="always">
+                <el-form :inline="true" :model="searchEntity" class="inputForm">
+                    <el-form-item label="品牌">
+                        <el-input v-model="searchEntity.brand" placeholder="品牌"></el-input>
+                    </el-form-item>
+                    <el-form-item label="卖家">
+                        <el-input v-model="searchEntity.seller" placeholder="卖家"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button
+                                type="primary"
+                                icon="el-icon-search"
+                                @click="reloadList">查询
+                        </el-button>
+                        <el-button
+                                icon="el-icon-delete"
+                                @click="searchEntity={}"
+                                type="primary" plain>清空
+                        </el-button>
+                    </el-form-item>
+                </el-form>
+            </el-card>
+        </el-col>
+    </div>
+
+
 </div>
 
 </body>
@@ -43,3 +66,18 @@
 <script type="text/javascript" src="static/vue/vue-resource.js"></script>
 <script type="text/javascript" src="static/js/index.js"></script>
 </html>
+<!--                <el-row style="margin-top:20px;margin-left:20%;margin-right:20%;">-->
+<!--                    <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">-->
+<!--                        <el-card :body-style="{ padding: '0px' }">-->
+<!--                            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"-->
+<!--                                 class="image">-->
+<!--                            <div style="padding: 14px;">-->
+<!--                                <span>好吃的汉堡</span>-->
+<!--                                <div class="bottom clearfix">-->
+<!--                                    <time class="time">{{ currentDate }}</time>-->
+<!--                                    <el-button type="text" class="button">操作按钮</el-button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </el-card>-->
+<!--                    </el-col>-->
+<!--                </el-row>-->

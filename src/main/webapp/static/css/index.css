@@ -7,7 +7,16 @@ a {
     text-decoration: none;
 }
 
-#author {
+/*.image {*/
+/*    width: 100%;*/
+/*    display: block;*/
+/*}*/
+
+#app {
+    margin: auto;
+}
+
+#user {
     float: right;
     border-bottom: none;
 }
@@ -20,43 +29,31 @@ a {
     font-size: 18px;
 }
 
-#author > img {
+#user > img {
     border: 1px solid #eee;
     border-radius: 100%;
     box-sizing: border-box;
-    height: 30px;
-    margin: 0 8px 0 10px;
+    height: 38px;
+    margin: 0 8px 0 8px;
     padding: 2px;
-    width: 30px;
+    width: 38px;
 }
 
-#author .el-dropdown {
-    display: inline-block;
-    position: relative;
-    color: #606266;
-    font-size: 14px;
-}
-
-.el-dropdown-menu__item a {
-    list-style: none;
-    line-height: 36px;
-    /*padding: 0 20px;*/
-    margin: 0;
-    font-size: 14px;
-    color: #606266;
-    cursor: pointer;
-    outline: 0;
-    text-decoration: none;
-}
 
 #main {
-    margin-top: 3%;
-    margin-left: 3%;
+    margin-top: 1%;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
-#main > .el-container {
+#main > .el-row {
     width: 80%;
     height: 100%;
+}
+
+#main > .el-col {
+    width: 100%;
+    margin-top: 20px;
 }
 
 .show {
@@ -129,4 +126,10 @@ a {
 
 .waring > div .el-form-item {
     margin-bottom: 0px;
+}
+
+.inputForm {
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 30%;
 }

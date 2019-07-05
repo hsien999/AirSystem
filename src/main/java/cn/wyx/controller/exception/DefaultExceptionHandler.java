@@ -39,4 +39,21 @@ public class DefaultExceptionHandler {
         mv.setViewName("login");
         return mv;
     }
+
+
+//    /**
+//     * 权限校验失败异常
+//     *
+//     * @param request
+//     * @param e
+//     * @return
+//     */
+//    @ExceptionHandler({UnauthorizedException.class})
+//    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+//    public ModelAndView processUnauthenticatedException(NativeWebRequest request, UnauthorizedException e) {
+//        ModelAndView mv = new ModelAndView();
+//        mv.addObject("exception", e);
+//        mv.setViewName("login");
+//        return mv;
+//    }
 }
