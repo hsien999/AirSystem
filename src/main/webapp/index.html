@@ -2,23 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JM航空</title>
     <link rel="stylesheet" href="static/element-ui/lib/theme-chalk/index.css"/>
     <link rel="stylesheet" href="static/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="static/css/index.css"/>
 </head>
 <body>
 <div id="app">
-    <el-button @click="click">
+    <el-menu mode="horizontal" :default-active="activeIndex" active-text-color="#409EFF">
+        <el-menu-item index="0" id="logo">JM航空&nbsp;&nbsp;&nbsp; <span
+                class="fa fa-plane fa-2x"></span></el-menu-item>
+        <el-menu-item index="1"><a href="register.html">机票预订</a></el-menu-item>
+        <el-menu-item index="2"><a href="register.html">航班查询</a></el-menu-item>
+        <el-menu-item id="user" index="3">
+            <img class="el-tooltip" src="static/image/flag.png"/>
+            <a href="logout">登陆</a>
+        </el-menu-item>
 
-    </el-button>
-</div>
+        <div id="main">
+            <el-col>
+                <el-card shadow="always">
+                    <el-steps :active="activeStep" finish-status="success" simple
+                              style="margin-top:20px;margin-left:20%;margin-right:20%;">
+                        <el-step title="选择航班"></el-step>
+                        <el-step title="填写订单"></el-step>
+                        <el-step title="确认并支付"></el-step>
+                        <el-step title="出票成功"></el-step>
+                    </el-steps>
 
+                </el-card>
+            </el-col>
+        </div>
+
+    </el-menu>
 </div>
 
 </body>
 <script type="text/javascript" src="static/vue/vue.js"></script>
 <script type="text/javascript" src="static/element-ui/lib/index.js"></script>
 <script type="text/javascript" src="static/vue/vue-resource.js"></script>
-<script type="text/javascript" src="static/js/test.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
 </html>

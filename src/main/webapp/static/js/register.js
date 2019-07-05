@@ -9,7 +9,7 @@ new Vue({
         const checkTel = (rule, value, callback) => {
 
             if (value == '') {
-                return callback(new Error('手机号码不能为空'));
+                return callback(new Error('请输入手机号码'));
             } else {
                 const reg1 = /^[0-9]{1,20}$/;
                 if (!reg1.test(value)) {
@@ -31,7 +31,7 @@ new Vue({
         };
         const checkChName = (rule, value, callback) => {
             if (value == '') {
-                return callback(new Error('姓名不能为空'));
+                return callback(new Error('请输入姓名'));
             } else {
                 const reg = /^[\u4E00-\u9FA5]{1,5}$/;
                 if (!reg.test(value)) {
@@ -43,7 +43,7 @@ new Vue({
         };
         const checkEnName = (rule, value, callback) => {
             if (value == '') {
-                return callback(new Error('拼音/英文姓名不能为空'));
+                return callback(new Error('请输入拼音/英文姓名'));
             } else {
                 const reg = /^[a-zA-Z]+$/;
                 if (!reg.test(value)) {
@@ -55,7 +55,7 @@ new Vue({
         };
         const checkCerid = (rule, value, callback) => {
             if (value == '') {
-                return callback(new Error('证件号不能为空'));
+                return callback(new Error('请输入证件号'));
             } else {
                 const format = /^(([1][1-5])|([2][1-3])|([3][1-7])|([4][1-6])|([5][0-4])|([6][1-5])|([7][1])|([8][1-2]))\d{4}(([1][9]\d{2})|([2]\d{3}))(([0][1-9])|([1][0-2]))(([0][1-9])|([1-2][0-9])|([3][0-1]))\d{3}[0-9xX]$/;
                 //号码规则校验
@@ -111,7 +111,7 @@ new Vue({
                 return callback(new Error('请输入密码'));
             } else {
                 if (this.userInfo2.checkPass !== '') {
-                    // this.$refs.userInfo2.validateField('checkPass');
+                    this.$refs.userInfo2.validateField('checkPass');
                 }
                 return callback();
             }
@@ -166,14 +166,14 @@ new Vue({
             },
             rules2: {
                 userTel: [
-                    { required: true, message: '请输入手机号码', trigger: 'blur' },
+                    {required: true, message: '请输入手机号码', trigger: 'blur'},
                     {validator: checkTel, trigger: 'blur',}
                 ], userPass: [
-                    { required: true, message: '请输入密码', trigger: 'blur' },
+                    {required: true, message: '请输入密码', trigger: 'blur'},
                     {validator: validatePass, trigger: 'blur'}
                 ],
                 checkPass: [
-                    { required: true, message: '请确认密码', trigger: 'blur' },
+                    {required: true, message: '请确认密码', trigger: 'blur'},
                     {validator: validatePass2, trigger: 'blur'}
                 ]
             },
@@ -233,20 +233,28 @@ new Vue({
                             }),
                         );
                     } else {
-                        this.$http.post('/AirSystem_war_exploded/register.do', JSON.stringify(this.user)).then(result => {
+                        this.$http.post('/AirSystem_war_exploded/register.do', JSON.stringify({
+                            userCerid: this.userInfo1.userCerid,
+                            userCerType: this.userInfo1.userCerType,
+                            userChname: this.userInfo1.userChname,
+                            userEnname: this.userInfo1.userEnname,
+                            userTel: this.userInfo2.userTel,
+                            userPass: this.userInfo2.userPass,
+                        })).then(result => {
                             if (result.body.success) {
                                 this.$message({
                                     type: 'success',
                                     message: result.body.message,
                                     duration: 6000
                                 });
-                                if (this.activeStep++ > 2) this.activeStep = 0;
+                                this.activeStep = 2;
                             } else {
                                 this.$message({
                                     type: 'warning',
                                     message: result.body.message,
                                     duration: 6000
                                 });
+                                // if (this.activeStep++ > 2) this.activeStep = 0;
                             }
                         })
                     }
@@ -256,8 +264,6 @@ new Vue({
 
         stepPrev() {
             if (this.activeStep-- < 0) this.activeStep = 0;
-            console.log('--');
-
         },
     },
 })

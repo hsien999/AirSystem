@@ -93,7 +93,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("register.do")
+    @RequestMapping("/register")
     public Result Register(@RequestBody User user) {
         boolean success = false;
         String message = "error";
@@ -115,7 +115,7 @@ public class UserController {
      * @param tel
      * @return
      */
-    @RequestMapping("validateTel.do")
+    @RequestMapping("/validateTel")
     public Result validateTel(@RequestParam(value = "tel") String tel) {
         boolean success = false;
         String message = "error";
@@ -141,7 +141,7 @@ public class UserController {
      * @param cerId
      * @return
      */
-    @RequestMapping("validateCerId.do")
+    @RequestMapping("/validateCerId")
     public Result validateCerId(@RequestParam(value = "cerId") String cerId) {
         try {
             if (this.userService.validateCerId(cerId)) {
