@@ -1,7 +1,7 @@
 package cn.wyx.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  *订单
@@ -22,11 +22,11 @@ public class Order implements Serializable {
     /**
      *确认时间
      */
-    private Date orderSureTime;
+    private Timestamp orderSureTime;
     /**
      *支付时间
      */
-    private Date orderPayTime;
+    private Timestamp orderPayTime;
     /**
      *支付方式
      */
@@ -55,7 +55,7 @@ public class Order implements Serializable {
     public Order() {
     }
 
-    public Order(String orderId, Long userId, int orderPrice, Date orderSureTime, Date orderPayTime, String orderPayType, int orderNums, String orderState, String orderContactName, String orderContactTel, String ordercontactEmail) {
+    public Order(String orderId, Long userId, int orderPrice, Timestamp orderSureTime, Timestamp orderPayTime, String orderPayType, int orderNums, String orderState, String orderContactName, String orderContactTel, String ordercontactEmail) {
         this.orderId = orderId;
         this.userId = userId;
         this.orderPrice = orderPrice;
@@ -93,19 +93,19 @@ public class Order implements Serializable {
         this.orderPrice = orderPrice;
     }
 
-    public Date getOrderSureTime() {
+    public Timestamp getOrderSureTime() {
         return orderSureTime;
     }
 
-    public void setOrderSureTime(Date orderSureTime) {
+    public void setOrderSureTime(Timestamp orderSureTime) {
         this.orderSureTime = orderSureTime;
     }
 
-    public Date getOrderPayTime() {
+    public Timestamp getOrderPayTime() {
         return orderPayTime;
     }
 
-    public void setOrderPayTime(Date orderPayTime) {
+    public void setOrderPayTime(Timestamp orderPayTime) {
         this.orderPayTime = orderPayTime;
     }
 

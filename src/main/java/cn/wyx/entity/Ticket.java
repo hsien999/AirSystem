@@ -30,17 +30,23 @@ public class Ticket implements Serializable {
      *航空保险费
      */
     private int airportFee;
+    /**
+     * 座位号
+     */
+    private int ticketSeat;
+
 
     public Ticket() {
     }
 
-    public Ticket(String ticketId, String ticketsId, String orderId, int ticketPrice, int fuelSurcharge, int airportFee) {
+    public Ticket(String ticketId, String ticketsId, String orderId, int ticketPrice, int fuelSurcharge, int airportFee, int ticketSeat) {
         this.ticketId = ticketId;
         this.ticketsId = ticketsId;
         this.orderId = orderId;
         this.ticketPrice = ticketPrice;
         this.fuelSurcharge = fuelSurcharge;
         this.airportFee = airportFee;
+        this.ticketSeat = ticketSeat;
     }
 
     public String getTicketId() {
@@ -91,6 +97,14 @@ public class Ticket implements Serializable {
         this.airportFee = airportFee;
     }
 
+    public int getTicketSeat() {
+        return ticketSeat;
+    }
+
+    public void setTicketSeat(int ticketSeat) {
+        this.ticketSeat = ticketSeat;
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +
@@ -100,6 +114,7 @@ public class Ticket implements Serializable {
                 ", ticketPrice=" + ticketPrice +
                 ", fuelSurcharge=" + fuelSurcharge +
                 ", airportFee=" + airportFee +
+                ", ticketSeat=" + ticketSeat +
                 '}';
     }
 }

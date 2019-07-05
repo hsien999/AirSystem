@@ -12,10 +12,10 @@
       <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="3" parent="1" name="airsystem">
+    <schema id="3" parent="1" name="company">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="4" parent="1" name="company">
+    <schema id="4" parent="1" name="easy_ashopping">
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="5" parent="1" name="easy_shopping">
@@ -24,598 +24,587 @@
     <schema id="6" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="7" parent="1" name="jmu">
+    <schema id="7" parent="1" name="mysql">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="8" parent="1" name="mybatis">
+    <schema id="8" parent="1" name="spring">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="9" parent="1" name="mysql">
+    <schema id="9" parent="1" name="ssm">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="10" parent="1" name="shiro">
+    <schema id="10" parent="1" name="temp_database">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="11" parent="1" name="spring">
+    <schema id="11" parent="1" name="test">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="12" parent="1" name="ssm">
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <schema id="13" parent="1" name="ssm_redis">
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <schema id="14" parent="1" name="test">
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <schema id="15" parent="1" name="testmvc">
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <schema id="16" parent="1" name="website">
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <collation id="17" parent="1" name="armscii8_bin">
+    <collation id="12" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="18" parent="1" name="armscii8_general_ci">
+    <collation id="13" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="19" parent="1" name="ascii_bin">
+    <collation id="14" parent="1" name="ascii_bin">
       <Charset>ascii</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="20" parent="1" name="ascii_general_ci">
+    <collation id="15" parent="1" name="ascii_general_ci">
       <Charset>ascii</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="21" parent="1" name="big5_bin">
+    <collation id="16" parent="1" name="big5_bin">
       <Charset>big5</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="22" parent="1" name="big5_chinese_ci">
+    <collation id="17" parent="1" name="big5_chinese_ci">
       <Charset>big5</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="23" parent="1" name="binary">
+    <collation id="18" parent="1" name="binary">
       <Charset>binary</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="24" parent="1" name="cp1250_bin">
+    <collation id="19" parent="1" name="cp1250_bin">
       <Charset>cp1250</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="25" parent="1" name="cp1250_croatian_ci">
+    <collation id="20" parent="1" name="cp1250_croatian_ci">
       <Charset>cp1250</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="26" parent="1" name="cp1250_czech_cs">
+    <collation id="21" parent="1" name="cp1250_czech_cs">
       <Charset>cp1250</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="27" parent="1" name="cp1250_general_ci">
+    <collation id="22" parent="1" name="cp1250_general_ci">
       <Charset>cp1250</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="28" parent="1" name="cp1250_polish_ci">
+    <collation id="23" parent="1" name="cp1250_polish_ci">
       <Charset>cp1250</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="29" parent="1" name="cp1251_bin">
+    <collation id="24" parent="1" name="cp1251_bin">
       <Charset>cp1251</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="30" parent="1" name="cp1251_bulgarian_ci">
+    <collation id="25" parent="1" name="cp1251_bulgarian_ci">
       <Charset>cp1251</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="31" parent="1" name="cp1251_general_ci">
+    <collation id="26" parent="1" name="cp1251_general_ci">
       <Charset>cp1251</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="32" parent="1" name="cp1251_general_cs">
+    <collation id="27" parent="1" name="cp1251_general_cs">
       <Charset>cp1251</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="33" parent="1" name="cp1251_ukrainian_ci">
+    <collation id="28" parent="1" name="cp1251_ukrainian_ci">
       <Charset>cp1251</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="34" parent="1" name="cp1256_bin">
+    <collation id="29" parent="1" name="cp1256_bin">
       <Charset>cp1256</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="35" parent="1" name="cp1256_general_ci">
+    <collation id="30" parent="1" name="cp1256_general_ci">
       <Charset>cp1256</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="36" parent="1" name="cp1257_bin">
+    <collation id="31" parent="1" name="cp1257_bin">
       <Charset>cp1257</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="37" parent="1" name="cp1257_general_ci">
+    <collation id="32" parent="1" name="cp1257_general_ci">
       <Charset>cp1257</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="38" parent="1" name="cp1257_lithuanian_ci">
+    <collation id="33" parent="1" name="cp1257_lithuanian_ci">
       <Charset>cp1257</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="39" parent="1" name="cp850_bin">
+    <collation id="34" parent="1" name="cp850_bin">
       <Charset>cp850</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="40" parent="1" name="cp850_general_ci">
+    <collation id="35" parent="1" name="cp850_general_ci">
       <Charset>cp850</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="41" parent="1" name="cp852_bin">
+    <collation id="36" parent="1" name="cp852_bin">
       <Charset>cp852</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="42" parent="1" name="cp852_general_ci">
+    <collation id="37" parent="1" name="cp852_general_ci">
       <Charset>cp852</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="43" parent="1" name="cp866_bin">
+    <collation id="38" parent="1" name="cp866_bin">
       <Charset>cp866</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="44" parent="1" name="cp866_general_ci">
+    <collation id="39" parent="1" name="cp866_general_ci">
       <Charset>cp866</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="45" parent="1" name="cp932_bin">
+    <collation id="40" parent="1" name="cp932_bin">
       <Charset>cp932</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="46" parent="1" name="cp932_japanese_ci">
+    <collation id="41" parent="1" name="cp932_japanese_ci">
       <Charset>cp932</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="47" parent="1" name="dec8_bin">
+    <collation id="42" parent="1" name="dec8_bin">
       <Charset>dec8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="48" parent="1" name="dec8_swedish_ci">
+    <collation id="43" parent="1" name="dec8_swedish_ci">
       <Charset>dec8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="49" parent="1" name="eucjpms_bin">
+    <collation id="44" parent="1" name="eucjpms_bin">
       <Charset>eucjpms</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="50" parent="1" name="eucjpms_japanese_ci">
+    <collation id="45" parent="1" name="eucjpms_japanese_ci">
       <Charset>eucjpms</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="51" parent="1" name="euckr_bin">
+    <collation id="46" parent="1" name="euckr_bin">
       <Charset>euckr</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="52" parent="1" name="euckr_korean_ci">
+    <collation id="47" parent="1" name="euckr_korean_ci">
       <Charset>euckr</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="53" parent="1" name="gb2312_bin">
+    <collation id="48" parent="1" name="gb2312_bin">
       <Charset>gb2312</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="54" parent="1" name="gb2312_chinese_ci">
+    <collation id="49" parent="1" name="gb2312_chinese_ci">
       <Charset>gb2312</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="55" parent="1" name="gbk_bin">
+    <collation id="50" parent="1" name="gbk_bin">
       <Charset>gbk</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="56" parent="1" name="gbk_chinese_ci">
+    <collation id="51" parent="1" name="gbk_chinese_ci">
       <Charset>gbk</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="57" parent="1" name="geostd8_bin">
+    <collation id="52" parent="1" name="geostd8_bin">
       <Charset>geostd8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="58" parent="1" name="geostd8_general_ci">
+    <collation id="53" parent="1" name="geostd8_general_ci">
       <Charset>geostd8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="59" parent="1" name="greek_bin">
+    <collation id="54" parent="1" name="greek_bin">
       <Charset>greek</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="60" parent="1" name="greek_general_ci">
+    <collation id="55" parent="1" name="greek_general_ci">
       <Charset>greek</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="61" parent="1" name="hebrew_bin">
+    <collation id="56" parent="1" name="hebrew_bin">
       <Charset>hebrew</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="62" parent="1" name="hebrew_general_ci">
+    <collation id="57" parent="1" name="hebrew_general_ci">
       <Charset>hebrew</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="63" parent="1" name="hp8_bin">
+    <collation id="58" parent="1" name="hp8_bin">
       <Charset>hp8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="64" parent="1" name="hp8_english_ci">
+    <collation id="59" parent="1" name="hp8_english_ci">
       <Charset>hp8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="65" parent="1" name="keybcs2_bin">
+    <collation id="60" parent="1" name="keybcs2_bin">
       <Charset>keybcs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="66" parent="1" name="keybcs2_general_ci">
+    <collation id="61" parent="1" name="keybcs2_general_ci">
       <Charset>keybcs2</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="67" parent="1" name="koi8r_bin">
+    <collation id="62" parent="1" name="koi8r_bin">
       <Charset>koi8r</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="68" parent="1" name="koi8r_general_ci">
+    <collation id="63" parent="1" name="koi8r_general_ci">
       <Charset>koi8r</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="69" parent="1" name="koi8u_bin">
+    <collation id="64" parent="1" name="koi8u_bin">
       <Charset>koi8u</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="70" parent="1" name="koi8u_general_ci">
+    <collation id="65" parent="1" name="koi8u_general_ci">
       <Charset>koi8u</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="71" parent="1" name="latin1_bin">
+    <collation id="66" parent="1" name="latin1_bin">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="72" parent="1" name="latin1_danish_ci">
+    <collation id="67" parent="1" name="latin1_danish_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="73" parent="1" name="latin1_general_ci">
+    <collation id="68" parent="1" name="latin1_general_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="74" parent="1" name="latin1_general_cs">
+    <collation id="69" parent="1" name="latin1_general_cs">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="75" parent="1" name="latin1_german1_ci">
+    <collation id="70" parent="1" name="latin1_german1_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="76" parent="1" name="latin1_german2_ci">
+    <collation id="71" parent="1" name="latin1_german2_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="77" parent="1" name="latin1_spanish_ci">
+    <collation id="72" parent="1" name="latin1_spanish_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="78" parent="1" name="latin1_swedish_ci">
+    <collation id="73" parent="1" name="latin1_swedish_ci">
       <Charset>latin1</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="79" parent="1" name="latin2_bin">
+    <collation id="74" parent="1" name="latin2_bin">
       <Charset>latin2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="80" parent="1" name="latin2_croatian_ci">
+    <collation id="75" parent="1" name="latin2_croatian_ci">
       <Charset>latin2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="81" parent="1" name="latin2_czech_cs">
+    <collation id="76" parent="1" name="latin2_czech_cs">
       <Charset>latin2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="82" parent="1" name="latin2_general_ci">
+    <collation id="77" parent="1" name="latin2_general_ci">
       <Charset>latin2</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="83" parent="1" name="latin2_hungarian_ci">
+    <collation id="78" parent="1" name="latin2_hungarian_ci">
       <Charset>latin2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="84" parent="1" name="latin5_bin">
+    <collation id="79" parent="1" name="latin5_bin">
       <Charset>latin5</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="85" parent="1" name="latin5_turkish_ci">
+    <collation id="80" parent="1" name="latin5_turkish_ci">
       <Charset>latin5</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="86" parent="1" name="latin7_bin">
+    <collation id="81" parent="1" name="latin7_bin">
       <Charset>latin7</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="87" parent="1" name="latin7_estonian_cs">
+    <collation id="82" parent="1" name="latin7_estonian_cs">
       <Charset>latin7</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="88" parent="1" name="latin7_general_ci">
+    <collation id="83" parent="1" name="latin7_general_ci">
       <Charset>latin7</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="89" parent="1" name="latin7_general_cs">
+    <collation id="84" parent="1" name="latin7_general_cs">
       <Charset>latin7</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="90" parent="1" name="macce_bin">
+    <collation id="85" parent="1" name="macce_bin">
       <Charset>macce</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="91" parent="1" name="macce_general_ci">
+    <collation id="86" parent="1" name="macce_general_ci">
       <Charset>macce</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="92" parent="1" name="macroman_bin">
+    <collation id="87" parent="1" name="macroman_bin">
       <Charset>macroman</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="93" parent="1" name="macroman_general_ci">
+    <collation id="88" parent="1" name="macroman_general_ci">
       <Charset>macroman</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="94" parent="1" name="sjis_bin">
+    <collation id="89" parent="1" name="sjis_bin">
       <Charset>sjis</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="95" parent="1" name="sjis_japanese_ci">
+    <collation id="90" parent="1" name="sjis_japanese_ci">
       <Charset>sjis</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="96" parent="1" name="swe7_bin">
+    <collation id="91" parent="1" name="swe7_bin">
       <Charset>swe7</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="97" parent="1" name="swe7_swedish_ci">
+    <collation id="92" parent="1" name="swe7_swedish_ci">
       <Charset>swe7</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="98" parent="1" name="tis620_bin">
+    <collation id="93" parent="1" name="tis620_bin">
       <Charset>tis620</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="99" parent="1" name="tis620_thai_ci">
+    <collation id="94" parent="1" name="tis620_thai_ci">
       <Charset>tis620</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="100" parent="1" name="ucs2_bin">
+    <collation id="95" parent="1" name="ucs2_bin">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="101" parent="1" name="ucs2_czech_ci">
+    <collation id="96" parent="1" name="ucs2_czech_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="102" parent="1" name="ucs2_danish_ci">
+    <collation id="97" parent="1" name="ucs2_danish_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="103" parent="1" name="ucs2_esperanto_ci">
+    <collation id="98" parent="1" name="ucs2_esperanto_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="104" parent="1" name="ucs2_estonian_ci">
+    <collation id="99" parent="1" name="ucs2_estonian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="105" parent="1" name="ucs2_general_ci">
+    <collation id="100" parent="1" name="ucs2_general_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="106" parent="1" name="ucs2_general_mysql500_ci">
+    <collation id="101" parent="1" name="ucs2_general_mysql500_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="107" parent="1" name="ucs2_hungarian_ci">
+    <collation id="102" parent="1" name="ucs2_hungarian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="108" parent="1" name="ucs2_icelandic_ci">
+    <collation id="103" parent="1" name="ucs2_icelandic_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="109" parent="1" name="ucs2_latvian_ci">
+    <collation id="104" parent="1" name="ucs2_latvian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="110" parent="1" name="ucs2_lithuanian_ci">
+    <collation id="105" parent="1" name="ucs2_lithuanian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="111" parent="1" name="ucs2_persian_ci">
+    <collation id="106" parent="1" name="ucs2_persian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="112" parent="1" name="ucs2_polish_ci">
+    <collation id="107" parent="1" name="ucs2_polish_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="113" parent="1" name="ucs2_roman_ci">
+    <collation id="108" parent="1" name="ucs2_roman_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="114" parent="1" name="ucs2_romanian_ci">
+    <collation id="109" parent="1" name="ucs2_romanian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="115" parent="1" name="ucs2_slovak_ci">
+    <collation id="110" parent="1" name="ucs2_slovak_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="116" parent="1" name="ucs2_slovenian_ci">
+    <collation id="111" parent="1" name="ucs2_slovenian_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="117" parent="1" name="ucs2_spanish2_ci">
+    <collation id="112" parent="1" name="ucs2_spanish2_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="118" parent="1" name="ucs2_spanish_ci">
+    <collation id="113" parent="1" name="ucs2_spanish_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="119" parent="1" name="ucs2_swedish_ci">
+    <collation id="114" parent="1" name="ucs2_swedish_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="120" parent="1" name="ucs2_turkish_ci">
+    <collation id="115" parent="1" name="ucs2_turkish_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="121" parent="1" name="ucs2_unicode_ci">
+    <collation id="116" parent="1" name="ucs2_unicode_ci">
       <Charset>ucs2</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="122" parent="1" name="ujis_bin">
+    <collation id="117" parent="1" name="ujis_bin">
       <Charset>ujis</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="123" parent="1" name="ujis_japanese_ci">
+    <collation id="118" parent="1" name="ujis_japanese_ci">
       <Charset>ujis</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="124" parent="1" name="utf8_bin">
+    <collation id="119" parent="1" name="utf8_bin">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="125" parent="1" name="utf8_czech_ci">
+    <collation id="120" parent="1" name="utf8_czech_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="126" parent="1" name="utf8_danish_ci">
+    <collation id="121" parent="1" name="utf8_danish_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="127" parent="1" name="utf8_esperanto_ci">
+    <collation id="122" parent="1" name="utf8_esperanto_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="128" parent="1" name="utf8_estonian_ci">
+    <collation id="123" parent="1" name="utf8_estonian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="129" parent="1" name="utf8_general_ci">
+    <collation id="124" parent="1" name="utf8_general_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
     </collation>
-    <collation id="130" parent="1" name="utf8_general_mysql500_ci">
+    <collation id="125" parent="1" name="utf8_general_mysql500_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="131" parent="1" name="utf8_hungarian_ci">
+    <collation id="126" parent="1" name="utf8_hungarian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="132" parent="1" name="utf8_icelandic_ci">
+    <collation id="127" parent="1" name="utf8_icelandic_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="133" parent="1" name="utf8_latvian_ci">
+    <collation id="128" parent="1" name="utf8_latvian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="134" parent="1" name="utf8_lithuanian_ci">
+    <collation id="129" parent="1" name="utf8_lithuanian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="135" parent="1" name="utf8_persian_ci">
+    <collation id="130" parent="1" name="utf8_persian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="136" parent="1" name="utf8_polish_ci">
+    <collation id="131" parent="1" name="utf8_polish_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="137" parent="1" name="utf8_roman_ci">
+    <collation id="132" parent="1" name="utf8_roman_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="138" parent="1" name="utf8_romanian_ci">
+    <collation id="133" parent="1" name="utf8_romanian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="139" parent="1" name="utf8_slovak_ci">
+    <collation id="134" parent="1" name="utf8_slovak_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="140" parent="1" name="utf8_slovenian_ci">
+    <collation id="135" parent="1" name="utf8_slovenian_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="141" parent="1" name="utf8_spanish2_ci">
+    <collation id="136" parent="1" name="utf8_spanish2_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="142" parent="1" name="utf8_spanish_ci">
+    <collation id="137" parent="1" name="utf8_spanish_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="143" parent="1" name="utf8_swedish_ci">
+    <collation id="138" parent="1" name="utf8_swedish_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="144" parent="1" name="utf8_turkish_ci">
+    <collation id="139" parent="1" name="utf8_turkish_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <collation id="145" parent="1" name="utf8_unicode_ci">
+    <collation id="140" parent="1" name="utf8_unicode_ci">
       <Charset>utf8</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="146" parent="2" name="tb_airport">
+    <table id="141" parent="2" name="tb_airport">
       <Comment>机场</Comment>
     </table>
-    <table id="147" parent="2" name="tb_airroute">
+    <table id="142" parent="2" name="tb_airroute">
       <Comment>航线</Comment>
     </table>
-    <table id="148" parent="2" name="tb_city">
+    <table id="143" parent="2" name="tb_city">
       <Comment>城市</Comment>
     </table>
-    <table id="149" parent="2" name="tb_flight">
+    <table id="144" parent="2" name="tb_flight">
       <Comment>执飞航班</Comment>
     </table>
-    <table id="150" parent="2" name="tb_flights">
+    <table id="145" parent="2" name="tb_flights">
       <Comment>航班</Comment>
     </table>
-    <table id="151" parent="2" name="tb_mdsp">
+    <table id="146" parent="2" name="tb_mdsp">
       <Comment>机型-舱位</Comment>
     </table>
-    <table id="152" parent="2" name="tb_model">
+    <table id="147" parent="2" name="tb_model">
       <Comment>机型</Comment>
     </table>
-    <table id="153" parent="2" name="tb_order">
+    <table id="148" parent="2" name="tb_order">
       <Comment>订单</Comment>
     </table>
-    <table id="154" parent="2" name="tb_passenger">
+    <table id="149" parent="2" name="tb_passenger">
       <Comment>乘机人信息</Comment>
     </table>
-    <table id="155" parent="2" name="tb_rule">
+    <table id="150" parent="2" name="tb_rule">
       <Comment>退改规则</Comment>
     </table>
-    <table id="156" parent="2" name="tb_space">
+    <table id="151" parent="2" name="tb_space">
       <Comment>舱位</Comment>
     </table>
-    <table id="157" parent="2" name="tb_ticket">
+    <table id="152" parent="2" name="tb_ticket">
       <Comment>机票</Comment>
     </table>
-    <table id="158" parent="2" name="tb_tickets">
+    <table id="153" parent="2" name="tb_tickets">
       <Comment>航班售票</Comment>
     </table>
-    <table id="159" parent="2" name="tb_user">
+    <table id="154" parent="2" name="tb_user">
       <Comment>用户</Comment>
     </table>
-    <table id="160" parent="2" name="tb_userpass">
+    <table id="155" parent="2" name="tb_userpass">
       <Comment>常用乘机人</Comment>
     </table>
-    <column id="161" parent="146" name="airport_id">
+    <view id="156" parent="2" name="v_airroute_airport_city">
+      <SourceTextLength>650</SourceTextLength>
+      <Definer>root@localhost</Definer>
+    </view>
+    <column id="157" parent="141" name="airport_id">
       <Position>1</Position>
       <Comment>机场编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -623,34 +612,34 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="162" parent="146" name="city_id">
+    <column id="158" parent="141" name="city_id">
       <Position>2</Position>
       <Comment>城市编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="163" parent="146" name="airport_name">
+    <column id="159" parent="141" name="airport_name">
       <Position>3</Position>
       <Comment>机场名称</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="164" parent="146" name="FK_Relationship_1">
+    <index id="160" parent="141" name="FK_Relationship_1">
       <ColNames>city_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="165" parent="146" name="PRIMARY">
+    <key id="161" parent="141" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>airport_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="166" parent="146" name="FK_Relationship_1">
+    <foreign-key id="162" parent="141" name="FK_Relationship_1">
       <ColNames>city_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_city</RefTableName>
       <RefColNames>city_id</RefColNames>
     </foreign-key>
-    <column id="167" parent="147" name="airroute_id">
+    <column id="163" parent="142" name="airroute_id">
       <Position>1</Position>
       <Comment>航线编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -658,50 +647,50 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="168" parent="147" name="airport_up">
+    <column id="164" parent="142" name="airport_up">
       <Position>2</Position>
       <Comment>起飞机场</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="169" parent="147" name="airport_down">
+    <column id="165" parent="142" name="airport_down">
       <Position>3</Position>
       <Comment>终点机场</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="170" parent="147" name="airroute_length">
+    <column id="166" parent="142" name="airroute_length">
       <Position>4</Position>
       <Comment>航线长度（公里）</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="171" parent="147" name="FK_Relationship_3">
+    <index id="167" parent="142" name="FK_Relationship_3">
       <ColNames>airport_up</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="172" parent="147" name="FK_Relationship_2">
+    <index id="168" parent="142" name="FK_Relationship_2">
       <ColNames>airport_down</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="173" parent="147" name="PRIMARY">
+    <key id="169" parent="142" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>airroute_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="174" parent="147" name="FK_Relationship_3">
+    <foreign-key id="170" parent="142" name="FK_Relationship_3">
       <ColNames>airport_up</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_airport</RefTableName>
       <RefColNames>airport_id</RefColNames>
     </foreign-key>
-    <foreign-key id="175" parent="147" name="FK_Relationship_2">
+    <foreign-key id="171" parent="142" name="FK_Relationship_2">
       <ColNames>airport_down</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_airport</RefTableName>
       <RefColNames>airport_id</RefColNames>
     </foreign-key>
-    <column id="176" parent="148" name="city_id">
+    <column id="172" parent="143" name="city_id">
       <Position>1</Position>
       <Comment>城市编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -709,198 +698,213 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="177" parent="148" name="city_name">
+    <column id="173" parent="143" name="city_name">
       <Position>2</Position>
       <Comment>城市名称</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="178" parent="148" name="PRIMARY">
+    <column id="174" parent="143" name="city_alp">
+      <Position>3</Position>
+      <DataType>char(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="175" parent="143" name="unique_name">
+      <ColNames>city_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="176" parent="143" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>city_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="179" parent="149" name="flight_id">
+    <key id="177" parent="143" name="unique_name">
+      <ColNames>city_name</ColNames>
+      <UnderlyingIndexName>unique_name</UnderlyingIndexName>
+    </key>
+    <column id="178" parent="144" name="flight_id">
       <Position>1</Position>
       <Comment>执飞航班编号</Comment>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="180" parent="149" name="flights_id">
+    <column id="179" parent="144" name="flights_id">
       <Position>2</Position>
       <Comment>航班号</Comment>
       <DataType>char(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="181" parent="149" name="flight_date">
+    <column id="180" parent="144" name="flight_date">
       <Position>3</Position>
       <Comment>执飞日期</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="182" parent="149" name="flight_state">
+    <column id="181" parent="144" name="flight_state">
       <Position>4</Position>
       <Comment>航班状态</Comment>
       <DataType>char(3)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="183" parent="149" name="flight_info">
+    <column id="182" parent="144" name="flight_info">
       <Position>5</Position>
       <Comment>航班信息</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="184" parent="149" name="pre_upTime">
+    <column id="183" parent="144" name="pre_upTime">
       <Position>6</Position>
       <Comment>预计起飞时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="185" parent="149" name="pre_downTime">
+    <column id="184" parent="144" name="pre_downTime">
       <Position>7</Position>
       <Comment>预计到达时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="186" parent="149" name="act_upTime">
+    <column id="185" parent="144" name="act_upTime">
       <Position>8</Position>
       <Comment>实际起飞时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="187" parent="149" name="act_downTime">
+    <column id="186" parent="144" name="act_downTime">
       <Position>9</Position>
       <Comment>实际到达时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="188" parent="149" name="FK_Relationship_5">
+    <index id="187" parent="144" name="FK_Relationship_5">
       <ColNames>flights_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="189" parent="149" name="PRIMARY">
+    <key id="188" parent="144" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>flight_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="190" parent="149" name="FK_Relationship_5">
+    <foreign-key id="189" parent="144" name="FK_Relationship_5">
       <ColNames>flights_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_flights</RefTableName>
       <RefColNames>flights_id</RefColNames>
     </foreign-key>
-    <column id="191" parent="150" name="flights_id">
+    <column id="190" parent="145" name="flights_id">
       <Position>1</Position>
       <Comment>航班号</Comment>
       <DataType>char(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="192" parent="150" name="model_id">
+    <column id="191" parent="145" name="model_id">
       <Position>2</Position>
       <Comment>机型</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="193" parent="150" name="airroute_id">
+    <column id="192" parent="145" name="airroute_id">
       <Position>3</Position>
       <Comment>航线</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="194" parent="150" name="flights_meals">
+    <column id="193" parent="145" name="flights_meals">
       <Position>4</Position>
       <Comment>餐食</Comment>
       <DataType>char(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="195" parent="150" name="plan_upTime">
+    <column id="194" parent="145" name="plan_upTime">
       <Position>5</Position>
       <Comment>计划起飞时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="196" parent="150" name="plan_downTime">
+    <column id="195" parent="145" name="plan_downTime">
       <Position>6</Position>
       <Comment>计划到达时间</Comment>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="197" parent="150" name="plan_time">
+    <column id="196" parent="145" name="plan_time">
       <Position>7</Position>
       <Comment>计划花费时间</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="198" parent="150" name="FK_Relationship_6">
+    <index id="197" parent="145" name="FK_Relationship_6">
       <ColNames>model_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="199" parent="150" name="FK_Relationship_4">
+    <index id="198" parent="145" name="FK_Relationship_4">
       <ColNames>airroute_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="200" parent="150" name="PRIMARY">
+    <key id="199" parent="145" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>flights_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="201" parent="150" name="FK_Relationship_6">
+    <foreign-key id="200" parent="145" name="FK_Relationship_6">
       <ColNames>model_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_model</RefTableName>
       <RefColNames>model_id</RefColNames>
     </foreign-key>
-    <foreign-key id="202" parent="150" name="FK_Relationship_4">
+    <foreign-key id="201" parent="145" name="FK_Relationship_4">
       <ColNames>airroute_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_airroute</RefTableName>
       <RefColNames>airroute_id</RefColNames>
     </foreign-key>
-    <column id="203" parent="151" name="model_id">
+    <column id="202" parent="146" name="model_id">
       <Position>1</Position>
       <Comment>机型</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="204" parent="151" name="space_id">
+    <column id="203" parent="146" name="space_id">
       <Position>2</Position>
       <Comment>舱位</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="205" parent="151" name="nums">
+    <column id="204" parent="146" name="nums">
       <Position>3</Position>
       <Comment>数量</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="206" parent="151" name="FK_tb_mdsp2">
+    <index id="205" parent="146" name="FK_tb_mdsp2">
       <ColNames>space_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="207" parent="151" name="PRIMARY">
+    <key id="206" parent="146" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>model_id
 space_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="208" parent="151" name="FK_tb_mdsp">
+    <foreign-key id="207" parent="146" name="FK_tb_mdsp">
       <ColNames>model_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_model</RefTableName>
       <RefColNames>model_id</RefColNames>
     </foreign-key>
-    <foreign-key id="209" parent="151" name="FK_tb_mdsp2">
+    <foreign-key id="208" parent="146" name="FK_tb_mdsp2">
       <ColNames>space_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_space</RefTableName>
       <RefColNames>space_id</RefColNames>
     </foreign-key>
-    <column id="210" parent="152" name="model_id">
+    <column id="209" parent="147" name="model_id">
       <Position>1</Position>
       <Comment>机型编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -908,106 +912,106 @@ space_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="211" parent="152" name="model_name">
+    <column id="210" parent="147" name="model_name">
       <Position>2</Position>
       <Comment>机型名称</Comment>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="212" parent="152" name="model_speed">
+    <column id="211" parent="147" name="model_speed">
       <Position>3</Position>
       <Comment>速度（公里/小时）</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="213" parent="152" name="PRIMARY">
+    <key id="212" parent="147" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>model_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="214" parent="153" name="order_id">
+    <column id="213" parent="148" name="order_id">
       <Position>1</Position>
       <Comment>订单编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="153" name="user_id">
+    <column id="214" parent="148" name="user_id">
       <Position>2</Position>
       <Comment>用户编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="153" name="order_price">
+    <column id="215" parent="148" name="order_price">
       <Position>3</Position>
       <Comment>价格</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="217" parent="153" name="order_sureTime">
+    <column id="216" parent="148" name="order_sureTime">
       <Position>4</Position>
       <Comment>确认时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="218" parent="153" name="order_payTime">
+    <column id="217" parent="148" name="order_payTime">
       <Position>5</Position>
       <Comment>支付时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="153" name="order_payType">
+    <column id="218" parent="148" name="order_payType">
       <Position>6</Position>
       <Comment>支付方式</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="153" name="order_nums">
+    <column id="219" parent="148" name="order_nums">
       <Position>7</Position>
       <Comment>乘客人数量</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="221" parent="153" name="order_state">
+    <column id="220" parent="148" name="order_state">
       <Position>8</Position>
       <Comment>订单状态</Comment>
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="222" parent="153" name="order_contactName">
+    <column id="221" parent="148" name="order_contactName">
       <Position>9</Position>
       <Comment>联系人姓名</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="223" parent="153" name="order_contactTel">
+    <column id="222" parent="148" name="order_contactTel">
       <Position>10</Position>
       <Comment>联系人手机号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="224" parent="153" name="order_contactEmail">
+    <column id="223" parent="148" name="order_contactEmail">
       <Position>11</Position>
       <Comment>联系人邮箱</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="225" parent="153" name="FK_Relationship_10">
+    <index id="224" parent="148" name="FK_Relationship_10">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="226" parent="153" name="PRIMARY">
+    <key id="225" parent="148" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>order_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="227" parent="153" name="FK_Relationship_10">
+    <foreign-key id="226" parent="148" name="FK_Relationship_10">
       <ColNames>user_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="228" parent="154" name="passenger_id">
+    <column id="227" parent="149" name="passenger_id">
       <Position>1</Position>
       <Comment>乘客人编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1015,237 +1019,241 @@ space_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="154" name="ticket_id">
+    <column id="228" parent="149" name="ticket_id">
       <Position>2</Position>
       <Comment>机票编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="230" parent="154" name="passenger_name">
+    <column id="229" parent="149" name="passenger_name">
       <Position>3</Position>
       <Comment>乘客人姓名</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="154" name="passenger_cerid">
+    <column id="230" parent="149" name="passenger_cerid">
       <Position>4</Position>
       <Comment>证件号</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="154" name="passenger_certype">
+    <column id="231" parent="149" name="passenger_certype">
       <Position>5</Position>
-      <Comment>证件类型</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="154" name="passenger_tel">
+    <column id="232" parent="149" name="passenger_tel">
       <Position>6</Position>
       <Comment>乘客人手机号码</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="154" name="passenger_type">
+    <column id="233" parent="149" name="passenger_type">
       <Position>7</Position>
       <Comment>乘客类型</Comment>
       <DataType>char(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="235" parent="154" name="FK_Relationship_12">
+    <index id="234" parent="149" name="FK_Relationship_12">
       <ColNames>ticket_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="236" parent="154" name="PRIMARY">
+    <key id="235" parent="149" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>passenger_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="237" parent="154" name="FK_Relationship_12">
+    <foreign-key id="236" parent="149" name="FK_Relationship_12">
       <ColNames>ticket_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_ticket</RefTableName>
       <RefColNames>ticket_id</RefColNames>
     </foreign-key>
-    <column id="238" parent="155" name="space_id">
+    <column id="237" parent="150" name="space_id">
       <Position>1</Position>
       <Comment>舱位编号</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="155" name="rule_type">
+    <column id="238" parent="150" name="rule_type">
       <Position>2</Position>
       <Comment>退改类型</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="155" name="rule_refund">
+    <column id="239" parent="150" name="rule_refund">
       <Position>3</Position>
       <Comment>退票手续费率</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="155" name="rule_change">
+    <column id="240" parent="150" name="rule_change">
       <Position>4</Position>
       <Comment>改票手续费率</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="242" parent="155" name="PRIMARY">
+    <key id="241" parent="150" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>space_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="243" parent="155" name="FK_Relationship_7">
+    <foreign-key id="242" parent="150" name="FK_Relationship_7">
       <ColNames>space_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_space</RefTableName>
       <RefColNames>space_id</RefColNames>
     </foreign-key>
-    <column id="244" parent="156" name="space_id">
+    <column id="243" parent="151" name="space_id">
       <Position>1</Position>
       <Comment>舱位编号</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="156" name="space_name">
+    <column id="244" parent="151" name="space_name">
       <Position>2</Position>
       <Comment>舱位名称</Comment>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="156" name="baggage_allowance">
+    <column id="245" parent="151" name="baggage_allowance">
       <Position>3</Position>
       <Comment>行李限额</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="247" parent="156" name="PRIMARY">
+    <key id="246" parent="151" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>space_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="248" parent="157" name="ticket_id">
+    <column id="247" parent="152" name="ticket_id">
       <Position>1</Position>
       <Comment>机票编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="157" name="tickets_id">
+    <column id="248" parent="152" name="tickets_id">
       <Position>2</Position>
       <Comment>售票编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="157" name="order_id">
+    <column id="249" parent="152" name="order_id">
       <Position>3</Position>
       <Comment>订单编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="157" name="ticket_price">
+    <column id="250" parent="152" name="ticket_price">
       <Position>4</Position>
       <Comment>票价</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="157" name="fuel_surcharge">
+    <column id="251" parent="152" name="fuel_surcharge">
       <Position>5</Position>
       <Comment>机场建设费</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="157" name="airport_fee">
+    <column id="252" parent="152" name="airport_fee">
       <Position>6</Position>
       <Comment>航空保险费</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="254" parent="157" name="FK_Relationship_11">
+    <column id="253" parent="152" name="ticket_seat">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="254" parent="152" name="FK_Relationship_11">
       <ColNames>tickets_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="255" parent="157" name="FK_Relationship_14">
+    <index id="255" parent="152" name="FK_Relationship_14">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="256" parent="157" name="PRIMARY">
+    <key id="256" parent="152" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ticket_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="257" parent="157" name="FK_Relationship_11">
+    <foreign-key id="257" parent="152" name="FK_Relationship_11">
       <ColNames>tickets_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_tickets</RefTableName>
       <RefColNames>tickets_id</RefColNames>
     </foreign-key>
-    <foreign-key id="258" parent="157" name="FK_Relationship_14">
+    <foreign-key id="258" parent="152" name="FK_Relationship_14">
       <ColNames>order_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_order</RefTableName>
       <RefColNames>order_id</RefColNames>
     </foreign-key>
-    <column id="259" parent="158" name="tickets_id">
+    <column id="259" parent="153" name="tickets_id">
       <Position>1</Position>
       <Comment>售票编号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="158" name="space_id">
+    <column id="260" parent="153" name="space_id">
       <Position>2</Position>
       <Comment>舱位编号</Comment>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="158" name="flight_id">
+    <column id="261" parent="153" name="flight_id">
       <Position>3</Position>
       <Comment>执飞航班编号</Comment>
       <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="158" name="tickets_price">
+    <column id="262" parent="153" name="tickets_price">
       <Position>4</Position>
       <Comment>票价</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="158" name="tickets_nums">
+    <column id="263" parent="153" name="tickets_nums">
       <Position>5</Position>
       <Comment>余票数</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="264" parent="158" name="FK_Relationship_9">
+    <index id="264" parent="153" name="FK_Relationship_9">
       <ColNames>space_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="265" parent="158" name="FK_Relationship_8">
+    <index id="265" parent="153" name="FK_Relationship_8">
       <ColNames>flight_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="266" parent="158" name="PRIMARY">
+    <key id="266" parent="153" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>tickets_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="267" parent="158" name="FK_Relationship_9">
+    <foreign-key id="267" parent="153" name="FK_Relationship_9">
       <ColNames>space_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_space</RefTableName>
       <RefColNames>space_id</RefColNames>
     </foreign-key>
-    <foreign-key id="268" parent="158" name="FK_Relationship_8">
+    <foreign-key id="268" parent="153" name="FK_Relationship_8">
       <ColNames>flight_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_flight</RefTableName>
       <RefColNames>flight_id</RefColNames>
     </foreign-key>
-    <column id="269" parent="159" name="user_id">
+    <column id="269" parent="154" name="user_id">
       <Position>1</Position>
       <Comment>用户编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1253,74 +1261,73 @@ space_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="159" name="user_tel">
+    <column id="270" parent="154" name="user_tel">
       <Position>2</Position>
       <Comment>手机号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="159" name="user_cerid">
+    <column id="271" parent="154" name="user_cerid">
       <Position>3</Position>
       <Comment>证件号</Comment>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="159" name="user_certype">
+    <column id="272" parent="154" name="user_certype">
       <Position>4</Position>
-      <Comment>证件类型</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="159" name="user_chname">
+    <column id="273" parent="154" name="user_chname">
       <Position>5</Position>
       <Comment>中文名</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="159" name="user_enname">
+    <column id="274" parent="154" name="user_enname">
       <Position>6</Position>
       <Comment>英文名</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="159" name="user_salt">
+    <column id="275" parent="154" name="user_salt">
       <Position>7</Position>
       <Comment>盐值</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="159" name="user_pass">
+    <column id="276" parent="154" name="user_pass">
       <Position>8</Position>
       <Comment>密码</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="277" parent="159" name="user_tel">
+    <index id="277" parent="154" name="user_tel">
       <ColNames>user_tel</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="278" parent="159" name="user_cerid">
+    <index id="278" parent="154" name="user_cerid">
       <ColNames>user_cerid</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="279" parent="159" name="PRIMARY">
+    <key id="279" parent="154" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="280" parent="159" name="user_tel">
+    <key id="280" parent="154" name="user_tel">
       <ColNames>user_tel</ColNames>
       <UnderlyingIndexName>user_tel</UnderlyingIndexName>
     </key>
-    <key id="281" parent="159" name="user_cerid">
+    <key id="281" parent="154" name="user_cerid">
       <ColNames>user_cerid</ColNames>
       <UnderlyingIndexName>user_cerid</UnderlyingIndexName>
     </key>
-    <column id="282" parent="160" name="userpass_id">
+    <column id="282" parent="155" name="userpass_id">
       <Position>1</Position>
       <Comment>常用乘机人编号</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1328,56 +1335,86 @@ space_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="160" name="user_id">
+    <column id="283" parent="155" name="user_id">
       <Position>2</Position>
       <Comment>用户编号</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="160" name="userpass_name">
+    <column id="284" parent="155" name="userpass_name">
       <Position>3</Position>
       <Comment>乘机人姓名</Comment>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="160" name="userpass_cerid">
+    <column id="285" parent="155" name="userpass_cerid">
       <Position>4</Position>
       <Comment>乘机人证件号</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="160" name="userpass_certype">
+    <column id="286" parent="155" name="userpass_certype">
       <Position>5</Position>
-      <Comment>乘机人证件类型</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="160" name="userpass_tel">
+    <column id="287" parent="155" name="userpass_tel">
       <Position>6</Position>
       <Comment>乘机人手机号</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="160" name="userpass_type">
+    <column id="288" parent="155" name="userpass_type">
       <Position>7</Position>
       <Comment>乘机人类型</Comment>
       <DataType>char(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="289" parent="160" name="FK_Relationship_13">
+    <index id="289" parent="155" name="FK_Relationship_13">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="290" parent="160" name="PRIMARY">
+    <key id="290" parent="155" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userpass_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="291" parent="160" name="FK_Relationship_13">
+    <foreign-key id="291" parent="155" name="FK_Relationship_13">
       <ColNames>user_id</ColNames>
       <RefSchemaName>air_system</RefSchemaName>
       <RefTableName>tb_user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
+    <column id="292" parent="156" name="airroute_id">
+      <Position>1</Position>
+      <Comment>航线编号</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="293" parent="156" name="airportUpName">
+      <Position>2</Position>
+      <Comment>机场名称</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="294" parent="156" name="airportDownName">
+      <Position>3</Position>
+      <Comment>机场名称</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="295" parent="156" name="cityStartName">
+      <Position>4</Position>
+      <Comment>城市名称</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="296" parent="156" name="cityEndName">
+      <Position>5</Position>
+      <Comment>城市名称</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="297" parent="156" name="airroute_length">
+      <Position>6</Position>
+      <Comment>航线长度（公里）</Comment>
+      <DataType>smallint(6)|0s</DataType>
+    </column>
   </database-model>
 </dataSource>
