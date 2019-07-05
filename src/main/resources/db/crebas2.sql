@@ -342,3 +342,12 @@ alter table tb_user
 
 alter table tb_userpass
     modify column userpass_certype varchar(20) ;
+
+/*Ìí¼ÓÎ¨Ò»ÌØÊâÊıtable*/
+drop table tb_number;
+create table tb_number
+(
+    ticket_relyOnId   bigint primary key not null comment '»úÆ±±àºÅÒÀÀµid',
+    ticket_relyOnNumber bigint not null comment '»úÆ±±àºÅÒÀÀµÊı'
+);
+insert into tb_number values (0,0);

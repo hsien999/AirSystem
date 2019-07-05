@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.TicketsMapper">
+
+<!--    <insert id="insertTicket" parameterType = "cn.wyx.entity.Order">-->
+<!--        insert into tb_ticket (ticket_id, tickets_id, order_id, ticket_price, fuel_surcharge, airport_fee, ticket_seat)-->
+<!--        values (#{ticketId},#{ticketsId},#{orderId},#{ticketPrice},#{fuelSurcharge},#{airportFee},#{ticketSeat});-->
+<!--    </insert>-->
+    <select id="findByTicketsId" parameterType="String" resultType="cn.wyx.entity.Tickets">
+        select * from tb_tickets
+        where tickets_id = #{ticketsId};
+    </select>
+
+    <update id="decreaseTicketsNum">
+        update tb_tickets
+        set tb_tickets.tickets_nums = tb_tickets.tickets_nums - #{subNum}
+        where tb_tickets.tickets_id = #{ticketsId};
+    </update>
+
+</mapper>

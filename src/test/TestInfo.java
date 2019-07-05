@@ -59,7 +59,7 @@ public class TestInfo {
     @Test
     public void selectOrder()
     {
-        Long userId = 2L;
+        Long userId = 1L;
         List<InfoOfOrder> infoOfOrders = this.orderService.findAllInfoOfOrderById(userId);
         System.out.println(infoOfOrders);
     }

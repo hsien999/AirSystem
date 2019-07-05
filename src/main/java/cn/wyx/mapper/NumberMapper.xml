@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.NumberMapper">
+
+    <select id="getTicketRelyOnNumber" resultType="java.lang.Long">
+        select ticket_relyOnNumber from tb_number where ticket_relyOnId = 0;
+    </select>
+
+    <update id = "increaseTicketRelyOnNumber" >
+        update tb_number set ticket_relyOnNumber = ticket_relyOnNumber + 1 where ticket_relyOnId = 0;
+    </update>
+
+    <update id = "setTicketRelyOnNumberZero" >
+        update tb_number set ticket_relyOnNumber = 0 where ticket_relyOnId = 0;
+    </update>
+
+
+</mapper>
