@@ -333,3 +333,12 @@ alter table tb_city
 
 alter table tb_ticket
     add column ticket_seat int;/*Ìí¼Ó×ùÎ»ºÅ*/
+
+alter table tb_passenger
+    modify column passenger_certype varchar(20) ;
+
+alter table tb_user
+    modify column user_certype varchar(20) ;
+
+alter table tb_userpass
+    modify column userpass_certype varchar(20) ;

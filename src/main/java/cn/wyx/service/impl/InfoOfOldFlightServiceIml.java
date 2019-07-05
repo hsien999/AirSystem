@@ -4,6 +4,7 @@ import cn.wyx.entity.InfoOfOldFlight;
 import cn.wyx.service.InfoOfOldFlightService;
 import cn.wyx.mapper.InfoOfOldFlightMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @Date: 2019/7/4 16:15
  * @Version 1.0
  */
+@Service
 public class InfoOfOldFlightServiceIml implements InfoOfOldFlightService {
 
 

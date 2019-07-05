@@ -1,6 +1,9 @@
 insert into tb_city (city_name) values ('北京'),('上海'),('厦门') ;
 select * from tb_city ;
 delete from tb_city where 1=1;
+update tb_city set city_alp = 'B' where city_name = '北京';
+update tb_city set city_alp = 'S' where city_name = '上海';
+update tb_city set city_alp = 'X' where city_name = '厦门';
 
 
 insert into tb_airport(city_id, airport_name) values (9,'北京机场T1'),(10,'上海机场T1'),(11,'厦门机场T2'),(9,'北京机场T2') ;
@@ -69,24 +72,42 @@ values ('TK1','X','1',100,20),('TK9','X','2',100,20),('TK17','Y','9',100,20),
        ('TK7','X','1',100,20),('TK15','X','7',100,20),('TK23','X','6',100,20),
        ('TK8','X','1',100,20),('TK16','Y','8',100,20),('TK24','X','7',100,20);
 select * from tb_tickets;
-
 select * from v_airroute_airport_city;
 
 
 
 
-select tf.flight_id,tf.flights_id,flight_date,model_name,model_speed,flights_meals,airroute_length,
-       airportUpName,airportDownName,cityStartName,cityEndName,pre_upTime,pre_downTime,
-       plan_time,tickets_id,tr.space_id,space_Name,tickets_price,tickets_nums,nums
-from v_airroute_airport_city left join tb_flights on v_airroute_airport_city.airroute_id = tb_flights.airroute_id
-                             left join tb_flight tf on tb_flights.flights_id = tf.flights_id
-                             left join tb_tickets tt on tf.flight_id = tt.flight_id
-                             left join tb_space ts on tt.space_id = ts.space_id
-                             left join tb_rule tr on ts.space_id = tr.space_id
-                             left join tb_mdsp tm on ts.space_id = tm.space_id
-                             left join tb_model t on tb_flights.model_id = t.model_id
-where cityStartName = '北京'
-  and cityEndName = '上海'
-  and flight_date = '2019-01-01';
+insert into tb_user (user_tel, user_cerid, user_certype, user_chname, user_enname, user_salt, user_pass)
+values ('18106932995','360600000000000000','居民身份证','蔡志涛','CZT','ssssssss','********'),
+       ('18107017785','360600000000000001','居民身份证','王永贤','WYX','ssssssss','********');
+select * from tb_user;
+
+
+
+
+insert into tb_order (order_id, user_id, order_price, order_sureTime, order_payTime, order_payType, order_nums, order_state, order_contactName, order_contactTel, order_contactEmail)
+values ('o1',1,100,'2019-01-01 12:00','2019-01-01 13:00','支付宝',2,'出票','蔡志涛','18106932995','100@qq.com'),
+       ('o2',2,100,'2019-01-01 12:00','2019-01-01 13:00','微信',2,'出票','王永贤','18107017785','101@qq.com');
+select * from tb_order;
+
+
+
+
+insert into tb_ticket (ticket_id, tickets_id, order_id, ticket_price, fuel_surcharge, airport_fee, ticket_seat)
+values ('ticket1','TK1','o1',50,20,20,25),
+       ('ticket2','TK2','o1',50,20,20,26),
+       ('ticket3','TK1','o2',50,20,20,28),
+       ('ticket4','TK2','o2',50,20,20,27);
+select * from tb_ticket;
+
+
+insert into tb_passenger (ticket_id, passenger_name, passenger_cerid, passenger_certype, passenger_tel, passenger_type)
+values ('ticket1','蔡志涛','居民身份证','360600000000000000','18106932995','成人'),
+       ('ticket2','王永贤','居民身份证','360600000000000001','18107017785','成人'),
+       ('ticket3','蔡志涛','居民身份证','360600000000000000','18106932995','成人'),
+       ('ticket4','王永贤','居民身份证','360600000000000001','18107017785','成人');
+select * from tb_passenger;
+
+
 
 

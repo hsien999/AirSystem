@@ -23,7 +23,7 @@ public class InfoOfFlightServiceIml implements InfoOfFlightService {
     private InfoOfFlightMapper infoOfFlightMapper;
 
     @Override
-    public List findAll() {
+    public List<InfoOfFlight> findAll() {
         return null;
     }
 

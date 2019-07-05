@@ -1,6 +1,5 @@
-import cn.wyx.entity.InfoOfOldFlight;
-import cn.wyx.entity.InfoOfTickets;
-import cn.wyx.service.InfoOfFlightService;
+import cn.wyx.entity.*;
+import cn.wyx.service.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +21,13 @@ public class TestInfo {
 
     @Autowired
     private InfoOfFlightService infoOfFlightService;
+    @Autowired
+    private InfoOfOldFlightService infoOfOldFlightService;
+    @Autowired
+    private OrderService orderService;
 
     @Test
-    public void select()
+    public void selectFlights()
     {
         String startCityId = "北京";
         String endCityId = "上海";
@@ -43,14 +46,22 @@ public class TestInfo {
 
 
     @Test
-    public void selectOld()
+    public void selectOldFlights()
     {
         String startCityId = "北京";
         String endCityId = "上海";
         Date date = Date.valueOf("2019-1-1");
 
-        List<InfoOfOldFlight> infoOfOldFlights = this.infoOfFlightService.findOldFlightByCityDate(startCityId,endCityId,date);
+        List<InfoOfOldFlight> infoOfOldFlights = this.infoOfOldFlightService.findOldFlightByCityDate(startCityId,endCityId,date);
         System.out.println(infoOfOldFlights);
+    }
+
+    @Test
+    public void selectOrder()
+    {
+        Long userId = 2L;
+        List<InfoOfOrder> infoOfOrders = this.orderService.findAllInfoOfOrderById(userId);
+        System.out.println(infoOfOrders);
     }
 
 }
