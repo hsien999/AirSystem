@@ -29,53 +29,77 @@
                     <el-step title="联系信息"></el-step>
                     <el-step title="注册成功"></el-step>
                 </el-steps>
-                <el-form :model="user" :rules="rules" ref="baseInfoForm" label-width="150px"
-                         class="inputForm">
+
+                <!-- 表单1-->
+                <el-form :model="userInfo1" :rules="rules1" ref="userInfo1" label-width="150px" status-icon
+                         class="inputForm" v-if="activeStep==0">
                     <el-form-item label="中文姓名" prop="userChname" required>
-                        <el-input v-model="user.userChname"></el-input>
+                        <el-input v-model="userInfo1.userChname"></el-input>
                     </el-form-item>
                     <el-form-item label="拼音/英文姓名" prop="userEnname" required>
-                        <el-input v-model="user.userEnname"></el-input>
+                        <el-input v-model="userInfo1.userEnname"></el-input>
                     </el-form-item>
                     <el-form-item label="身份证件" required>
-                        <el-col :span="8">
-                            <el-form-item prop="cerType">
-                                <el-select placeholder="请选择证件类型" v-model="cerType">
-                                    <el-option v-for="item in types"
-                                               :key="item.value"
-                                               :label="item.label"
-                                               :value="item.value"></el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                        <el-col :span="2" style="width: 20px">&nbsp;&nbsp;-&nbsp;&nbsp;</el-col>
-                        <el-col :span="15">
-                            <el-form-item prop="userCerid">
-                                <el-input v-model="user.userCerid"></el-input>
-                            </el-form-item>
-                        </el-col>
+                        <el-row type="flex">
+                            <el-col :span="8">
+                                <el-form-item prop="userCerType">
+                                    <el-select placeholder="请选择证件类型" v-model="userInfo1.userCerType">
+                                        <el-option v-for="item in types"
+                                                   :key="item.value"
+                                                   :label="item.label"
+                                                   :value="item.value"
+                                        ></el-option>
+                                    </el-select>
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="2" style="width: 20px">&nbsp;&nbsp;-&nbsp;&nbsp;</el-col>
+                            <el-col :span="15">
+                                <el-form-item prop="userCerid">
+                                    <el-input v-model="userInfo1.userCerid"></el-input>
+                                </el-form-item>
+                            </el-col>
+                        </el-row>
                     </el-form-item>
-                    <el-form-item label="注册同意条件" required prop="commit" :show-message=false>
+                    <el-form-item label="注册同意条件" show-message prop="commit">
                         <el-radio-group v-model="commit">
-                            <el-radio border label=" 我同意遵守JM航空会员手册的条款与条件
-                                  请您认真查看JM航空会相关规定!">
+                            <el-radio label='1'>我同意遵守JM航空会员手册的条款与条件
+                                请您认真查看JM航空会相关规定!
                             </el-radio>
                         </el-radio-group>
                     </el-form-item>
+                    <el-row style="margin-top: 50px">
+                        <el-button type="primary" icon="el-icon-arrow-right el-icon--right" style="float: right"
+                                   @click="stepNext('userInfo1')">
+                            下一步</i>
+                        </el-button>
+                    </el-row>
                 </el-form>
-                <el-button-group style="margin-top:20px;margin-left:20%;margin-right:20%">
-                    <el-button-group>
-                        <el-button type="primary" icon="el-icon-arrow-left" @click="stepPrev" v-if="activeStep==1">
-                            上一步
+
+                <!-- 表单2 :rules="rules2" -->
+                <el-form :model="userInfo2" ref="userInfo2" label-width="150px" status-icon
+                         class="inputForm" v-if="activeStep==1">
+                    <el-form-item label="手机号码" prop="userTel">
+                        <el-input v-model="userInfo2.userTel"></el-input>
+                    </el-form-item>
+                    <el-form-item label="密码" prop="userPass" autocomplete="off">
+                        <el-input type="password" v-model="userInfo2.userPass"></el-input>
+                    </el-form-item>
+                    <el-form-item label="确认密码" prop="checkPass" autocomplete="off">
+                        <el-input type="password" v-model="userInfo2.checkPass"></el-input>
+                    </el-form-item>
+                    <el-row style="margin-top: 50px">
+                        <el-button type="primary" icon="el-icon-arrow-right el-icon--right" style="float: right"
+                                   @click="stepNext('userInfo2')">
+                            下一步</i>
                         </el-button>
-                        <el-button type="primary">下一步<i class="el-icon-arrow-right el-icon--right" @click="stepNext"
-                                                        v-if="activeStep==0||activeStep==1"></i>
-                        </el-button>
-                    </el-button-group>
-                </el-button-group>
+                    </el-row>
+                </el-form>
+
+
             </el-card>
         </el-col>
     </div>
+
 </div>
 </body>
 <script type="text/javascript" src="static/vue/vue.js"></script>
