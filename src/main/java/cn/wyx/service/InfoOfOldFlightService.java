@@ -11,7 +11,7 @@ import java.util.List;
  * @Date: 2019/7/4 16:12
  * @Version 1.0
  */
-public interface InfoOfOldFlightService extends BaseService<InfoOfOldFlight>{
+public interface InfoOfOldFlightService extends BaseService<InfoOfOldFlight> {
 
     /**
      * 动态航班查询

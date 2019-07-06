@@ -13,7 +13,7 @@ public class Mdsp implements Serializable {
     /**
      *舱位
      */
-    private char spaceId;
+    private String spaceId;
     /**
      *数量
      */
@@ -22,7 +22,7 @@ public class Mdsp implements Serializable {
     public Mdsp() {
     }
 
-    public Mdsp(Long modelId, char spaceId, int nums) {
+    public Mdsp(Long modelId, String spaceId, int nums) {
         this.modelId = modelId;
         this.spaceId = spaceId;
         this.nums = nums;
@@ -36,11 +36,11 @@ public class Mdsp implements Serializable {
         this.modelId = modelId;
     }
 
-    public char getSpaceId() {
+    public String getSpaceId() {
         return spaceId;
     }
 
-    public void setSpaceId(char spaceId) {
+    public void setSpaceId(String spaceId) {
         this.spaceId = spaceId;
     }
 
@@ -56,7 +56,7 @@ public class Mdsp implements Serializable {
     public String toString() {
         return "Mdsp{" +
                 "modelId=" + modelId +
-                ", spaceId=" + spaceId +
+                ", spaceId='" + spaceId + '\'' +
                 ", nums=" + nums +
                 '}';
     }

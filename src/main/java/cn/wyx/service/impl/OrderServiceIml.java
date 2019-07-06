@@ -30,11 +30,11 @@ public class OrderServiceIml implements OrderService {
 
 
     @Override
-    public void createNewOrder(Order order,String ticketsId,List<Passenger>passengerList) {
+    public void createNewOrder(Order order, String ticketsId, List<Passenger>passengerList) {
         /*订单数据处理*/
         //生成订单号
         String ss = timestampToString(order.getOrderSureTime());
-        order.setOrderId("OD"+ss + order.getUserId());
+        order.setOrderId("OD"+ss + String.format("%04d",order.getUserId()%10000));
         //计算总价
         int price = 0;
         int airportFee = 50;
@@ -102,6 +102,16 @@ public class OrderServiceIml implements OrderService {
     @Override
     public void create(InfoOfOrder infoOfOrder) {
 
+    }
+
+    /**
+     * 更改订单状态
+     * @param OrderId
+     * @param OrderState
+     */
+    @Override
+    public void setOrderState(String OrderId, String OrderState) {
+        this.orderMapper.updateOrderState(OrderId,OrderState);
     }
 
     @Override

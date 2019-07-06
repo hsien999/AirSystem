@@ -1,8 +1,8 @@
 package cn.wyx.service.impl;
 
 import cn.wyx.entity.InfoOfOldFlight;
-import cn.wyx.service.InfoOfOldFlightService;
 import cn.wyx.mapper.InfoOfOldFlightMapper;
+import cn.wyx.service.InfoOfOldFlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

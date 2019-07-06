@@ -2,7 +2,7 @@ package cn.wyx.mapper;
 
 import cn.wyx.entity.InfoOfOrder;
 import cn.wyx.entity.Order;
-import cn.wyx.entity.UserPass;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -33,5 +33,10 @@ public interface OrderMapper {
      */
     int insertOrder(Order order);
 
-
+    /**
+     * 修改订单状态
+     * @param orderid
+     * @param orderState
+     */
+    void updateOrderState(@Param("orderId") String orderid, @Param("orderState") String orderState);
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.AirRouteMapper">
+
+    <insert id="create" parameterType="cn.wyx.entity.AirRoute">
+        insert into tb_airroute (airport_up, airport_down, airroute_length)
+        values (#{airportUp},#{airportDown},#{airroute_length}),
+                (#{airportDown},#{airportUp},#{airroute_length});
+    </insert>
+
+    <select id="findByAirports" resultType="cn.wyx.entity.AirRoute">
+        select *
+        from tb_airroute
+            left join tb_airport ta on tb_airroute.airport_up = ta.airport_id
+            left join tb_airport tb on tb_airroute.airport_down = tb.airport_id
+        where ta.airport_name = #{airportUpName} and tb.airport_name = #{airportUpName};
+    </select>
+
+    <select id="findByCities" resultType="cn.wyx.entity.AirRoute">
+        select *
+        from tb_airroute
+            left join tb_airport ta on tb_airroute.airport_up = ta.airport_id
+            left join tb_city tc on ta.city_id = tc.city_id
+            left join tb_airport tb on tb_airroute.airport_down = tb.airport_id
+            left join tb_city td on tb.city_id = td.city_id
+        where tc.city_name = #{cityStartName} and td.city_name = #{cityEndName};
+    </select>
+
+    <update id="setLengthByAirports">
+        update tb_airroute set airroute_length = #{airrouteLength}
+        where (airport_up = (select airport_id from tb_airport where airport_name = #{airportUpName})
+        and airport_down = (select airport_id from tb_airport where airport_name = #{airportDownName}))
+        or (airport_up = (select airport_id from tb_airport where airport_name = #{airportDownName})
+        and airport_down = (select airport_id from tb_airport where airport_name = #{airportUpName}))
+    </update>
+
+</mapper>

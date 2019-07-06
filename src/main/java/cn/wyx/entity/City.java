@@ -14,26 +14,41 @@ public class City implements Serializable {
      * 城市名称
      */
     private String cityName;
-
     /**
      * 城市名首字母
      */
-    private char city_alp;
+    private String city_alp;
 
     public City() {
     }
 
-    public City(Long cityId, String cityName, char city_alp) {
+    public City(Long cityId, String cityName, String city_alp) {
         this.cityId = cityId;
         this.cityName = cityName;
         this.city_alp = city_alp;
     }
 
-    public char getCity_alp() {
+    public Long getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(Long cityId) {
+        this.cityId = cityId;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getCity_alp() {
         return city_alp;
     }
 
-    public void setCity_alp(char city_alp) {
+    public void setCity_alp(String city_alp) {
         this.city_alp = city_alp;
     }
 
@@ -42,7 +57,7 @@ public class City implements Serializable {
         return "City{" +
                 "cityId=" + cityId +
                 ", cityName='" + cityName + '\'' +
-                ", city_alp=" + city_alp +
+                ", city_alp='" + city_alp + '\'' +
                 '}';
     }
 }

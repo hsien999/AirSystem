@@ -1,9 +1,6 @@
 package cn.wyx.service;
 
 import cn.wyx.entity.User;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * 用户业务逻辑接口

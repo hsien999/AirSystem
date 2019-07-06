@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.CityMapper">
+
+    <insert id="create">
+        insert into tb_city ( city_name, city_alp)
+        values (#{cityName},#{cityAlp});
+    </insert>
+
+    <select id="getCityIdByName" parameterType="java.lang.String" resultType="cn.wyx.entity.City">
+        select * from tb_city where city_name = #{cityName};
+    </select>
+
+    <update id="setCity" parameterType="cn.wyx.entity.City">
+        update tb_city
+        set city_name = #{cityName},city_alp = #{cityAlp}
+        where city_id = #{cityId};
+    </update>
+
+</mapper>

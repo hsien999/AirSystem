@@ -1,7 +1,7 @@
 package cn.wyx.service;
 
 import cn.wyx.entity.InfoOfFlight;
-import cn.wyx.entity.InfoOfOldFlight;
+
 import java.sql.Date;
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
  * @Version 1.0
  * 航班信息查询业务
  */
-public interface InfoOfFlightService extends BaseService<InfoOfFlight>{
+public interface InfoOfFlightService extends BaseService<InfoOfFlight> {
     /**
      * 航班订票查询
       * @param cityStartName

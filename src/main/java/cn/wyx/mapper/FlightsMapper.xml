@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.FlightsMapper">
+
+    <insert id="create" parameterType="cn.wyx.entity.Flights">
+        insert into tb_flights
+        values (#{flightsId},#{modelId},#{airrouteId},#{flightsMeals},#{planUpTime},#{planDownTime},#{planTime});
+    </insert>
+
+    <update id="setFlights" parameterType="cn.wyx.entity.Flights">
+        update tb_flights
+        set model_id = #{modelId},airroute_id = #{airrouteId},flights_meals = #{flightsMeals},
+            plan_upTime = #{planUpTime},plan_downTime =#{planDownTime},plan_time = #{planTime}
+        where flights_id = #{flightsId};
+    </update>
+
+    <select id="findByFlightsId" parameterType="java.lang.String" resultType="cn.wyx.entity.Flights">
+        select * from tb_flights where flights_id = #{flightsId};
+    </select>
+
+    <select id="findByAirrouteId" parameterType="java.lang.Long" resultType="cn.wyx.entity.Flights">
+        select * from tb_flights where airroute_id = #{airrouteId};
+    </select>
+
+</mapper>

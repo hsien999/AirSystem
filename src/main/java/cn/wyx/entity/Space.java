@@ -9,7 +9,7 @@ public class Space implements Serializable {
     /**
      *舱位编号
      */
-    private char spaceId;
+    private String spaceId;
     /**
      *舱位名称
      */
@@ -22,17 +22,17 @@ public class Space implements Serializable {
     public Space() {
     }
 
-    public Space(char spaceId, String spaceName, int baggageAllowance) {
+    public Space(String spaceId, String spaceName, int baggageAllowance) {
         this.spaceId = spaceId;
         this.spaceName = spaceName;
         this.baggageAllowance = baggageAllowance;
     }
 
-    public char getSpaceId() {
+    public String getSpaceId() {
         return spaceId;
     }
 
-    public void setSpaceId(char spaceId) {
+    public void setSpaceId(String spaceId) {
         this.spaceId = spaceId;
     }
 
@@ -55,7 +55,7 @@ public class Space implements Serializable {
     @Override
     public String toString() {
         return "Space{" +
-                "spaceId=" + spaceId +
+                "spaceId='" + spaceId + '\'' +
                 ", spaceName='" + spaceName + '\'' +
                 ", baggageAllowance=" + baggageAllowance +
                 '}';

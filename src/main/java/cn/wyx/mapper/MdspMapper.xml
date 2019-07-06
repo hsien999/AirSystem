@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.MdspMapper">
+
+    <insert id="create" parameterType="cn.wyx.entity.Mdsp">
+        insert into tb_mdsp (model_id, space_id, nums)
+        values (#{modelId},#{spaceId},#{nums});
+    </insert>
+
+    <update id = "setNums" parameterType="cn.wyx.entity.Mdsp">
+        update tb_mdsp set nums = #{nums}
+        where space_id = #{spaceId}
+        and model_id = #{modelId};
+    </update>
+
+    <select id="findMdsp" resultType="cn.wyx.entity.Mdsp">
+        select * from tb_mdsp
+        <where>
+            <if test="modelId != null">
+                model_id = #{modelId}
+            </if>
+            <if test="spaceId != null and spaceId != ''">
+                space_id = #{spaceId}
+            </if>
+        </where>;
+    </select>
+
+</mapper>

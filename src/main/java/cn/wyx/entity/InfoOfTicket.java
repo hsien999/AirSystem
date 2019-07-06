@@ -52,12 +52,12 @@ public class InfoOfTicket implements Serializable {
     /**
      * 舱位编号
      */
-    private char spaceId;
+    private String spaceId;
 
     public InfoOfTicket() {
     }
 
-    public InfoOfTicket(String ticketId, String passengerName, String passengerTel, String passengerCertype, String passengerCerid, int ticketPrice, int airportFee, int fuelSurcharge, int ticketSeat, String passengerType, char spaceId) {
+    public InfoOfTicket(String ticketId, String passengerName, String passengerTel, String passengerCertype, String passengerCerid, int ticketPrice, int airportFee, int fuelSurcharge, int ticketSeat, String passengerType, String spaceId) {
         this.ticketId = ticketId;
         this.passengerName = passengerName;
         this.passengerTel = passengerTel;
@@ -151,11 +151,11 @@ public class InfoOfTicket implements Serializable {
         this.passengerType = passengerType;
     }
 
-    public char getSpaceId() {
+    public String getSpaceId() {
         return spaceId;
     }
 
-    public void setSpaceId(char spaceId) {
+    public void setSpaceId(String spaceId) {
         this.spaceId = spaceId;
     }
 
@@ -172,7 +172,7 @@ public class InfoOfTicket implements Serializable {
                 ", fuelSurcharge=" + fuelSurcharge +
                 ", ticketSeat=" + ticketSeat +
                 ", passengerType='" + passengerType + '\'' +
-                ", spaceId=" + spaceId +
+                ", spaceId='" + spaceId + '\'' +
                 '}';
     }
 }

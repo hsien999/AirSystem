@@ -9,7 +9,7 @@ public class InfoOfTickets implements Serializable {
     /**
      * 舱型编号
      */
-    private char spaceId;
+    private String spaceId;
     /**
      * 售票编号
      */
@@ -34,7 +34,7 @@ public class InfoOfTickets implements Serializable {
     public InfoOfTickets() {
     }
 
-    public InfoOfTickets(char spaceId, String ticketsId, String spaceName, int ticketsPrice, int ticketsNums, int ticketsAllNums) {
+    public InfoOfTickets(String spaceId, String ticketsId, String spaceName, int ticketsPrice, int ticketsNums, int ticketsAllNums) {
         this.spaceId = spaceId;
         this.ticketsId = ticketsId;
         this.spaceName = spaceName;
@@ -43,11 +43,11 @@ public class InfoOfTickets implements Serializable {
         this.ticketsAllNums = ticketsAllNums;
     }
 
-    public char getSpaceId() {
+    public String getSpaceId() {
         return spaceId;
     }
 
-    public void setSpaceId(char spaceId) {
+    public void setSpaceId(String spaceId) {
         this.spaceId = spaceId;
     }
 
@@ -94,7 +94,7 @@ public class InfoOfTickets implements Serializable {
     @Override
     public String toString() {
         return "InfoOfTickets{" +
-                "spaceId=" + spaceId +
+                "spaceId='" + spaceId + '\'' +
                 ", ticketsId='" + ticketsId + '\'' +
                 ", spaceName='" + spaceName + '\'' +
                 ", ticketsPrice=" + ticketsPrice +

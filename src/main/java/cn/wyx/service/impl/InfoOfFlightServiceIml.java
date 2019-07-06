@@ -57,7 +57,6 @@ public class InfoOfFlightServiceIml implements InfoOfFlightService {
 
     /**
      * 航班订票查询
-     *
      * @param cityStartName
      * @param cityEndName
      * @param date
@@ -67,4 +66,6 @@ public class InfoOfFlightServiceIml implements InfoOfFlightService {
     public List<InfoOfFlight> findFlightByCityDate(String cityStartName, String cityEndName, Date date) {
         return this.infoOfFlightMapper.findByCityDate(cityStartName, cityEndName, date);
     }
+
+
 }

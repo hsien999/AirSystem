@@ -6,14 +6,15 @@ import java.io.Serializable;
  *退改规则
  */
 public class Rule implements Serializable {
+    private Long ruleId;
     /**
      *舱位编号
      */
-    private char spaceId;
+    private String spaceId;
     /**
      *退改类型
      */
-    private char ruleType;
+    private String ruleType;
     /**
      *退票手续费率
      */
@@ -26,26 +27,35 @@ public class Rule implements Serializable {
     public Rule() {
     }
 
-    public Rule(char spaceId, char ruleType, int ruleRefund, int ruleChange) {
+    public Rule(Long ruleId, String spaceId, String ruleType, int ruleRefund, int ruleChange) {
+        this.ruleId = ruleId;
         this.spaceId = spaceId;
         this.ruleType = ruleType;
         this.ruleRefund = ruleRefund;
         this.ruleChange = ruleChange;
     }
 
-    public char getSpaceId() {
+    public Long getRuleId() {
+        return ruleId;
+    }
+
+    public void setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+    }
+
+    public String getSpaceId() {
         return spaceId;
     }
 
-    public void setSpaceId(char spaceId) {
+    public void setSpaceId(String spaceId) {
         this.spaceId = spaceId;
     }
 
-    public char getRuleType() {
+    public String getRuleType() {
         return ruleType;
     }
 
-    public void setRuleType(char ruleType) {
+    public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
 
@@ -68,8 +78,9 @@ public class Rule implements Serializable {
     @Override
     public String toString() {
         return "Rule{" +
-                "spaceId=" + spaceId +
-                ", ruleType=" + ruleType +
+                "ruleId=" + ruleId +
+                ", spaceId='" + spaceId + '\'' +
+                ", ruleType='" + ruleType + '\'' +
                 ", ruleRefund=" + ruleRefund +
                 ", ruleChange=" + ruleChange +
                 '}';
