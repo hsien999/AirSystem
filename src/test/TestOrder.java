@@ -30,6 +30,6 @@ public class TestOrder {
         ticketList.add(ticket);
         ticket = new Ticket("ticket56","TK1",null,100,50,20,31);
         ticketList.add(ticket);
-//        orderService.createNewOrder(order,ticketList);
+        orderService.createNewOrder(order,ticketList);
     }
 }
