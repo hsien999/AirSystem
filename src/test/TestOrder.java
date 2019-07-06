@@ -24,12 +24,5 @@ public class TestOrder {
     @Test
     public void createOrder()
     {
-        Order order = new Order("o3",2L,200,null,null,"支付宝",2,"未支付","小明", "110","110@qq.com");
-        List<Ticket> ticketList = new ArrayList<Ticket>();
-        Ticket ticket = new Ticket("ticket55","TK1",null,100,50,20,30);
-        ticketList.add(ticket);
-        ticket = new Ticket("ticket56","TK1",null,100,50,20,31);
-        ticketList.add(ticket);
-        orderService.createNewOrder(order,ticketList);
     }
 }
