@@ -31,6 +31,7 @@
             </el-card>
         </el-col>
 
+
         <el-col>
             <el-card shadow="always">
                 <div class="myCard">
@@ -95,8 +96,59 @@
         </el-col>
 
         <el-col>
-            <el-card shadow="always">
+            <el-card shadow="always" v-loading="loading"
+                     element-loading-text="拼命加载中"
+                     element-loading-spinner="el-icon-loading"
+                     element-loading-background="rgba(150, 230, 250, 0.8)">
+
+
                 <div class="myCard">
+                    <div v-for="item in InfoOfFlight"
+                         :key="item.flightsId">
+                        <el-table :data="item.tickets"
+                                  style="width: 80%"
+                                  max-height="500"
+                                  :default-sort="{prop: 'spaceId', order: 'descending'}">
+                            <el-table-column label="舱位"
+                                             width="250">
+                                <template slot-scope="scope">
+                                    <span class="fa fa-lg">
+                                        {{ scope.row.spaceName }}{{scope.row.spaceName}}</span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column label="行李|退改规则"
+                                             width="180">
+                                <template slot-scope="scope">
+                                    <el-popover trigger="hover" placement="top" @show="showRules(scope.row.spaceId)">
+                                        <span class="">行李限额:</span>
+                                        <el-divider></el-divider>
+                                        <span class="">退改规则:</span>
+                                        <div slot="reference">
+                                            <el-tag size="medium">{{ scope.row.spaceId }}</el-tag>
+                                        </div>
+                                    </el-popover>
+                                </template>
+                            </el-table-column>
+                            <el-table-column label="余票数"
+                                             width="180">
+                                <template slot-scope="scope">
+                                    <span class="fa fa-lg fa-rmb"></span>
+                                    <span class="fa fa-stack-1x text-danger">{{scope.row.ticketsPrice}}</span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column label="操作">
+                                <template slot-scope="scope">
+                                    <el-button
+                                            size="mini"
+                                            round
+                                            type="success"
+                                            @click="orderTicket(scope.row.ticketsId)">预订
+                                    </el-button>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                    </div>
+
                     <el-table
                             :data="tableData"
                             style="width: 80%"
@@ -139,6 +191,7 @@
                 </div>
             </el-card>
         </el-col>
+
     </div>
 
 

@@ -1,5 +1,5 @@
 //设置全局表单提交格式
-// Vue.http.options.emulateJSON = true;
+Vue.http.options.emulateJSON = true;
 
 //Vue实例
 new Vue({
@@ -11,6 +11,7 @@ new Vue({
             activeIndex: '0',
             activeStep: 0,
             upDate: '',
+            loading: false,
 
             searchEntity: {
                 stCity: [],
@@ -163,20 +164,31 @@ new Vue({
 
         },
 
+        showRules(spaceId) {
+
+        },
+
+        orderTicket(ticketId) {
+
+        },
+
         handleEdit(index, row) {
             console.log(index, row);
         },
 
         handleDelete(index, row) {
             console.log(index, row);
+        },
+        init() {
+            this.InfoOfFlight = [];
         }
     },
 
     //声明周期钩子函数-->在data和methods渲染结束后执行
     created() {
+        this.init();
         //首先加载城市信息
         this.getAllCitys();
-
     },
 });
 
