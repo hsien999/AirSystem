@@ -8,7 +8,7 @@ new Vue({
         //手机号码验证
         const checkTel = (rule, value, callback) => {
 
-            if (value == '') {
+            if (value === '') {
                 return callback(new Error('请输入手机号码'));
             } else {
                 const reg1 = /^[0-9]{1,20}$/;
@@ -23,14 +23,14 @@ new Vue({
                     }
                     //验证是否已存在
                     this.$http.post('/AirSystem_war_exploded/validateTel.do', {tel: value}).then(result => {
-                        if (result.body.success == false) return callback(new Error('该手机号已注册'));
+                        if (result.body.success === false) return callback(new Error('该手机号已注册'));
                         else return callback();
                     });
                 }
             }
         };
         const checkChName = (rule, value, callback) => {
-            if (value == '') {
+            if (value === '') {
                 return callback(new Error('请输入姓名'));
             } else {
                 const reg = /^[\u4E00-\u9FA5]{1,5}$/;
@@ -42,7 +42,7 @@ new Vue({
             }
         };
         const checkEnName = (rule, value, callback) => {
-            if (value == '') {
+            if (value === '') {
                 return callback(new Error('请输入拼音/英文姓名'));
             } else {
                 const reg = /^[a-zA-Z]+$/;
@@ -54,7 +54,7 @@ new Vue({
             }
         };
         const checkCerid = (rule, value, callback) => {
-            if (value == '') {
+            if (value === '') {
                 return callback(new Error('请输入证件号'));
             } else {
                 const format = /^(([1][1-5])|([2][1-3])|([3][1-7])|([4][1-6])|([5][0-4])|([6][1-5])|([7][1])|([8][1-2]))\d{4}(([1][9]\d{2})|([2]\d{3}))(([0][1-9])|([1][0-2]))(([0][1-9])|([1-2][0-9])|([3][0-1]))\d{3}[0-9xX]$/;
@@ -85,14 +85,14 @@ new Vue({
                     return callback(new Error('请输入正确的证件号'));
                 }
                 this.$http.post('/AirSystem_war_exploded/validateCerId.do', {cerId: value}).then(result => {
-                    if (result.body.success == false) return callback(new Error('该证件号已注册'));
+                    if (result.body.success === false) return callback(new Error('该证件号已注册'));
                     else return callback();
                 });
             }
         };
         const checkType = (rule, value, callback) => {
             // console.log('value1 ==' + value);
-            if (value == '') {
+            if (value === '') {
                 return callback(new Error('请选择证件类型'));
             } else {
                 return callback();

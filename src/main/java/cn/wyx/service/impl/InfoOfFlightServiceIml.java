@@ -1,9 +1,7 @@
 package cn.wyx.service.impl;
 
 import cn.wyx.entity.InfoOfFlight;
-import cn.wyx.entity.InfoOfOldFlight;
 import cn.wyx.mapper.InfoOfFlightMapper;
-import cn.wyx.mapper.InfoOfOldFlightMapper;
 import cn.wyx.service.InfoOfFlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +57,7 @@ public class InfoOfFlightServiceIml implements InfoOfFlightService {
 
     /**
      * 航班订票查询
+     *
      * @param cityStartName
      * @param cityEndName
      * @param date
@@ -68,6 +67,4 @@ public class InfoOfFlightServiceIml implements InfoOfFlightService {
     public List<InfoOfFlight> findFlightByCityDate(String cityStartName, String cityEndName, Date date) {
         return this.infoOfFlightMapper.findByCityDate(cityStartName, cityEndName, date);
     }
-
-
 }

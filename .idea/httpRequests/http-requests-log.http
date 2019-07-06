@@ -1,0 +1,24 @@
+GET http://localhost:8080/AirSystem_war_exploded
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T115124.200.html
+
+###
+
+GET http://localhost:8080/AirSystem_war_exploded
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T115102.200.html
+
+###
+
+GET http://localhost:8080/AirSystem_war_exploded/register.do
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T115028.200.html
+
+###
+

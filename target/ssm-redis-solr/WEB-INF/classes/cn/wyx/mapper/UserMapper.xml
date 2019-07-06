@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.UserMapper">
+    <select id="findAll" resultType="cn.wyx.entity.User">
+        select *
+        from tb_user;
+    </select>
+
+    <select id="findByTel" parameterType="java.lang.String" resultType="cn.wyx.entity.User">
+        select *
+        from tb_user
+        where user_tel = #{tel};
+    </select>
+
+    <select id="findById" parameterType="java.lang.Long" resultType="cn.wyx.entity.User">
+        select *
+        from tb_user
+        where user_id = #{id};
+    </select>
+
+    <insert id="create" parameterType="cn.wyx.entity.User">
+        insert into tb_user(user_tel, user_cerid, user_certype, user_chname, user_enname, user_salt, user_pass)
+        values (#{userTel}, #{userCerid}, #{userCerType},
+                #{userChname}, #{userEnname}, #{userSalt}, #{userPass});
+    </insert>
+
+    <update id="update" parameterType="cn.wyx.entity.User">
+        update tb_user
+        <set>
+            <if test="userTel != null and userTel != ''">
+                user_tel = #{userTel},
+            </if>
+            <if test="userCerid != null and userCerid != ''">
+                user_cerid = #{userCerid},
+            </if>
+            <if test="userCerType != null and userCerType != ''">
+                user_certype = #{userCerType},
+            </if>
+            <if test="userChname != null and userChname != ''">
+                user_chname = #{userChname},
+            </if>
+            <if test="userEnname != null and userEnname != ''">
+                user_enname = #{userEnname},
+            </if>
+            <if test="userSalt != null and userSalt != ''">
+                user_salt = #{userSalt},
+            </if>
+            <if test="userPass != null and userPass != ''">
+                user_pass = #{userPass},
+            </if>
+        </set>
+        where user_id = #{userId}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        delete
+        from tb_user
+        where user_id = #{id}
+    </delete>
+
+    <select id="validateTel" resultType="int" parameterType="java.lang.String">
+        select count(user_id)
+        from tb_user
+        where user_tel = #{tel};
+    </select>
+
+    <select id="validateCerId" resultType="int" parameterType="java.lang.String">
+        select count(user_id)
+        from tb_user
+        where user_cerid = #{CerId};
+    </select>
+</mapper>
