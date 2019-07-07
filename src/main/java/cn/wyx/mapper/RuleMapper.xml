@@ -16,7 +16,7 @@
                 spa = #{spaceId},
             </if>
             <if test="ruleType != null and ruleType!=''">
-                rule_type = #{ruleTyjpe},
+                rule_type = #{ruleType},
             </if>
             tb_rule.rule_change = #{ruleChange},
             tb_rule.rule_refund = #{ruleRefund},

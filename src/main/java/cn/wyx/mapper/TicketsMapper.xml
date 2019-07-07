@@ -4,11 +4,12 @@
 
 <mapper namespace="cn.wyx.mapper.TicketsMapper">
 
-<!--    <insert id="insertTicket" parameterType = "cn.wyx.entity.Order">-->
-<!--        insert into tb_ticket (ticket_id, tickets_id, order_id, ticket_price, fuel_surcharge, airport_fee, ticket_seat)-->
-<!--        values (#{ticketId},#{ticketsId},#{orderId},#{ticketPrice},#{fuelSurcharge},#{airportFee},#{ticketSeat});-->
-<!--    </insert>-->
-    <select id="findByTicketsId" parameterType="String" resultType="cn.wyx.entity.Tickets">
+    <insert id="create" parameterType = "cn.wyx.entity.Tickets">
+        insert into tb_tickets (tickets_id, space_id, flight_id, tickets_price, tickets_nums)
+        values (#{ticketsId},#{spaceId},#{flightId},#{ticketsPrice},#{ticketsNums});
+    </insert>
+
+    <select id="findByTicketsId" parameterType="java.lang.String" resultType="cn.wyx.entity.Tickets">
         select * from tb_tickets
         where tickets_id = #{ticketsId};
     </select>
@@ -17,6 +18,12 @@
         update tb_tickets
         set tb_tickets.tickets_nums = tb_tickets.tickets_nums - #{subNum}
         where tb_tickets.tickets_id = #{ticketsId};
+    </update>
+
+    <update id="setTicketsPriceAndNum">
+        update tb_tickets
+        set tickets_price = #{ticketsPrice},tickets_nums = #{ticketsNum}
+        where tickets_id = #{ticketsId};
     </update>
 
 </mapper>

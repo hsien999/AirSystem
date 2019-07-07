@@ -40,9 +40,9 @@ drop table if exists tb_userpass;
 /*==============================================================*/
 create table tb_airport
 (
-    airport_id   bigint not null,
+    airport_id   bigint auto_increment not null,
     city_id      bigint,
-    airport_name varchar(10),
+    airport_name varchar(20),
     primary key (airport_id)
 ) CHARSET = utf8
   ENGINE = InnoDB;
@@ -72,7 +72,7 @@ alter table tb_airroute
 create table tb_city
 (
     city_id   bigint auto_increment not null comment '城市编号',
-    city_name varchar(10) unique comment '城市名称',
+    city_name varchar(20) unique comment '城市名称',
     city_alp  char comment '城市名称首字母',
     primary key (city_id)
 ) CHARSET = utf8
@@ -89,7 +89,7 @@ create table tb_flight
     flight_id    varchar(15) not null comment '执飞航班编号',
     flights_id   char(6) comment '航班号',
     flight_date  date comment '执飞日期',
-    flight_state char(3) comment '航班状态',
+    flight_state varchar(10) comment '航班状态',
     flight_info  varchar(20) comment '航班信息',
     pre_upTime   time comment '预计起飞时间',
     pre_downTime time comment '预计到达时间',
@@ -110,7 +110,7 @@ create table tb_flights
     flights_id    char(6) not null comment '航班号',
     model_id      bigint comment '机型',
     airroute_id   bigint comment '航线',
-    flights_meals char(5) comment '餐食',
+    flights_meals varchar(10) comment '餐食',
     plan_upTime   time comment '计划起飞时间',
     plan_downTime time comment '计划到达时间',
     plan_time     smallint comment '计划花费时间',
@@ -142,7 +142,7 @@ alter table tb_mdsp
 create table tb_model
 (
     model_id    bigint auto_increment not null comment '机型编号',
-    model_name  varchar(8) comment '机型名称',
+    model_name  varchar(20) comment '机型名称',
     model_speed smallint comment '速度（公里/小时）',
     primary key (model_id)
 ) CHARSET = utf8
@@ -185,7 +185,7 @@ create table tb_passenger
     passenger_cerid   varchar(50) comment '证件号',
     passenger_certype varchar(20) comment '证件类型',
     passenger_tel     varchar(20) comment '乘客人手机号码',
-    passenger_type    char(10) comment '乘客类型',
+    passenger_type    varchar(10) comment '乘客类型',
     primary key (passenger_id)
 ) CHARSET = utf8
   ENGINE = InnoDB;
@@ -200,7 +200,7 @@ create table tb_rule
 (
     rule_id     int auto_increment not null comment '退改规则ID',
     space_id    char(1) comment '舱位编号',
-    rule_type   char(1)            not null comment '退改类型',
+    rule_type   char(1) not null comment '退改类型',
     rule_refund smallint comment '退票手续费率',
     rule_change smallint comment '改票手续费率',
     primary key (rule_id)
@@ -237,7 +237,7 @@ create table tb_ticket
     ticket_price   smallint comment '票价',
     fuel_surcharge smallint comment '机场建设费',
     airport_fee    smallint comment '航空保险费',
-    tb_seat        smallint comment '座位号',
+    ticket_seat        smallint comment '座位号',
     primary key (ticket_id)
 ) CHARSET = utf8
   ENGINE = InnoDB;
@@ -293,7 +293,7 @@ create table tb_userpass
     userpass_cerid   varchar(30) comment '乘机人证件号',
     userpass_certype varchar(20) comment '乘机人证件类型',
     userpass_tel     varchar(20) comment '乘机人手机号',
-    userpass_type    char(20) comment '乘机人类型',
+    userpass_type    varchar(20) comment '乘机人类型',
     primary key (userpass_id)
 ) CHARSET = utf8
   ENGINE = InnoDB;
@@ -420,3 +420,4 @@ alter table tb_userpass
 #
 #
 # 普通航线旅客运输基准票价=LOG（150，航线距离×0.6）× 航线距离 × 1.1
+

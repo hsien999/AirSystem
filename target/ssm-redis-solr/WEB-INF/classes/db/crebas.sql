@@ -89,7 +89,7 @@ create table tb_flight
     flight_id    varchar(15) not null comment '执飞航班编号',
     flights_id   char(6) comment '航班号',
     flight_date  date comment '执飞日期',
-    flight_state char(3) comment '航班状态',
+    flight_state varchar(10) comment '航班状态',
     flight_info  varchar(20) comment '航班信息',
     pre_upTime   time comment '预计起飞时间',
     pre_downTime time comment '预计到达时间',
@@ -237,7 +237,7 @@ create table tb_ticket
     ticket_price   smallint comment '票价',
     fuel_surcharge smallint comment '机场建设费',
     airport_fee    smallint comment '航空保险费',
-    tb_seat        smallint comment '座位号',
+    ticket_seat        smallint comment '座位号',
     primary key (ticket_id)
 ) CHARSET = utf8
   ENGINE = InnoDB;
@@ -420,3 +420,4 @@ alter table tb_userpass
 #
 #
 # 普通航线旅客运输基准票价=LOG（150，航线距离×0.6）× 航线距离 × 1.1
+

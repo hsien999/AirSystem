@@ -18,14 +18,19 @@ public class Space implements Serializable {
      *行李限额
      */
     private int baggageAllowance;
+    /**
+     * 舱位折扣
+     */
+    private double spaceDiscount;
 
     public Space() {
     }
 
-    public Space(String spaceId, String spaceName, int baggageAllowance) {
+    public Space(String spaceId, String spaceName, int baggageAllowance, double spaceDiscount) {
         this.spaceId = spaceId;
         this.spaceName = spaceName;
         this.baggageAllowance = baggageAllowance;
+        this.spaceDiscount = spaceDiscount;
     }
 
     public String getSpaceId() {
@@ -52,12 +57,21 @@ public class Space implements Serializable {
         this.baggageAllowance = baggageAllowance;
     }
 
+    public double getSpaceDiscount() {
+        return spaceDiscount;
+    }
+
+    public void setSpaceDiscount(double spaceDiscount) {
+        this.spaceDiscount = spaceDiscount;
+    }
+
     @Override
     public String toString() {
         return "Space{" +
                 "spaceId='" + spaceId + '\'' +
                 ", spaceName='" + spaceName + '\'' +
                 ", baggageAllowance=" + baggageAllowance +
+                ", spaceDiscount=" + spaceDiscount +
                 '}';
     }
 }

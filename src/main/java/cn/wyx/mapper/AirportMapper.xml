@@ -20,8 +20,8 @@
         where city_name = #{cityName};
     </select>
 
-    <select id="findAirportByAirportId" parameterType="java.lang.String" resultType="cn.wyx.entity.Airport">
-        select * from tb_airport where airport_id = #{airportName};
+    <select id="findAirportByAirportName" parameterType="java.lang.String" resultType="cn.wyx.entity.Airport">
+        select * from tb_airport where airport_name = #{airportName};
     </select>
 
 </mapper>

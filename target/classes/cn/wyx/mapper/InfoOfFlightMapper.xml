@@ -34,17 +34,17 @@
     <select id = "findByCityDate" resultMap="InfoOfFlightMap">
         select tf.flight_id,tf.flights_id,flight_date,model_name,model_speed,flights_meals,airroute_length,
                airportUpName,airportDownName,cityStartName,cityEndName,pre_upTime,pre_downTime,
-               plan_time,tickets_id,tr.space_id,space_Name,tickets_price,tickets_nums,nums
+               plan_time,tickets_id,ts.space_id,space_Name,tickets_price,tickets_nums,nums
         from v_airroute_airport_city left join tb_flights on v_airroute_airport_city.airroute_id = tb_flights.airroute_id
         left join tb_flight tf on tb_flights.flights_id = tf.flights_id
         left join tb_tickets tt on tf.flight_id = tt.flight_id
         left join tb_space ts on tt.space_id = ts.space_id
         left join tb_rule tr on ts.space_id = tr.space_id
         left join tb_mdsp tm on ts.space_id = tm.space_id
-        left join tb_model t on tb_flights.model_id = t.model_id
+        right join tb_model t on tb_flights.model_id = t.model_id
         where cityStartName = #{cityStartName}
         and cityEndName = #{cityEndName}
-        and flight_date = #{date}
+        and flight_date = #{date};
     </select>
 
 </mapper>

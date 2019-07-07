@@ -17,15 +17,15 @@ public class City implements Serializable {
     /**
      * 城市名首字母
      */
-    private String city_alp;
+    private String cityAlp;
 
     public City() {
     }
 
-    public City(Long cityId, String cityName, String city_alp) {
+    public City(Long cityId, String cityName, String cityAlp) {
         this.cityId = cityId;
         this.cityName = cityName;
-        this.city_alp = city_alp;
+        this.cityAlp = cityAlp;
     }
 
     public Long getCityId() {
@@ -44,12 +44,12 @@ public class City implements Serializable {
         this.cityName = cityName;
     }
 
-    public String getCity_alp() {
-        return city_alp;
+    public String getCityAlp() {
+        return cityAlp;
     }
 
-    public void setCity_alp(String city_alp) {
-        this.city_alp = city_alp;
+    public void setCityAlp(String cityAlp) {
+        this.cityAlp = cityAlp;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class City implements Serializable {
         return "City{" +
                 "cityId=" + cityId +
                 ", cityName='" + cityName + '\'' +
-                ", city_alp='" + city_alp + '\'' +
+                ", cityAlp='" + cityAlp + '\'' +
                 '}';
     }
 }

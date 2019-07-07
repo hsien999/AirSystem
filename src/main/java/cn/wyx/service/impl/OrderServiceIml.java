@@ -28,7 +28,12 @@ public class OrderServiceIml implements OrderService {
     @Autowired
     private NumberMapper numberMapper;
 
-
+    /**
+     * 创建新的订单
+     * @param order
+     * @param ticketsId
+     * @param passengerList
+     */
     @Override
     public void createNewOrder(Order order, String ticketsId, List<Passenger>passengerList) {
         /*订单数据处理*/
@@ -77,7 +82,6 @@ public class OrderServiceIml implements OrderService {
     public List<InfoOfOrder> findAllInfoOfOrderById(Long userId) {
         return orderMapper.findAllById(userId);
     }
-
 
     @Override
     public List<InfoOfOrder> findAll() {

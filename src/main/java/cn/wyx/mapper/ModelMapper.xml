@@ -13,7 +13,7 @@
         update tb_model
         <set>
             <if test="modelName != null and modelName !=''">
-                model_name = #{model},
+                model_name = #{modelName},
             </if>
             model_speed = #{modelSpeed}
         </set>

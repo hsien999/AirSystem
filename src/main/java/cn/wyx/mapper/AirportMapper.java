@@ -36,5 +36,5 @@ public interface AirportMapper {
      * @param airportName
      * @return
      */
-    Airport findAirportByAirportId(String airportName);
+    Airport findAirportByAirportName(String airportName);
 }

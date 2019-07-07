@@ -1,9 +1,9 @@
 package cn.wyx.mapper;
 
-import cn.wyx.entity.Rule;
-import org.apache.ibatis.annotations.Param;
+        import cn.wyx.entity.Rule;
+        import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
+        import java.util.List;
 
 /**
  * @Author: czt

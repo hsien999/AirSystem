@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.SpaceMapper">
+
+    <insert id="create" parameterType = "cn.wyx.entity.Space">
+        insert into tb_space (space_id, space_name, baggage_allowance, space_discount)
+        values (#{spaceId},#{spaceName},#{baggageAllowance},#{spaceDiscount});
+    </insert>
+
+    <update id="setSpace" parameterType="cn.wyx.entity.Space">
+        update tb_space
+        <set>
+            <if test="spaceName != null and spaceName != ''">
+                space_Name = #{spaceName},
+            </if>
+            baggage_allowance = #{baggageAllowance},
+            space_discount = #{spaceDiscount}
+        </set>
+        where space_id = #{spaceId};
+    </update>
+
+    <select id="findModel" parameterType ="java.lang.String" resultType="cn.wyx.entity.Space">
+        select * from tb_space
+        <where>
+            <if test="spaceId != null and spaceId != ''">
+                space_id = #{spaceId}
+            </if>
+        </where>;
+    </select>
+
+    <select id="findByRelatedModelId" parameterType="java.lang.Long" resultType="cn.wyx.entity.Space">
+        select ts.space_id,space_name,baggage_allowance,space_discount
+        from tb_model left join tb_mdsp tm on tb_model.model_id = tm.model_id
+                      left join  tb_space ts on tm.space_id = ts.space_id
+        where tm.model_id = #{modelId};
+    </select>
+
+</mapper>
