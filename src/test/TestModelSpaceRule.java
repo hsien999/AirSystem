@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 /**
  * @Author: czt
  * @Date: 2019/7/7 15:24
@@ -46,5 +48,39 @@ public class TestModelSpaceRule {
         this.modelSpaceRuleService.setSpace(space);
         this.modelSpaceRuleService.setRule(rule);
         this.modelSpaceRuleService.setMdspNums(mdsp);
+    }
+
+    @Test
+    public void select()
+    {
+        List<Model> models = this.modelSpaceRuleService.findAllModel();
+        System.out.println(models);
+
+        List<Space> spaces =  this.modelSpaceRuleService.findAllSpace();
+        System.out.println(spaces);
+
+        Model model =  this.modelSpaceRuleService.findModelByModelId(1L);
+        System.out.println(model);
+
+        List<Space> spaces2 = this.modelSpaceRuleService.findSpaceByRelatedModelId(1L);
+        System.out.println(spaces2);
+
+        List<Mdsp> mdsps = this.modelSpaceRuleService.findMdsp(1L,null);
+        System.out.println(mdsps);
+
+        mdsps = this.modelSpaceRuleService.findMdsp(1L,"Y");
+        System.out.println(mdsps);
+
+        Space space =  this.modelSpaceRuleService.findSpaceById("Y");
+        System.out.println(space);
+
+        Model model1 = this.modelSpaceRuleService.findModelByModelName("空客747");
+        System.out.println(model1);
+
+        List<Rule> rules = this.modelSpaceRuleService.findRuleBySpaceId("Y");
+        System.out.println(rules);
+
+        Rule rule = this.modelSpaceRuleService.findRuleBySpaceIdAndRuleType("Y","3");
+        System.out.println(rule);
     }
 }

@@ -96,10 +96,8 @@ public class ModelSpaceRuleServiceIml implements ModelSpaceRuleService {
 
     @Override
     public Space findSpaceById(String spaceId) {
-        List<Space>spaces = this.spaceMapper.findById(spaceId);
-        if(spaces!=null && spaces.size()>0)
-            return spaces.get(0);
-        return null;
+        Space space = this.spaceMapper.findById(spaceId);
+        return space;
     }
 
     @Override
@@ -109,7 +107,7 @@ public class ModelSpaceRuleServiceIml implements ModelSpaceRuleService {
 
     @Override
     public List<Space> findAllSpace() {
-        return this.spaceMapper.findById(null);
+        return this.spaceMapper.findAllSpace();
     }
 
     @Override
@@ -124,6 +122,6 @@ public class ModelSpaceRuleServiceIml implements ModelSpaceRuleService {
 
     @Override
     public List<Mdsp> findMdsp(Long modelId, String spaceId) {
-        return findMdsp(modelId,spaceId);
+        return this.mdspMapper.findMdsp(modelId,spaceId);
     }
 }

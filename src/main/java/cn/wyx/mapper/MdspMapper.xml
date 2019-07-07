@@ -22,7 +22,7 @@
                 model_id = #{modelId}
             </if>
             <if test="spaceId != null and spaceId != ''">
-                space_id = #{spaceId}
+               and space_id = #{spaceId}
             </if>
         </where>;
     </select>

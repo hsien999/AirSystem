@@ -1,3 +1,5 @@
+cn\wyx\service\ModelSpaceRuleService.class
+cn\wyx\mapper\MdspMapper.class
 cn\wyx\controller\UserController.class
 cn\wyx\entity\Result.class
 cn\wyx\entity\User.class
@@ -8,15 +10,19 @@ cn\wyx\mapper\InfoOfFlightMapper.class
 cn\wyx\entity\Airport.class
 cn\wyx\mapper\FlightsMapper.class
 cn\wyx\mapper\PassengerMapper.class
+cn\wyx\mapper\AirRouteMapper.class
 cn\wyx\mapper\TicketsMapper.class
 cn\wyx\entity\InfoOfTicket.class
+cn\wyx\mapper\SpaceMapper.class
 cn\wyx\credentials\RetryLimitHashedCredentialsMatcher.class
+cn\wyx\mapper\AirportMapper.class
 cn\wyx\mapper\NumberMapper.class
 cn\wyx\entity\InfoOfTickets.class
 cn\wyx\controller\exception\DefaultExceptionHandler.class
 cn\wyx\entity\Model.class
 cn\wyx\entity\Space.class
 cn\wyx\service\UserPassService.class
+cn\wyx\mapper\CityMapper.class
 cn\wyx\service\impl\InfoOfOldFlightServiceIml.class
 cn\wyx\entity\Order.class
 cn\wyx\service\impl\OrderServiceIml.class
@@ -27,6 +33,7 @@ cn\wyx\service\BaseService.class
 cn\wyx\service\impl\UserServiceIml.class
 cn\wyx\entity\InfoOfFlight.class
 cn\wyx\entity\InfoOfOldFlight.class
+cn\wyx\service\impl\CityAirportServiceIml.class
 cn\wyx\controller\FlightsSearchController.class
 cn\wyx\entity\Flights.class
 cn\wyx\mapper\UserMapper.class
@@ -34,6 +41,7 @@ cn\wyx\mapper\OrderMapper.class
 cn\wyx\mapper\InfoOfOldFlightMapper.class
 cn\wyx\entity\Flight.class
 cn\wyx\mapper\UserPassMapper.class
+cn\wyx\mapper\ModelMapper.class
 cn\wyx\entity\PageBean.class
 cn\wyx\realm\UserRealm.class
 cn\wyx\service\UserService.class
@@ -41,8 +49,11 @@ cn\wyx\service\impl\InfoOfFlightServiceIml.class
 cn\wyx\mapper\TicketMapper.class
 cn\wyx\service\impl\UserPassServiceIml.class
 cn\wyx\entity\AirRoute.class
+cn\wyx\service\CityAirportService.class
 cn\wyx\service\InfoOfOldFlightService.class
 cn\wyx\service\OrderService.class
+cn\wyx\service\impl\ModelSpaceRuleServiceIml.class
+cn\wyx\mapper\RuleMapper.class
 cn\wyx\entity\Ticket.class
 cn\wyx\entity\UserPass.class
 cn\wyx\entity\City.class

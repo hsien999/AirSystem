@@ -7,45 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d928010-46fd-45cd-a1f8-aa7e9f745668" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/54b0e0d7-7548-44f3-b8dd-fe17e5e4c977.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/54b0e0d7-7548-44f3-b8dd-fe17e5e4c977.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTickets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Mdsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Mdsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Rule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Space.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Tickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Tickets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/OrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/service/impl/InfoOfFlightServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/service/impl/InfoOfFlightServiceIml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/service/impl/OrderServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/service/impl/OrderServiceIml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/crebas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/crebas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTickets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Mdsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Mdsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Rule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Space.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Tickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/Tickets.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/OrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/impl/InfoOfFlightServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/impl/InfoOfFlightServiceIml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/impl/OrderServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/service/impl/OrderServiceIml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/db/crebas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/db/crebas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestOrder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,22 +79,36 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="4">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="609">
+                    <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+                    <folding>
+                      <element signature="docComment;method#findById#0;class#SpaceMapper#0" expanded="true" />
+                      <element signature="docComment;method#findAllSpace#0;class#SpaceMapper#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/TestCityAirport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/TestModelSpaceRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="240">
+              <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#TestModelSpaceRule#0" expanded="true" />
@@ -126,80 +117,78 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/entity/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="260">
+              <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
-              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="239">
+              <caret line="98" column="57" lean-forward="true" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1138#1139#0" expanded="true" />
+                <element signature="e#2879#2880#0" expanded="true" />
+                <element signature="e#2933#2934#0" expanded="true" />
+                <element signature="e#3211#3212#0" expanded="true" />
+                <element signature="e#3255#3256#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_model">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_space">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_rule">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_mdsp">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_airport">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-685">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#ModelSpaceRuleService#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -282,10 +271,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/entity/Space.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/CityAirportServiceIml.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" />
@@ -294,12 +279,16 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/TicketsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/controller/FlightsSearchController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/crebas.sql" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/entity/City.java" />
         <option value="$PROJECT_DIR$/src/test/TestCityAirport.java" />
-        <option value="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" />
       </list>
     </option>
   </component>
@@ -342,8 +331,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1389" />
+    <option name="x" value="705" />
+    <option name="width" value="1222" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -580,17 +569,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestModelSpaceRule.set">
-    <configuration name="TestCityAirport.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AirSystem" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCityAirport" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestModelSpaceRule.select">
     <configuration name="TestCityAirport.select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AirSystem" />
       <option name="PACKAGE_NAME" value="" />
@@ -616,6 +595,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestModelSpaceRule" />
       <option name="METHOD_NAME" value="creaet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestModelSpaceRule.select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestModelSpaceRule" />
+      <option name="METHOD_NAME" value="select" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -705,19 +694,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat8" />
-      <item itemvalue="JUnit.TestCityAirport.create" />
       <item itemvalue="JUnit.TestCityAirport.set" />
       <item itemvalue="JUnit.TestCityAirport.select" />
       <item itemvalue="JUnit.TestModelSpaceRule.creaet" />
       <item itemvalue="JUnit.TestModelSpaceRule.set" />
+      <item itemvalue="JUnit.TestModelSpaceRule.select" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestModelSpaceRule.select" />
         <item itemvalue="JUnit.TestModelSpaceRule.set" />
         <item itemvalue="JUnit.TestModelSpaceRule.creaet" />
         <item itemvalue="JUnit.TestCityAirport.select" />
         <item itemvalue="JUnit.TestCityAirport.set" />
-        <item itemvalue="JUnit.TestCityAirport.create" />
       </list>
     </recent_temporary>
   </component>
@@ -734,7 +723,7 @@
       <workItem from="1562074971121" duration="7720000" />
       <workItem from="1562114254982" duration="31160000" />
       <workItem from="1562417036970" duration="11584000" />
-      <workItem from="1562464435222" duration="20292000" />
+      <workItem from="1562464435222" duration="24091000" />
     </task>
     <task id="LOCAL-00001" summary="ver1 初始化">
       <created>1562075420257</created>
@@ -806,43 +795,50 @@
       <option name="project" value="LOCAL" />
       <updated>1562486184404</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="CityAirportService 完成测试">
+      <created>1562486357027</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562486357027</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCityAirport_create - 2019.07.07 at 14h 48m 16s.xml">
-      <configuration name="TestCityAirport.create" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 42m 54s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_create - 2019.07.07 at 15h 09m 02s.xml">
-      <configuration name="TestCityAirport.create" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 43m 40s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_set - 2019.07.07 at 15h 13m 47s.xml">
-      <configuration name="TestCityAirport.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 45m 12s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_set - 2019.07.07 at 15h 14m 37s.xml">
-      <configuration name="TestCityAirport.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 46m 25s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_set - 2019.07.07 at 15h 16m 50s.xml">
-      <configuration name="TestCityAirport.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 47m 03s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_set - 2019.07.07 at 15h 17m 33s.xml">
-      <configuration name="TestCityAirport.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 48m 53s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCityAirport_select - 2019.07.07 at 15h 22m 15s.xml">
-      <configuration name="TestCityAirport.select" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 49m 30s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestModelSpaceRule_creaet - 2019.07.07 at 15h 43m 01s.xml">
-      <configuration name="TestModelSpaceRule.creaet" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 52m 25s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestModelSpaceRule_set - 2019.07.07 at 15h 48m 24s.xml">
-      <configuration name="TestModelSpaceRule.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 56m 14s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestModelSpaceRule_set - 2019.07.07 at 15h 52m 13s.xml">
-      <configuration name="TestModelSpaceRule.set" configurationId="JUnit" />
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 57m 32s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70756000" />
+    <option name="totallyTimeSpent" value="74555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -855,8 +851,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34541577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -867,7 +864,7 @@
       <window_info anchor="bottom" id="Application Servers" order="0" weight="0.3010502" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.42777777" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" visible="true" weight="0.5173536" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -877,7 +874,7 @@
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32905483" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32905483" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5010661" side_tool="true" weight="0.33188722" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.13403614" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.32905483" />
       <window_info anchor="bottom" id="Database Changes" order="16" weight="0.32905483" />
@@ -889,7 +886,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Redis Servers" order="6" weight="0.3299356" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.33422175" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3619403" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -958,45 +955,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/register.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/public.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/login.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/FlightsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/PassengerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/PassengerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1168,27 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ModelSpaceRuleService#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/CityAirportService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1265,25 +1202,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_model">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-          <filtering>
-            <filter text="" />
-          </filtering>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/entity/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_space">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
-          <filtering>
-            <filter text="" />
-          </filtering>
+    <entry file="file://$PROJECT_DIR$/src/test/TestCityAirport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_rule">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_model">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
           <filtering>
@@ -1301,31 +1250,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/entity/Model.java">
+    <entry file="file://$PROJECT_DIR$/target/classes/cn/wyx/mapper/SpaceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="324">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml">
+    <entry file="file://$PROJECT_DIR$/target/classes/cn/wyx/mapper/SpaceMapper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="179">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#366#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestCityAirport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="135">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/entity/Mdsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/entity/Space.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_space">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a15cb323-5b6e-4658-b303-05f3e7c59fb2">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/TestModelSpaceRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="240">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#TestModelSpaceRule#0" expanded="true" />
@@ -1333,8 +1329,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-685">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ModelSpaceRuleService#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;method#findById#0;class#SpaceMapper#0" expanded="true" />
+            <element signature="docComment;method#findAllSpace#0;class#SpaceMapper#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="98" column="57" lean-forward="true" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#2879#2880#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#3211#3212#0" expanded="true" />
+            <element signature="e#3255#3256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

@@ -51,13 +51,13 @@
                 user_pass = #{userPass},
             </if>
         </set>
-        where user_id = #{userId}
+        where user_id = #{userId};
     </update>
 
     <delete id="delete" parameterType="java.lang.Long">
         delete
         from tb_user
-        where user_id = #{id}
+        where user_id = #{id};
     </delete>
 
     <select id="validateTel" resultType="int" parameterType="java.lang.String">

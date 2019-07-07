@@ -27,7 +27,13 @@ public interface SpaceMapper{
      * @param spaceId
      * @return
      */
-    List<Space> findById(String spaceId);
+    Space findById(String spaceId);
+
+    /**
+     * 查询所有舱型
+     * @return
+     */
+    List<Space> findAllSpace();
 
     /**
      * 通过机型Id 由 机型-舱位对应关系 获取相关的舱位对象

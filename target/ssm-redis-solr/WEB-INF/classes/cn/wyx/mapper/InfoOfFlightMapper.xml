@@ -44,7 +44,7 @@
         right join tb_model t on tb_flights.model_id = t.model_id
         where cityStartName = #{cityStartName}
         and cityEndName = #{cityEndName}
-        and flight_date = #{date}
+        and flight_date = #{date};
     </select>
 
 </mapper>

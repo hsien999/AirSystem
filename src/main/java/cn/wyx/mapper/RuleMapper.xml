@@ -12,8 +12,8 @@
     <update id="setRule" parameterType="cn.wyx.entity.Rule">
         update tb_rule
         <set>
-            <if test="spaceId != null and spaceId! = ''">
-                spa = #{spaceId},
+            <if test="spaceId != null and spaceId != ''">
+                space_id = #{spaceId},
             </if>
             <if test="ruleType != null and ruleType!=''">
                 rule_type = #{ruleType},
@@ -32,7 +32,7 @@
                 space_id = #{spaceId}
             </if>
             <if test="ruleType != null and ruleType !=''">
-                rule_type = #{ruleType}
+                and rule_type = #{ruleType}
             </if>
         </where>
     </select>

@@ -21,13 +21,13 @@
         where space_id = #{spaceId};
     </update>
 
-    <select id="findModel" parameterType ="java.lang.String" resultType="cn.wyx.entity.Space">
+    <select id="findById" parameterType ="String" resultType ="cn.wyx.entity.Space">
         select * from tb_space
-        <where>
-            <if test="spaceId != null and spaceId != ''">
-                space_id = #{spaceId}
-            </if>
-        </where>;
+        where space_id = #{spaceId};
+    </select>
+
+    <select id="findAllSpace" resultType ="cn.wyx.entity.Space">
+        select * from tb_space;
     </select>
 
     <select id="findByRelatedModelId" parameterType="java.lang.Long" resultType="cn.wyx.entity.Space">
