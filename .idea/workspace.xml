@@ -8,12 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d928010-46fd-45cd-a1f8-aa7e9f745668" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/MdspMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -104,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/TestModelSpaceRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+            <state relative-caret-position="179">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#TestModelSpaceRule#0" expanded="true" />
@@ -126,17 +120,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="98" column="57" lean-forward="true" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+            <state relative-caret-position="-2143">
+              <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#902#903#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
                 <element signature="e#1072#1073#0" expanded="true" />
                 <element signature="e#1138#1139#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+                <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#2442#2443#0" expanded="true" />
                 <element signature="e#2879#2880#0" expanded="true" />
                 <element signature="e#2933#2934#0" expanded="true" />
+                <element signature="e#2988#2989#0" expanded="true" />
+                <element signature="e#3032#3033#0" expanded="true" />
+                <element signature="e#3088#3089#0" expanded="true" />
+                <element signature="e#3133#3134#0" expanded="true" />
                 <element signature="e#3211#3212#0" expanded="true" />
                 <element signature="e#3255#3256#0" expanded="true" />
               </folding>
@@ -723,7 +729,7 @@
       <workItem from="1562074971121" duration="7720000" />
       <workItem from="1562114254982" duration="31160000" />
       <workItem from="1562417036970" duration="11584000" />
-      <workItem from="1562464435222" duration="24091000" />
+      <workItem from="1562464435222" duration="24339000" />
     </task>
     <task id="LOCAL-00001" summary="ver1 初始化">
       <created>1562075420257</created>
@@ -802,13 +808,17 @@
       <option name="project" value="LOCAL" />
       <updated>1562486357027</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ModelSpaceRuleService 完成测试">
+      <created>1562490304947</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562490304947</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 42m 54s.xml">
-      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 43m 40s.xml">
       <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
@@ -836,9 +846,12 @@
     <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 16h 57m 32s.xml">
       <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestModelSpaceRule_select - 2019.07.07 at 17h 03m 28s.xml">
+      <configuration name="TestModelSpaceRule.select" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74555000" />
+    <option name="totallyTimeSpent" value="74803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,7 +961,8 @@
     <MESSAGE value="ver1 初始化" />
     <MESSAGE value="已将我的代码整合完毕" />
     <MESSAGE value="CityAirportService 完成测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="CityAirportService 完成测试" />
+    <MESSAGE value="ModelSpaceRuleService 完成测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModelSpaceRuleService 完成测试" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1318,17 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestModelSpaceRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#TestModelSpaceRule#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-685">
@@ -1360,16 +1363,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="98" column="57" lean-forward="true" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+        <state relative-caret-position="-2143">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
             <element signature="e#1072#1073#0" expanded="true" />
             <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2442#2443#0" expanded="true" />
             <element signature="e#2879#2880#0" expanded="true" />
             <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
+            <element signature="e#3032#3033#0" expanded="true" />
+            <element signature="e#3088#3089#0" expanded="true" />
+            <element signature="e#3133#3134#0" expanded="true" />
             <element signature="e#3211#3212#0" expanded="true" />
             <element signature="e#3255#3256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TestModelSpaceRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#TestModelSpaceRule#0" expanded="true" />
           </folding>
         </state>
       </provider>
