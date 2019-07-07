@@ -7,30 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d928010-46fd-45cd-a1f8-aa7e9f745668" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/SpaceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/CityAirportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/ModelSpaceRuleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/CityAirportServiceIml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ModelSpaceRuleServiceIml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestCityAirport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestModelSpaceRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/54b0e0d7-7548-44f3-b8dd-fe17e5e4c977.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/54b0e0d7-7548-44f3-b8dd-fe17e5e4c977.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirportMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirportMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirportMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfOldFilghtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/ModelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/RuleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/TicketsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/TicketsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/TicketsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/TicketsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/OrderServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/OrderServiceIml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/crebas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/crebas.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/City.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTicket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/InfoOfTickets.class" afterDir="false" />
@@ -51,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/City.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTicket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm-redis-solr/WEB-INF/classes/cn/wyx/entity/InfoOfTickets.class" afterDir="false" />
@@ -757,7 +734,7 @@
       <workItem from="1562074971121" duration="7720000" />
       <workItem from="1562114254982" duration="31160000" />
       <workItem from="1562417036970" duration="11584000" />
-      <workItem from="1562464435222" duration="20047000" />
+      <workItem from="1562464435222" duration="20292000" />
     </task>
     <task id="LOCAL-00001" summary="ver1 初始化">
       <created>1562075420257</created>
@@ -822,7 +799,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562419786363</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CityAirportService 完成测试">
+      <created>1562486184403</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562486184404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -858,7 +842,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70511000" />
+    <option name="totallyTimeSpent" value="70756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -872,7 +856,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -883,7 +867,7 @@
       <window_info anchor="bottom" id="Application Servers" order="0" weight="0.3010502" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.42777777" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" visible="true" weight="0.33188722" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -893,7 +877,7 @@
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32905483" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32905483" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5005365" side_tool="true" weight="0.25813448" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.33188722" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.13403614" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.32905483" />
       <window_info anchor="bottom" id="Database Changes" order="16" weight="0.32905483" />
@@ -966,7 +950,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ver1 初始化" />
     <MESSAGE value="已将我的代码整合完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="已将我的代码整合完毕" />
+    <MESSAGE value="CityAirportService 完成测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="CityAirportService 完成测试" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
