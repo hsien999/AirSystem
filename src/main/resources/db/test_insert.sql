@@ -109,5 +109,10 @@ values ('ticket1','蔡志涛','居民身份证','360600000000000000','1810693299
 select * from tb_passenger;
 
 
+select airport_up,airport_down,airroute_id,airroute_length
+from tb_airroute
+         left join tb_airport ta on tb_airroute.airport_up = ta.airport_id
+         left join tb_airport tb on tb_airroute.airport_down = tb.airport_id
+where ta.airport_name = '北京机场'and tb.airport_name = '上海机场';
 
-
+delete from tb_airroute where 1=1;

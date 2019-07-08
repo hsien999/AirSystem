@@ -3,6 +3,7 @@ cn\wyx\mapper\MdspMapper.class
 cn\wyx\controller\UserController.class
 cn\wyx\entity\Result.class
 cn\wyx\entity\User.class
+cn\wyx\service\ManageFlightsService.class
 cn\wyx\entity\Mdsp.class
 cn\wyx\entity\InfoOfOrder.class
 cn\wyx\service\InfoOfFlightService.class
@@ -46,6 +47,7 @@ cn\wyx\entity\PageBean.class
 cn\wyx\realm\UserRealm.class
 cn\wyx\service\UserService.class
 cn\wyx\service\impl\InfoOfFlightServiceIml.class
+cn\wyx\service\impl\ManageFlightsServiceIml.class
 cn\wyx\mapper\TicketMapper.class
 cn\wyx\service\impl\UserPassServiceIml.class
 cn\wyx\entity\AirRoute.class

@@ -10,6 +10,7 @@ D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\UserPassService.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\entity\Tickets.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\entity\UserPass.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\mapper\InfoOfFlightMapper.java
+D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\ManageFlightsService.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\mapper\FlightsMapper.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\impl\ModelSpaceRuleServiceIml.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\entity\Airport.java
@@ -18,6 +19,7 @@ D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\InfoOfOldFlightService.ja
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\entity\City.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\mapper\AirportMapper.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\mapper\UserPassMapper.java
+D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\impl\ManageFlightsServiceIml.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\mapper\MdspMapper.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\entity\Model.java
 D:\ideaProjects\AirSystem\src\main\java\cn\wyx\service\impl\UserServiceIml.java

@@ -25,7 +25,9 @@ public class CityAirportServiceIml implements CityAirportService {
 
     @Override
     public void createCity(String cityName, String cityAlp) {
-        this.cityMapper.create(cityName,cityAlp);
+        City city = this.cityMapper.getCityIdByName(cityName);
+        if(city == null)
+            this.cityMapper.create(cityName,cityAlp);
     }
 
     @Override
@@ -41,7 +43,9 @@ public class CityAirportServiceIml implements CityAirportService {
     @Override
     public void createAirport(String cityName, String airportName) {
         City city = this.cityMapper.getCityIdByName(cityName);
-        this.airportMapper.create(city.getCityId(),airportName);
+        Airport airport = this.airportMapper.findAirportByAirportName(airportName);
+        if(airport == null)
+            this.airportMapper.create(city.getCityId(),airportName);
     }
 
     @Override

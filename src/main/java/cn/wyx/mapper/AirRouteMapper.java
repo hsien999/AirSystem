@@ -38,5 +38,5 @@ public interface AirRouteMapper {
      * @param airportUpName
      * @param airportDownName
      */
-    void setLengthByAirports(@Param("airportUpName") String airportUpName, @Param("airportDownName") String airportDownName, @Param("airrouteLength") int airrairrouteLengthoute);
+    void setLengthByAirports(@Param("airportUpName") String airportUpName, @Param("airportDownName") String airportDownName, @Param("airrouteLength") int airrouteLength);
 }

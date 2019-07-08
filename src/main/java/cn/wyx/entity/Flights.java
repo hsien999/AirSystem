@@ -34,12 +34,12 @@ public class Flights implements Serializable {
     /**
      *计划花费时间
      */
-    private Time planTime;
+    private int planTime;
 
     public Flights() {
     }
 
-    public Flights(String flightsId, Long modelId, Long airrouteId, String flightsMeals, Time planUpTime, Time planDownTime, Time planTime) {
+    public Flights(String flightsId, Long modelId, Long airrouteId, String flightsMeals, Time planUpTime, Time planDownTime, int planTime) {
         this.flightsId = flightsId;
         this.modelId = modelId;
         this.airrouteId = airrouteId;
@@ -97,11 +97,11 @@ public class Flights implements Serializable {
         this.planDownTime = planDownTime;
     }
 
-    public Time getPlanTime() {
+    public int getPlanTime() {
         return planTime;
     }
 
-    public void setPlanTime(Time planTime) {
+    public void setPlanTime(int planTime) {
         this.planTime = planTime;
     }
 

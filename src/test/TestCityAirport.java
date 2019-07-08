@@ -26,7 +26,11 @@ public class TestCityAirport {
     public void create()
     {
         this.cityAirportService.createCity("天津","T");
+        this.cityAirportService.createCity("北京","B");
+        this.cityAirportService.createCity("上海","S");
         this.cityAirportService.createAirport("天津" ,"天津机场");
+        this.cityAirportService.createAirport("北京" ,"北京机场");
+        this.cityAirportService.createAirport("上海" ,"上海机场");
     }
 
     @Test

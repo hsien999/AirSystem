@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.InfoOfFlightsMapper">
+    <!-- 航班机票查询结果类型 -->
+    <resultMap type = "cn.wyx.entity.InfoOfFlights" id = "InfoOfFlightsMap" >
+        <!--执飞航班信息-->
+        <id column="flights_id"  property = "flightsId" />
+        <result column="model_id" property = "modelId"/>
+        <result column="flights_meals" property = "fightsMeals"/>
+        <result column="plan_upTime" property = "planUpTime"/>
+        <result column="plan_time" property = "planTime"/>
+        <result column="airportUpName" property = "airportUpName"/>
+        <result column="airportDownName" property = "airportDownName"/>
+        <result column="airroute_length" property = "airRouteLength"/>
+    </resultMap>
+
+    <select id = "findFlights" resultMap="InfoOfFlightsMap">
+        select  flights_id,tb_flights.model_id,flights_meals,plan_upTime,plan_time,airportUpName,airportDownName,airroute_length
+        from v_airroute_airport_city left join tb_flights on v_airroute_airport_city.airroute_id = tb_flights.airroute_id
+                                     left join tb_model t on tb_flights.model_id = t.model_id
+       <where>
+           <if test="flightsId != null and flightsId != ''">
+               flights_id = #{flightsId}
+           </if>
+           <if test="airportUpName != null and airportUpName != ''">
+               and airportUpName = #{airportUpName}
+           </if>
+           <if test="airportDownName != null and airportDownName != ''">
+               and airportDownName = #{airportDownName}
+           </if>
+       </where>
+    </select>
+
+</mapper>

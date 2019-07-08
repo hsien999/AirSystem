@@ -39,9 +39,9 @@
         left join tb_flight tf on tb_flights.flights_id = tf.flights_id
         left join tb_tickets tt on tf.flight_id = tt.flight_id
         left join tb_space ts on tt.space_id = ts.space_id
-        left join tb_rule tr on ts.space_id = tr.space_id
+        left join tb_model t on tb_flights.model_id = t.model_id
         left join tb_mdsp tm on ts.space_id = tm.space_id
-        right join tb_model t on tb_flights.model_id = t.model_id
+        left join tb_rule tr on ts.space_id = tr.space_id
         where cityStartName = #{cityStartName}
         and cityEndName = #{cityEndName}
         and flight_date = #{date};
