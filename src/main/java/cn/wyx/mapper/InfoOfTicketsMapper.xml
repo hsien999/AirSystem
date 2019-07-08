@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.InfoOfTicketsMapper">
+
+ <resultMap type="cn.wyx.entity.InfoOfTickets" id ="InfoOfTicketsMap">
+     <id column="tickets_id"  property = "ticketsId" />
+     <result column="space_id" property = "spaceId"/>
+     <result column="space_Name" property = "spaceName"/>
+     <result column="tickets_price" property = "ticketsPrice"/>
+     <result column="tickets_nums" property = "ticketsNums"/>
+     <result column="nums" property = "ticketsAllNums"/>
+ </resultMap>
+
+    <select id="findInfoOfTickets" resultMap="InfoOfTicketsMap">
+        select tickets_id,tb_space.space_id,space_Name,tickets_price,tickets_nums,nums
+        from tb_flights left join tb_flight on tb_flights.flights_id = tb_flight.flights_id
+                        left join tb_tickets on tb_flight.flight_id = tb_tickets.flight_id
+                        left join tb_model on tb_flights.model_id = tb_model.model_id
+                        left join tb_space on tb_tickets.space_id = tb_space.space_id
+                        left join tb_mdsp on tb_model.model_id = tb_mdsp.model_id
+        <where>
+            <if test="ticketsId != null and ticketsId != ''">
+                tb_tickets.tickets_id = #{ticketsId}
+            </if>
+            <if test="flightId != null and flightId !=''">
+                and tb_flight.flight_id = #{flightId}
+            </if>
+            <if test="spaceId != null and spaceId != ''">
+                and tb_space.space_id = #{spaceId}
+            </if>
+        </where>
+    </select>
+</mapper>

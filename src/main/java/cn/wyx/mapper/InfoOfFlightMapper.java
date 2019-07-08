@@ -13,4 +13,6 @@ public interface InfoOfFlightMapper {
      * @return
      */
     List<InfoOfFlight> findByCityDate(@Param("cityStartName") String cityStartName, @Param("cityEndName") String cityEndName, @Param("date") Date date);
+
+    List<InfoOfFlight> findByFlightIdFlightsId(@Param("flightId") String flightId,@Param("flightsId") String flightsId ,@Param("date") Date date);
 }

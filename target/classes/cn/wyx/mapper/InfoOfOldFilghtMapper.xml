@@ -21,15 +21,26 @@
         <result column="flight_state" property="state"/>
     </resultMap>
 
-    <select id = "findByCityDate" resultMap="InfoOfOldFlightMap">
+    <select id = "findByCityDateId" resultMap="InfoOfOldFlightMap">
         select  flight_id,tf.flights_id,flight_date,model_name,airportUpName,airportDownName,cityStartName,cityEndName,
                 plan_upTime,plan_downTime,act_upTime,act_downTime,flight_state
         from v_airroute_airport_city left join tb_flights on v_airroute_airport_city.airroute_id = tb_flights.airroute_id
                                      left join tb_flight tf on tb_flights.flights_id = tf.flights_id
                                      left join tb_model t on tb_flights.model_id = t.model_id
-        where cityStartName = #{cityStartName}
-          and cityEndName = #{cityEndName}
-          and flight_date = #{date};
+        <where>
+            flight_date = #{date}
+            <if test="cityStartName != null and cityStartName!= '' and cityEndName != null and cityEndName!= '' ">
+                and cityStartName = #{cityStartName}
+                and cityEndName = #{cityEndName}
+            </if>
+            <if test="flightsId != null and flightsId != ''">
+                and tf.flights_id = #{flightsId}
+            </if>
+            <if test="flightId != null and flightId != ''">
+                and tf.flight_id = #{flightId}
+            </if>
+        </where>
+
     </select>
 
 </mapper>

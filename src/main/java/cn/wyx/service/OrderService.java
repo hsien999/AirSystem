@@ -22,12 +22,19 @@ public interface OrderService extends BaseService<InfoOfOrder> {
      List<InfoOfOrder> findAllInfoOfOrderById(Long userId);
 
     /**
+     * 通过orderId查找订单信息
+     * @param orderId
+     * @return
+     */
+     InfoOfOrder findInfoOfOrderByOrderId(String orderId);
+
+    /**
      * 创建新的订单
      * @param order
      * @param ticketsId
      * @param passengerList
      */
-     void createNewOrder(Order order, String ticketsId, List<Passenger> passengerList);
+     InfoOfOrder createNewOrder(Order order, String ticketsId, List<Passenger> passengerList);
 
     /**
      * 更改订单状态

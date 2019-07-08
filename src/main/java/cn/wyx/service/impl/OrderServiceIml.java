@@ -28,6 +28,11 @@ public class OrderServiceIml implements OrderService {
     @Autowired
     private NumberMapper numberMapper;
 
+    @Override
+    public InfoOfOrder findInfoOfOrderByOrderId(String orderId) {
+        return this.orderMapper.findOneById(orderId);
+    }
+
     /**
      * 创建新的订单
      * @param order
@@ -35,7 +40,7 @@ public class OrderServiceIml implements OrderService {
      * @param passengerList
      */
     @Override
-    public void createNewOrder(Order order, String ticketsId, List<Passenger>passengerList) {
+    public InfoOfOrder createNewOrder(Order order, String ticketsId, List<Passenger>passengerList) {
         /*订单数据处理*/
         //生成订单号
         String ss = timestampToString(order.getOrderSureTime());
@@ -70,7 +75,7 @@ public class OrderServiceIml implements OrderService {
             this.ticketMapper.insertTicket(ticket);
             this.passengerMapper.insertPassenger(passengerList.get(i));
         }
-
+        return this.orderMapper.findOneById(order.getOrderId());
     }
 
     /**
@@ -140,8 +145,8 @@ public class OrderServiceIml implements OrderService {
      */
     public String timestampToString(Timestamp time){
         String ss = time.toString();
-        String sb1 = ss.substring(0,3),sb2 = ss.substring(5,6),sb3 = ss.substring(8,9);
-        String sb4 = ss.substring(11,12),sb5 = ss.substring(14,15),sb6 = ss.substring(17,18);
+        String sb1 = ss.substring(0,4),sb2 = ss.substring(5,7),sb3 = ss.substring(8,10);
+        String sb4 = ss.substring(11,13),sb5 = ss.substring(14,16),sb6 = ss.substring(17,19);
         String result = sb1+sb2+sb3+sb4+sb5+sb6;
         return result;
     }

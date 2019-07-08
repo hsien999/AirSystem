@@ -421,3 +421,4 @@ alter table tb_userpass
 #
 # 普通航线旅客运输基准票价=LOG（150，航线距离×0.6）× 航线距离 × 1.1
 
+insert into tb_number values (0,0);

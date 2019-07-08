@@ -34,14 +34,17 @@ public class TestInfo {
         Date date = Date.valueOf("2019-1-1");
 
 
-       List<InfoOfFlight> infoOfFlights = this.infoOfFlightService.findFlightByCityDate(startCityId,endCityId,date);
-        for (InfoOfFlight o: infoOfFlights) {
-            System.out.println(o.getFilghtId()+":"+o.getFlightsId());
-            for (InfoOfTickets o2: o.getTickets()) {
-                System.out.println("---- "+ o2);
-            }
-        }
-       //System.out.println(infoOfFlights);
+
+       //List<InfoOfFlight> infoOfFlights = this.infoOfFlightService.findFlightByCityDate(startCityId,endCityId,date);
+//        List<InfoOfFlight> infoOfFlights1 = this.infoOfFlightService.findFlightByFlightIdFlightsIdDate(null,"MF013",date);
+//        for (InfoOfFlight o: infoOfFlights1) {
+//            System.out.println(o.getFilghtId()+":"+o.getFlightsId());
+//            for (InfoOfTickets o2: o.getTickets()) {
+//                System.out.println("---- "+ o2);
+//            }
+//        }
+        List<InfoOfTickets> tickets = infoOfFlightService.findInfoOfTickets(null,"1",null);
+       System.out.println(tickets);
     }
 
 
@@ -53,6 +56,7 @@ public class TestInfo {
         Date date = Date.valueOf("2019-1-1");
 
         List<InfoOfOldFlight> infoOfOldFlights = this.infoOfOldFlightService.findOldFlightByCityDate(startCityId,endCityId,date);
+       // List<InfoOfOldFlight> infoOfOldFlightList = this.infoOfOldFlightService.findOldFlightByFlightIdFlightsIdDate(null,"MF013",date);
         System.out.println(infoOfOldFlights);
     }
 

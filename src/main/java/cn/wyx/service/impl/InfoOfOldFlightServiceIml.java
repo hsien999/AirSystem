@@ -32,6 +32,11 @@ public class InfoOfOldFlightServiceIml implements InfoOfOldFlightService {
     }
 
     @Override
+    public List<InfoOfOldFlight> findOldFlightByFlightIdFlightsIdDate(String flightId, String flightsId, Date date) {
+        return this.infoOfOldFlightMapper.findByCityDateId(null,null,date,flightId,flightsId);
+    }
+
+    @Override
     public InfoOfOldFlight findById(String id) {
         return null;
     }
@@ -64,6 +69,6 @@ public class InfoOfOldFlightServiceIml implements InfoOfOldFlightService {
      */
     @Override
     public List<InfoOfOldFlight> findOldFlightByCityDate(String cityStartName, String cityEndName, Date date) {
-        return this.infoOfOldFlightMapper.findByCityDate(cityStartName,cityEndName,date);
+        return this.infoOfOldFlightMapper.findByCityDateId(cityStartName,cityEndName,date,null,null);
     }
 }
