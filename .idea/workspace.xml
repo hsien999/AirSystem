@@ -7,20 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d928010-46fd-45cd-a1f8-aa7e9f745668" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/InfoOfFlights.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ManageFlightsServiceIml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestManageFlights.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/entity/Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/CityAirportServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/CityAirportServiceIml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/test_insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/test_insert.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestCityAirport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestCityAirport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Flights.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/entity/Flights.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/wyx/mapper/InfoOfFlightMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/test_insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/test_insert.sql" afterDir="false" />
@@ -219,11 +206,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/TestManageFlights.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+            <state relative-caret-position="364">
+              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#TestManageFlights#0" expanded="true" />
@@ -235,7 +222,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ManageFlightsServiceIml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
+            <state relative-caret-position="229">
               <caret line="121" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -254,10 +241,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+        <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_airroute">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="66103129-7a79-4bd7-88a9-9462410d14cb">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -282,11 +271,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="391">
+              <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -406,10 +395,10 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/AirRouteMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ManageFlightsServiceIml.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wyx/entity/InfoOfFlights.java" />
         <option value="$PROJECT_DIR$/src/test/TestManageFlights.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java" />
       </list>
     </option>
   </component>
@@ -845,7 +834,7 @@
       <workItem from="1562114254982" duration="31160000" />
       <workItem from="1562417036970" duration="11584000" />
       <workItem from="1562464435222" duration="42435000" />
-      <workItem from="1562552164770" duration="8296000" />
+      <workItem from="1562552164770" duration="8606000" />
     </task>
     <task id="LOCAL-00001" summary="ver1 初始化">
       <created>1562075420257</created>
@@ -938,16 +927,17 @@
       <option name="project" value="LOCAL" />
       <updated>1562490407448</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ManageFlightsService 完成并完成测试">
+      <created>1562565261926</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1562565261926</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestManageFlights_calculate - 2019.07.08 at 12h 03m 20s.xml">
-      <configuration name="TestManageFlights.calculate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestManageFlights_calculate - 2019.07.08 at 12h 07m 48s.xml">
-      <configuration name="TestManageFlights.calculate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestManageFlights_calculate - 2019.07.08 at 12h 09m 20s.xml">
       <configuration name="TestManageFlights.calculate" configurationId="JUnit" />
     </history-entry>
@@ -972,9 +962,15 @@
     <history-entry file="TestManageFlights_findFlights - 2019.07.08 at 13h 43m 57s.xml">
       <configuration name="TestManageFlights.findFlights" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestManageFlights_setFlights - 2019.07.08 at 13h 49m 21s.xml">
+      <configuration name="TestManageFlights.setFlights" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestManageFlights_setFlights - 2019.07.08 at 13h 49m 41s.xml">
+      <configuration name="TestManageFlights.setFlights" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101195000" />
+    <option name="totallyTimeSpent" value="101505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -987,7 +983,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17963752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1022,7 +1017,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Redis Servers" order="6" weight="0.3299356" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.42430705" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.28997868" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -1123,7 +1118,8 @@
     <MESSAGE value="已将我的代码整合完毕" />
     <MESSAGE value="CityAirportService 完成测试" />
     <MESSAGE value="ModelSpaceRuleService 完成测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModelSpaceRuleService 完成测试" />
+    <MESSAGE value="ManageFlightsService 完成并完成测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="ManageFlightsService 完成并完成测试" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1426,15 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_airroute">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="66103129-7a79-4bd7-88a9-9462410d14cb">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/FlightsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1518,26 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ManageFlightsServiceIml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/mapper/InfoOfFlightMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-162">
@@ -1613,11 +1580,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/TestManageFlights.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+        <state relative-caret-position="364">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#TestManageFlights#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0e0d7-7548-44f3-b8dd-fe17e5e4c977/schema/air_system/table/tb_airroute">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="66103129-7a79-4bd7-88a9-9462410d14cb">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/impl/ManageFlightsServiceIml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wyx/service/ManageFlightsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
