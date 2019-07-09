@@ -1,22 +1,34 @@
 //设置全局表单提交格式
 Vue.http.options.emulateJSON = true;
 
+const Notfound = {
+    template: '<h2>404</h2>'
+}
+
+const routerObj = new VueRouter({
+    mode: 'history',
+    routes: [{
+        path: "*",
+        component: Notfound
+    },]
+});
+
 //Vue实例
 new Vue({
     el: '#app',
     data() {
-
-
         return {
-            activeIndex: '0',
+            activeIndex: '1',
             activeStep: 0,
             upDate: '',
             loading: false,
+            baggageAllowance: 0,
 
             searchEntity: {
                 stCity: [],
                 edCity: [],
-                planTime: ''
+                planTime: '',
+
             },
 
             InfoOfFlight: [
@@ -26,21 +38,21 @@ new Vue({
                     date: '', //航班飞行时间
                     modelName: '',//机型
                     flightsMeals: '', //餐食类型
-                    airrouteLength: '',//航线长
+                    airrouteLength: 0,//航线长
                     airportUpName: '',//起飞机场
                     airportDownName: '',//降落机场
                     cityStartName: '',//起飞城市
                     cityEndName: '',//降落城市
                     preUpTime: '',//预计起飞时间
                     preDownTime: '',//预计到达时间
-                    planTime: '',//计划用时
+                    planTime: 0,//计划用时
                     tickets: [
                         {
                             ticketsId: '',//售票ID
                             spaceName: '',//舱位名称
-                            ticketsPrice: '',//售票价
-                            ticketsNums: '',//余票数
-                            spaceId: '' //舱型ID
+                            ticketsPrice: 0,//售票价
+                            ticketsNums: 0,//余票数
+                            spaceId: '', //舱型ID
                         }
                     ]
                 }
@@ -61,6 +73,11 @@ new Vue({
                     ]
                 }
             ],
+            ticketRules: [{
+                ruleType: '',
+                ruleRefund: '',
+                ruleChange: '',
+            }],
 
             pickerOptions: {
                 disabledDate(time) {
@@ -88,24 +105,6 @@ new Vue({
                 }]
             },
 
-            tableData: [{
-                date: '2016-05-02',
-                name: '王小虎',
-                address: '上海市普陀区金沙江路 1518 弄'
-            }, {
-                date: '2016-05-04',
-                name: '王小虎',
-                address: '上海市普陀区金沙江路 1517 弄'
-            }, {
-                date: '2016-05-01',
-                name: '王小虎',
-                address: '上海市普陀区金沙江路 1519 弄'
-            }, {
-                date: '2016-05-03',
-                name: '王小虎',
-                address: '上海市普陀区金沙江路 1516 弄'
-            }],
-
             rules: {
                 stCity: [
                     {required: true, message: '请选择出发城市', trigger: 'change'},
@@ -116,12 +115,47 @@ new Vue({
                 planTime: [
                     {required: true, message: '请选择乘机时间', trigger: 'change'},
                 ],
-            }
+            },
 
         }
 
     },
 
+
+    filters: {
+
+        //过滤时间的秒
+        timeFilter(time) {
+            const values = (time || '').split(':');
+            if (values.length >= 2) {
+                const hours = parseInt(values[0], 10);
+                const minutes = parseInt(values[1], 10);
+                let hh = hours >= 10 ? hours : '0' + hours;
+                let mm = minutes >= 10 ? minutes : '0' + minutes;
+                return hh + ':' + mm;
+            }
+            /* istanbul ignore next */
+            return '';
+        },
+
+        //格式化总时间
+        sumTimeFilter(data) {
+            const hours = Math.floor(data / 60);
+            const minutes = Math.floor(data % 60);
+            if (hours == 0 && minutes == 0) {
+                return '';
+            } else if (hours == 0) {
+                return minutes + '分钟';
+            } else if (minutes == 0) {
+                return hours + '小时';
+            } else {
+                return hours + '小时' + minutes + '分钟';
+            }
+
+        },
+
+    },
+    router: routerObj,
     methods: {
 
         getAllCitys() {
@@ -131,7 +165,6 @@ new Vue({
         },
 
         search(form) {
-
             this.$refs[form].validate((valid) => {
                 /*通过表单验证*/
                 if (!valid) {
@@ -145,18 +178,23 @@ new Vue({
                     );
 
                 } else {
+                    this.loading = true;
+                    setTimeout(() => {
+                        this.loading = false;
+                    }, 2000);
+                    //发送ajax请求
                     this.$http.post('/AirSystem_war_exploded/findAllInfoOfFlights.do?stCity=' +
                         this.searchEntity.stCity[2] + '&edCity=' + this.searchEntity.edCity[2] + '&searchDate=' + this.searchEntity.planTime
                     ).then(result => {
-                        try {
-                            this.InfoOfFlight = result.body;
-                        } catch (e) {
+                        if (result.body == null || JSON.stringify(result.body) === '[]') {
                             this.$message({
-                                type: 'error',
-                                message: "获取航班信息失败",
-                                duration: 6000
+                                type: 'warning',
+                                message: "无相关航班信息",
+                                duration: 2000
                             });
-                            this.$refs.searchEntity.resetFields();
+                            this.InfoOfFlight = [];
+                        } else {
+                            this.InfoOfFlight = result.body;
                         }
                     })
                 }
@@ -165,20 +203,50 @@ new Vue({
         },
 
         showRules(spaceId) {
-
+            this.$http.post('/AirSystem_war_exploded/findRulesById.do?spaceId=' + spaceId
+            ).then(result => {
+                this.ticketRules = result.body;
+                this.ticketRules.forEach(row => {
+                    if (row.ruleType.toLowerCase() == 'a') {
+                        row.ruleType = '起飞前7天（含）前'
+                    } else if (row.ruleType.toLowerCase() == 'b') {
+                        row.ruleType = '起飞前7天（不含）至48小时（含）之间'
+                    } else if (row.ruleType.toLowerCase() == 'c') {
+                        row.ruleType = '起飞前48小时（不含）至4小时（含）之间'
+                    } else {
+                        row.ruleType = '起飞前4小时（含）后'
+                    }
+                })
+            })
+            this.$http.post('/AirSystem_war_exploded/findBaggageAllowance.do?spaceId=' + spaceId
+            ).then(result => {
+                this.baggageAllowance = result.body;
+            })
         },
 
-        orderTicket(ticketId) {
-
+        orderTicket(flightId, ticketsId) {
+            window.location.href = 'user/orderNav1.html?' + 'flightId=' + flightId + '&ticketsId=' + ticketsId;
+            // this.$router.push({
+            //     path: 'user/orderNav1.html',
+            //     query: {
+            //         stCity: this.searchEntity.stCity[2],
+            //         edCity: this.searchEntity.edCity[2],
+            //         searchDate: this.searchEntity.planTime,
+            //         ticketsId: ticketsId,
+            //     }
+            // })
         },
 
-        handleEdit(index, row) {
-            console.log(index, row);
-        },
 
-        handleDelete(index, row) {
-            console.log(index, row);
-        },
+        sortBy1(a, b) {
+            return a.spaceId >= b.spaceId ? 1 : -1;
+        }
+        ,
+        sortBy2(a, b) {
+            return a.ticketsPrice - b.ticketsPrice;
+        }
+        ,
+
         init() {
             this.InfoOfFlight = [];
         }
@@ -189,7 +257,23 @@ new Vue({
         this.init();
         //首先加载城市信息
         this.getAllCitys();
-    },
+
+        this.$http.post('/AirSystem_war_exploded/findAllInfoOfFlights.do?stCity=' +
+            '厦门' + '&edCity=' + '上海虹桥' + '&searchDate=' + '2019-7-8'
+        ).then(result => {
+            try {
+                this.InfoOfFlight = result.body;
+            } catch (e) {
+                this.$message({
+                    type: 'error',
+                    message: "获取航班信息失败",
+                    duration: 6000
+                });
+                this.$refs.searchEntity.resetFields();
+            }
+        })
+    }
+
 });
 
 
