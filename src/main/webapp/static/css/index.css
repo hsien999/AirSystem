@@ -45,6 +45,10 @@ a {
     margin-top: 1%;
     margin-left: 6%;
     margin-right: 6%;
+    width: 88%;
+    display: inline-block;
+    /*height: -webkit-fill-available;*/
+    height: available;
 }
 
 /*#main > .el-row {*/
@@ -57,40 +61,13 @@ a {
     margin-top: 20px;
 }
 
-.show {
-    width: 261px;
-    height: 326px;
-    display: inline-block;
-    margin: 2px 5px;
-    border: 1px solid #eee;
-    overflow: hidden;
-}
-
-.show .img > img {
-    border-bottom: 1px solid #eee;
-    /*border-radius: 100%;*/
-    box-sizing: border-box;
-    height: 253px;
-    /*margin: 0 8px 0 10px;*/
-    padding: 2px;
-    width: 261px;
-}
-
-.show .price > span {
-    color: #F40;
-    font-weight: 700;
-    padding: 5px;
-}
-
-.show .title {
-    margin-top: 10px;
-    font-size: 10px;
-    padding: 0 5px;
-}
 
 .footer {
+    width: 100%;
     border-top: solid 1px #e6e6e6;
-    margin-top: 50px;
+    margin-top: 15%;
+    text-align: center;
+    /*bottom: 0;*/
 }
 
 .footer .footer-inner {
@@ -100,11 +77,12 @@ a {
 }
 
 .footer .footer-inner .copyright {
+    text-align: center;
     margin-bottom: 3px;
 }
 
 .footer .footer-inner label {
-    margin-left: -30%;
+    margin-left: -15%;
 }
 
 .pagination {
@@ -140,4 +118,54 @@ a {
     margin-top: 10px;
     margin-left: 7%;
 }
+
+.myCard .el-row .el-col > label {
+    font-size: larger;
+    font-family: Arial;
+    color: #4062bb;
+    margin-left: 10px;
+}
+
+.myCard #plane > img {
+    height: 16px;
+    width: 100%;
+}
+
+.myCard #upPlane > img {
+    height: 23px;
+    width: 80%;
+}
+
+.myCard #downPlane > img {
+    height: 23px;
+    width: 80%;
+}
+
+.dotLine {
+    width: 100%;
+    margin-bottom: 20%;
+    border-bottom: #accef5 dashed 2px;
+    text-align: center;
+    font-size: larger;
+    font-family: Arial;
+    color: #5e87bb;
+}
+
+.splitLine {
+    height: 10px;
+    margin-right: 20%;
+    border-bottom: #9fc0f8 2px solid;
+}
+
+.topInfo {
+    margin-right: 20%;
+    margin-top: 20px;
+    border-bottom: #ecf4f8 1px solid;
+}
+
+
+
+
+
+
 
