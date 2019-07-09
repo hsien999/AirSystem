@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JM航空</title>
+    <link rel="stylesheet" href="static/element-ui/lib/theme-chalk/index.css"/>
+    <link rel="stylesheet" href="static/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+<body>
+<div id="app">
+    <el-menu mode="horizontal" :default-active="activeIndex" active-text-color="#409EFF">
+        <el-menu-item index="0" id="logo">JM航空&nbsp;&nbsp;&nbsp; <span
+                class="fa fa-plane fa-2x"></span></el-menu-item>
+        <el-menu-item index="1"><a href="register.html">机票预订</a></el-menu-item>
+        <el-menu-item index="2"><a href="nav/order.html">航班查询</a></el-menu-item>
+        <el-menu-item id="user" index="3">
+            <img class="el-tooltip" src="static/image/flag.png"/>
+            <a href="logout">登陆</a>
+        </el-menu-item>
+    </el-menu>
+</div>
+
+<div class="footer">
+    <el-container>
+        <el-footer>
+            <el-row :gutter="20">
+                <el-col :span="10" :offset="10">
+                    <div class="footer-inner">
+                        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+                            <span class="with-love">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                </span>
+                            <span class="author" itemprop="copyrightHolder">WYX & CZT</span>
+                        </div>
+                        <label style="margin-left: 0px;">整合SpringMVC + Mybatis + Shiro + Solr &mdash;
+                            简单的航空票务系统</label>
+                    </div>
+                </el-col>
+            </el-row>
+        </el-footer>
+    </el-container>
+</div>
+</div>
+
+</body>
+<script type="text/javascript" src="static/vue/vue.js"></script>
+<script type="text/javascript" src="static/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="static/vue/vue-resource.js"></script>
+<script type="text/javascript" src="static/js/unauthorized.js"></script>
+</html>
