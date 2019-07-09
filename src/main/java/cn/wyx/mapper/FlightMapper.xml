@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.wyx.mapper.FlightMapper">
+
+    <insert id="create" parameterType="cn.wyx.entity.Flight">
+        insert into tb_flight (flight_id, flights_id, flight_date, flight_state, flight_info, pre_upTime, pre_downTime, act_upTime, act_downTime)
+        values (#{flightId},#{flightsId},#{date},#{flightState},#{flightInfo},#{preUpTime},#{preDownTime},#{actUpTime},#{actDownTime});
+    </insert>
+
+    <update id="setFlight" parameterType="cn.wyx.entity.Flight">
+        update tb_flight
+        <set>
+            <if test="flightsId != null and flightsId != ''">
+                flights_id = #{flightsId},
+            </if>
+            <if test="flightDate != null">
+                flight_date = #{flightDate},
+            </if>
+            <if test="flightState != null and flightState != ''">
+                flight_state = #{flightState},
+            </if>
+            <if test="flightInfo != null">
+                flight_info = #{flightInfo},
+            </if>
+            <if test="preUpTime != null" >
+                pre_upTime = #{preUpTime},
+            </if>
+            <if test="preDownTime != null ">
+                pre_downTime = #{preDownTime},
+            </if>
+            <if test="actUpTime != null">
+                act_upTime = #{actUpTime},
+            </if>
+            <if test="actDownTime != null">
+                act_downTime = #{actDownTime}
+            </if>
+        </set>
+        where flight_id = #{flightId};
+    </update>
+
+    <select id="findFlightByIdDateState" resultType="cn.wyx.entity.Flight">
+        select * from tb_flight
+        <where>
+            <if test="flightId != null and flightId !=''">
+                flight_id = #{flightId}
+            </if>
+            <if test="flightsId != null and flightsId != ''">
+                and flights_id = #{flightsId}
+            </if>
+            <if test="flightState != null and flightState != ''">
+                and flight_state = #{flightState}
+            </if>
+            <if test="date != null">
+                and flight_date = #{date}
+            </if>
+        </where>
+    </select>
+
+    <select id="flndFlightByDateRangeAndState" resultType="cn.wyx.entity.Flight">
+        select * from tb_flight
+        <where>
+            <if test="dateLeft != null">
+                flight_date >= #{dateLeft}
+            </if>
+            <if test="dateRight != null">
+                and <![CDATA[flights_id <= #{dateRight}]]>
+            </if>
+            <if test="flightState != null and flightState != ''">
+                and flight_state = #{flightState}
+            </if>
+        </where>
+    </select>
+
+</mapper>

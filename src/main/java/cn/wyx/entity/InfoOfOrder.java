@@ -1,4 +1,5 @@
 package cn.wyx.entity;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.sql.Time;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
  * @Date: 2019/7/4 18:29
  * @Version 1.0
  */
-public class InfoOfOrder {
+public class InfoOfOrder implements Serializable {
     /**
      * 订单编号
      */

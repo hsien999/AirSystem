@@ -39,4 +39,11 @@ public interface AirRouteMapper {
      * @param airportDownName
      */
     void setLengthByAirports(@Param("airportUpName") String airportUpName, @Param("airportDownName") String airportDownName, @Param("airrouteLength") int airrouteLength);
+
+    /**
+     * 根据id查找航线
+     * @param airRouteId
+     * @return
+     */
+    AirRoute findById(Long airRouteId);
 }

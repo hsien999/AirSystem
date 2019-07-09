@@ -37,5 +37,4 @@ public interface TicketsMapper {
      */
     void setTicketsPriceAndNum(@Param("ticketsId") String ticketsId,@Param("ticketsPrice") int ticketsPrice,@Param("ticketsNum") int ticketsNum);
 
-
 }

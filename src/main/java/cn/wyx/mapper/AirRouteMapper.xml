@@ -36,4 +36,8 @@
         and airport_down = (select airport_id from tb_airport where airport_name = #{airportUpName}));
     </update>
 
+    <select id="findById" parameterType="java.lang.Long" resultType="cn.wyx.entity.AirRoute">
+        select * from tb_airroute
+        where airroute_id = #{airRouteId};
+    </select>
 </mapper>
