@@ -45,18 +45,16 @@ public class UserController {
             //初始化
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
-            if (remember != null) {
-                if (remember.equals("true")) {
-                    //说明选择了记住我
-                    token.setRememberMe(true);
-                } else {
-                    token.setRememberMe(false);
-                }
+            if (remember != null && remember.equals("true")) {
+//                System.out.println("触发了Remember me");
+                //说明选择了记住我
+                token.setRememberMe(true);
             } else {
                 token.setRememberMe(false);
             }
 
             try {
+                System.out.println("是否remember：" + subject.isRemembered());
                 //登录，即身份校验，由通过Spring注入的UserRealm会自动校验输入的用户名和密码在数据库中是否有对应的值
                 subject.login(token);
                 System.out.println("用户是否登录：" + subject.isAuthenticated());

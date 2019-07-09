@@ -2,6 +2,7 @@ package cn.wyx.controller;
 
 import cn.wyx.entity.InfoOfFlight;
 import cn.wyx.service.InfoOfFlightService;
+import cn.wyx.service.ModelSpaceRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,16 +22,16 @@ public class FlightsSearchController {
     @Autowired
     private InfoOfFlightService flightService;
 
+
     @RequestMapping("/findAllInfoOfFlights")
     public List<InfoOfFlight> findAllInfoOfFlights(@RequestParam(value = "stCity") String stCity, @RequestParam(value = "edCity") String edCity, @RequestParam(value = "searchDate") Date searchDate) {
-
         try {
-            System.out.println(this.flightService.findFlightByCityDate(stCity, edCity, searchDate));
             return this.flightService.findFlightByCityDate(stCity, edCity, searchDate);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
+
 
 }
