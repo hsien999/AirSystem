@@ -128,7 +128,7 @@
         <!-- Shiro的安全管理器，所有关于安全的操作都会经过SecurityManager -->
         <property name="securityManager" ref="securityManager"/>
         <!-- 系统认证提交地址，如果用户退出即session丢失就会访问这个页面 -->
-        <property name="loginUrl" value="/login.html"/>
+        <property name="loginUrl" value="/index.html"/>
         <!-- 权限验证失败跳转的页面，需要配合Spring的ExceptionHandler异常处理机制使用 -->
         <!--<property name="unauthorizedUrl" value="/unauthorized.jsp"/>-->
         <property name="unauthorizedUrl" value="/login.html"/>
