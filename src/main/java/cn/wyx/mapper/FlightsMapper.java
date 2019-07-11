@@ -14,13 +14,13 @@ public interface FlightsMapper {
      * 添加新的航班
      * @param flights
      */
-    void create (Flights flights);
+    void create(Flights flights);
 
     /**
      * 修改航班信息
      * @param flights
      */
-    void setFlights (Flights flights);
+    void setFlights(Flights flights);
 
     /**
      * 根据航班号获取航班信息

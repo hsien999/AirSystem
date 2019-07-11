@@ -34,11 +34,11 @@ public class InfoOfTicket implements Serializable {
      */
     private int ticketPrice;
     /**
-     * 航空保险费
+     * 机场建设费
      */
     private int airportFee;
     /**
-     * 机场建设费
+     * 燃油费
      */
     private int fuelSurcharge;
     /**

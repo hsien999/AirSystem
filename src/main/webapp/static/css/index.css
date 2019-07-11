@@ -114,6 +114,12 @@ a {
     margin-right: 30%;
 }
 
+.inputForm2 {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 40%;
+}
+
 .myCard {
     margin-top: 10px;
     margin-left: 7%;
@@ -163,6 +169,11 @@ a {
     border-bottom: #ecf4f8 1px solid;
 }
 
+.passCard {
+    margin: 2%;
+    font-family: Arial;
+    color: #3f7198;
+}
 
 
 

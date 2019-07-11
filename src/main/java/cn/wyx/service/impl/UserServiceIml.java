@@ -57,6 +57,11 @@ public class UserServiceIml implements UserService {
         }
     }
 
+    @Override
+    public String getChName(Long id) {
+        return this.userMapper.getChName(id);
+    }
+
     /**
      * 更新用户信息
      */

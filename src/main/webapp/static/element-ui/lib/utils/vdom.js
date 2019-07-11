@@ -11,10 +11,9 @@ var _util = require('element-ui/lib/utils/util');
 
 function isVNode(node) {
   return node !== null && (typeof node === 'undefined' ? 'undefined' : _typeof(node)) === 'object' && (0, _util.hasOwn)(node, 'componentOptions');
-};
-
+}
 function getFirstComponentChild(children) {
   return children && children.filter(function (c) {
     return c && c.tag;
   })[0];
-};
+}

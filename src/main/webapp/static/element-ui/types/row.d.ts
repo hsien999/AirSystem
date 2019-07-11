@@ -9,16 +9,16 @@ export type VertialAlignment = 'top' | 'middle' | 'bottom'
 /** Row Layout Component */
 export declare class ElRow extends ElementUIComponent {
   /** Grid spacing */
-  gutter: number
+  gutter: number;
 
   /** Layout mode. You can use flex. Works in modern browsers */
-  type: string
+  type: string;
 
   /** Horizontal alignment of flex layout */
-  justify: HorizontalAlignment
+  justify: HorizontalAlignment;
 
   /** Vertical alignment of flex layout */
-  align: VertialAlignment
+  align: VertialAlignment;
 
   /** Custom element tag */
   tag: string

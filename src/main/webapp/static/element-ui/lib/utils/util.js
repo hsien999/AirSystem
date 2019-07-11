@@ -7,19 +7,17 @@ exports.toObject = toObject;
 exports.getPropByPath = getPropByPath;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-function noop() {};
-
+function noop() {
+}
 function hasOwn(obj, key) {
   return hasOwnProperty.call(obj, key);
-};
-
+}
 function extend(to, _from) {
   for (var key in _from) {
     to[key] = _from[key];
   }
   return to;
-};
-
+}
 function toObject(arr) {
   var res = {};
   for (var i = 0; i < arr.length; i++) {
@@ -28,8 +26,7 @@ function toObject(arr) {
     }
   }
   return res;
-};
-
+}
 var getValueByPath = exports.getValueByPath = function getValueByPath(object, prop) {
   prop = prop || '';
   var paths = prop.split('.');
@@ -72,8 +69,7 @@ function getPropByPath(obj, path, strict) {
     k: keyArr[i],
     v: tempObj ? tempObj[keyArr[i]] : null
   };
-};
-
+}
 var generateId = exports.generateId = function generateId() {
   return Math.floor(Math.random() * 10000);
 };

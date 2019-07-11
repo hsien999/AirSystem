@@ -6,25 +6,25 @@ export type ProgressStatus = 'success' | 'exception'
 /** Progress Component */
 export declare class ElProgress extends ElementUIComponent {
   /** Percentage, required */
-  percentage: number
+  percentage: number;
 
   /** The type of progress bar */
-  type: ProgressType
+  type: ProgressType;
 
   /** The width of progress bar */
-  strokeWidth: number
+  strokeWidth: number;
 
   /** Whether to place the percentage inside progress bar, only works when type is 'line' */
-  textInside: boolean
+  textInside: boolean;
 
   /** The current status of progress bar */
-  status: ProgressStatus
+  status: ProgressStatus;
 
   /** Background color of progress bar. Overrides `status` prop */
-  color: string
+  color: string;
 
   /** The canvas width of circle progress bar */
-  width: number
+  width: number;
 
   /** Whether to show percentage */
   showText: boolean

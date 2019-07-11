@@ -30,7 +30,7 @@ public interface InfoOfFlightService extends BaseService<InfoOfFlight> {
      * @param date
      * @return
      */
-    List<InfoOfFlight> findFlightByFlightIdFlightsIdDate(String flightId,String flightsId,Date date);
+    List<InfoOfFlight> findFlightByFlightIdFlightsIdDate(String flightId, String flightsId, Date date);
     /**
      * 通过售票Id 或 执飞航班号 或 航舱号 查询所有售票信息
      * @param ticketsId

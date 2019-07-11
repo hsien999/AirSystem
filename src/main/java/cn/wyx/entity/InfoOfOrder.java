@@ -1,4 +1,5 @@
 package cn.wyx.entity;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.sql.Time;
 import java.util.List;
@@ -8,11 +9,15 @@ import java.util.List;
  * @Date: 2019/7/4 18:29
  * @Version 1.0
  */
-public class InfoOfOrder {
+public class InfoOfOrder implements Serializable {
     /**
      * 订单编号
      */
     private String orderId;
+    /**
+     * 订单总价
+     */
+    private int orderPrice;
     /**
      * 订单提交时间
      */
@@ -37,7 +42,7 @@ public class InfoOfOrder {
      * 订单状态
      */
     private String orderState;
-    /**、
+    /**
      * 联系人姓名
      */
     private String orderContactName;
@@ -81,8 +86,9 @@ public class InfoOfOrder {
     public InfoOfOrder() {
     }
 
-    public InfoOfOrder(String orderId, Timestamp orderSureTime, String startCityName, String endCityName, String upAirportName, String downAirportName, String orderState, String orderContactName, String orderContactTel, String orderContactEmail, String flightsId, int orderNums, Time preUpTime, Time preDownTime, String modelName, String flightsMeal, List<InfoOfTicket> tickets) {
+    public InfoOfOrder(String orderId, int orderPrice, Timestamp orderSureTime, String startCityName, String endCityName, String upAirportName, String downAirportName, String orderState, String orderContactName, String orderContactTel, String orderContactEmail, String flightsId, int orderNums, Time preUpTime, Time preDownTime, String modelName, String flightsMeal, List<InfoOfTicket> tickets) {
         this.orderId = orderId;
+        this.orderPrice = orderPrice;
         this.orderSureTime = orderSureTime;
         this.startCityName = startCityName;
         this.endCityName = endCityName;
@@ -107,6 +113,14 @@ public class InfoOfOrder {
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
+    }
+
+    public int getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(int orderPrice) {
+        this.orderPrice = orderPrice;
     }
 
     public Timestamp getOrderSureTime() {
@@ -241,6 +255,7 @@ public class InfoOfOrder {
     public String toString() {
         return "InfoOfOrder{" +
                 "orderId='" + orderId + '\'' +
+                ", orderPrice=" + orderPrice +
                 ", orderSureTime=" + orderSureTime +
                 ", startCityName='" + startCityName + '\'' +
                 ", endCityName='" + endCityName + '\'' +

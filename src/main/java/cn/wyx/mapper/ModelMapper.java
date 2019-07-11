@@ -15,13 +15,13 @@ public interface ModelMapper {
      *  添加机型
      * @param model
      */
-    void create (Model model);
+    void create(Model model);
 
     /**
      * 修改机型
      * @param model
      */
-    void setModel (Model model);
+    void setModel(Model model);
 
     /**
      * 获取机型

@@ -130,7 +130,7 @@
           const offset = mapping[keyCode.toString()];
           this.scrollDown(offset);
           event.stopPropagation();
-          return;
+
         }
       }
     },

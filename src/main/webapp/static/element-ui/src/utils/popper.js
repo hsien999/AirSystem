@@ -517,10 +517,10 @@
             // Thanks the fucking native API, `document.body.scrollTop` & `document.documentElement.scrollTop`
             var getScrollTopValue = function (element) {
                 return element == document.body ? Math.max(document.documentElement.scrollTop, document.body.scrollTop) : element.scrollTop;
-            }
+            };
             var getScrollLeftValue = function (element) {
                 return element == document.body ? Math.max(document.documentElement.scrollLeft, document.body.scrollLeft) : element.scrollLeft;
-            }
+            };
 
             // if the popper is fixed we don't have to substract scrolling from the boundaries
             var scrollTop = data.offsets.popper.position === 'fixed' ? 0 : getScrollTopValue(scrollParent);

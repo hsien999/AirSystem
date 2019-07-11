@@ -19,7 +19,7 @@ public interface ManageFlightsService {
      * @param airportDownName
      * @param length
      */
-    void createAirRoute(String airportUpName,String airportDownName,int length);
+    void createAirRoute(String airportUpName, String airportDownName, int length);
 
     /**
      * 通过城市名查找航线
@@ -27,7 +27,7 @@ public interface ManageFlightsService {
      * @param endCityName
      * @return
      */
-    List<AirRoute>  findAirRouteByCitiesName(String startCityName,String endCityName);
+    List<AirRoute>  findAirRouteByCitiesName(String startCityName, String endCityName);
 
     /**
      * 通过机场名查找航线
@@ -35,7 +35,7 @@ public interface ManageFlightsService {
      * @param airportDownName
      * @return
      */
-    AirRoute findAirRouteByAirportsName(String airportUpName,String airportDownName);
+    AirRoute findAirRouteByAirportsName(String airportUpName, String airportDownName);
 
     /**
      * 修改航线长度
@@ -43,14 +43,14 @@ public interface ManageFlightsService {
      * @param airportDownName
      * @param length
      */
-    void setLengthByAirportsName(String airportUpName,String airportDownName,int length);
+    void setLengthByAirportsName(String airportUpName, String airportDownName, int length);
 
     /**
      * 根据机型和航线长度计算飞行时间(分钟）
      * @param modelId
      * @param length
      */
-    int calculatePlanTime(Long modelId,int length);
+    int calculatePlanTime(Long modelId, int length);
 
     /**
      * 根据计划到达时间和飞行时间计算计划到达时间
@@ -58,7 +58,7 @@ public interface ManageFlightsService {
      * @param planTime
      * @return
      */
-    Time calculatePlanDownTime(Time planUpTime,int planTime);
+    Time calculatePlanDownTime(Time planUpTime, int planTime);
 
     /**
      * 插入航班
@@ -78,6 +78,6 @@ public interface ManageFlightsService {
      * @param airportUpName
      * @param airportDownName
      */
-    List<InfoOfFlights> findFlights(String flightsId,String airportUpName,String airportDownName);
+    List<InfoOfFlights> findFlights(String flightsId, String airportUpName, String airportDownName);
 
 }

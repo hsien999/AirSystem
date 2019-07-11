@@ -240,7 +240,7 @@
           const step = mapping[keyCode];
           this.spinner.scrollDown(step);
           event.preventDefault();
-          return;
+
         }
       }
     }

@@ -30,7 +30,7 @@ public interface InfoOfOldFlightService extends BaseService<InfoOfOldFlight> {
      * @param date
      * @return
      */
-    List<InfoOfOldFlight> findOldFlightByFlightIdFlightsIdDate(String flightId,String flightsId,Date date);
+    List<InfoOfOldFlight> findOldFlightByFlightIdFlightsIdDate(String flightId, String flightsId, Date date);
 
 
 }

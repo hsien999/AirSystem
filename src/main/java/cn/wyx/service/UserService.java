@@ -31,4 +31,5 @@ public interface UserService extends BaseService<User> {
      */
     boolean validateCerId(String CerId);
 
+    String getChName(Long id);
 }

@@ -413,7 +413,7 @@ alter table tb_userpass
 # tickets_id = flight_id +space_id (共15位）
 # ticket_id = tickets_id + RelyOnNumber（%05的）   (共20位）
 #
-#
+#订单状态：待支付、已完成、已取消
 #
 # OrderService 添加了设置订单状态的方法
 # 修改了各种id的编码生成方式，保证不会超过数据的长度
@@ -421,3 +421,4 @@ alter table tb_userpass
 #
 # 普通航线旅客运输基准票价=LOG（150，航线距离×0.6）× 航线距离 × 1.1
 
+insert into tb_number values (0,0);

@@ -79,19 +79,19 @@ export default {
   render(h) {
     if (this.popperVM) {
       this.popperVM.node = (
-        <transition
-          name={ this.transition }
+        <transition;
+          name={ this.transition };
           onAfterLeave={ this.doDestroy }>
-          <div
-            onMouseleave={ () => { this.setExpectedState(false); this.debounceClose(); } }
-            onMouseenter= { () => { this.setExpectedState(true); } }
-            ref="popper"
-            role="tooltip"
-            id={this.tooltipId}
+          <div;
+            onMouseleave={ (); => { this.setExpectedState(false); this.debounceClose(); } }
+            onMouseenter= { (); => { this.setExpectedState(true); } }
+            ref="popper";
+            role="tooltip";
+            id={this.tooltipId};
             aria-hidden={ (this.disabled || !this.showPopper) ? 'true' : 'false' }
-            v-show={!this.disabled && this.showPopper}
+            v-show={;!this.disabled && this.showPopper}
             class={
-              ['el-tooltip__popper', 'is-' + this.effect, this.popperClass]
+              ['el-tooltip__popper', 'is-' + this.effect, this.popperClass;]
             }>
             { this.$slots.content || this.content }
           </div>

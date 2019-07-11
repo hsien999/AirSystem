@@ -19,7 +19,7 @@ public interface InfoOfFlightsMapper {
      * @param airportDownName
      * @return
      */
-    List<InfoOfFlights> findFlights(@Param("flightsId") String flightsId,@Param("airportUpName") String airportUpName,@Param("airportDownName") String airportDownName);
+    List<InfoOfFlights> findFlights(@Param("flightsId") String flightsId, @Param("airportUpName") String airportUpName, @Param("airportDownName") String airportDownName);
 
 
 }

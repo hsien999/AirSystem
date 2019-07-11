@@ -13,49 +13,49 @@ export interface SliderTooltipFormat {
 /** Slider Component */
 export declare class ElSlider extends ElementUIComponent {
   /** Current value of the slider */
-  value: number | number[]
+  value: number | number[];
 
   /** Minimum value */
-  min: number
+  min: number;
 
   /** Maximum value */
-  max: number
+  max: number;
 
   /** Whether Slider is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Step size */
-  step: number
+  step: number;
 
   /** Whether to display an input box, works when range is false */
-  showInput: boolean
+  showInput: boolean;
 
   /** Format of displayed tooltip value */
-  formatTooltip: SliderTooltipFormat
+  formatTooltip: SliderTooltipFormat;
 
   /** Whether to display control buttons when show-input is true */
-  showInputControls: boolean
+  showInputControls: boolean;
 
   /** Size of the input box */
-  inputSize: string
+  inputSize: string;
 
   /** Whether to display breakpoints */
-  showStops: boolean
+  showStops: boolean;
 
   /** Whether to display tooltip value */
-  showTooltip: boolean
+  showTooltip: boolean;
 
   /** Whether to select a range */
-  range: boolean
+  range: boolean;
 
   /** Vertical mode */
-  vertical: boolean
+  vertical: boolean;
 
   /** Slider height, required in vertical mode */
-  height: boolean
+  height: boolean;
 
   /** Debounce delay when typing, in milliseconds, works when show-input is true */
-  debounce: number
+  debounce: number;
 
   /** Custom class name for the tooltip */
   tooltipClass: string

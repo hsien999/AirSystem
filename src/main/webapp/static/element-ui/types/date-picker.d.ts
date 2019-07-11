@@ -64,58 +64,58 @@ export interface DatePickerOptions {
 /** DatePicker Component */
 export declare class ElDatePicker extends ElementUIComponent {
   /** The value of the date picker */
-  value: Date | string | Date[] | string[]
+  value: Date | string | Date[] | string[];
 
   /** Whether DatePicker is read only */
-  readonly: boolean
+  readonly: boolean;
 
   /** Whether DatePicker is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Size of Input */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /** Whether the input is editable */
-  editable: boolean
+  editable: boolean;
 
   /** Whether to show clear button */
-  clearable: boolean
+  clearable: boolean;
 
   /** Placeholder */
-  placeholder: string
+  placeholder: string;
 
   /** Placeholder for the start date in range mode */
-  startPlaceholder: string
+  startPlaceholder: string;
 
   /** Placeholder for the end date in range mode */
-  endPlaceholder: string
+  endPlaceholder: string;
 
   /** Type of the picker */
-  type: DatePickerType
+  type: DatePickerType;
 
   /** Format of the picker */
-  format: string
+  format: string;
 
   /** Alignment */
-  align: ElementUIHorizontalAlignment
+  align: ElementUIHorizontalAlignment;
 
   /** Custom class name for DatePicker's dropdown */
-  popperClass: string
+  popperClass: string;
 
   /** Additional options, check the table below */
-  pickerOptions: DatePickerOptions
+  pickerOptions: DatePickerOptions;
 
   /** Range separator */
-  rangeSeparator: string
+  rangeSeparator: string;
 
   /** Default date of the calendar */
-  defaultValue: Date | number | string
+  defaultValue: Date | number | string;
 
   /** Format of binding value. If not specified, the binding value will be a Date object */
-  valueFormat: string
+  valueFormat: string;
 
   /** name for the inner native input */
-  name: string
+  name: string;
 
   /**
    * Focus the Input component

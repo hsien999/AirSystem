@@ -145,7 +145,7 @@
         } else if ([9, 27].indexOf(keyCode) > -1) { // tab || esc
           this.hide();
         }
-        return;
+
       },
       handleItemKeyDown(ev) {
         const keyCode = ev.keyCode;
@@ -174,7 +174,7 @@
           this.hide();
           this.triggerElm.focus();
         }
-        return;
+
       },
       resetTabindex(ele) { // 下次tab时组件聚焦元素
         this.removeTabindex();
@@ -252,20 +252,20 @@
       let triggerElm = !splitButton
         ? this.$slots.default
         : (<el-button-group>
-          <el-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
+          <el-button; type={type}; size={dropdownSize}; nativeOn-click={handleMainButtonClick}>
             {this.$slots.default}
           </el-button>
-          <el-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
-            <i class="el-dropdown__icon el-icon-arrow-down"></i>
+          <el-button; ref="trigger"; type={type}; size={dropdownSize}; class="el-dropdown__caret-button">
+            <i; class="el-dropdown__icon el-icon-arrow-down"></i>
           </el-button>
-        </el-button-group>);
+        </el-button-group>);;
 
       return (
-        <div class="el-dropdown" v-clickoutside={hide}>
-          {triggerElm}
+        <div; class="el-dropdown"; v-clickoutside={hide}>
+          {triggerElm};
           {this.$slots.dropdown}
-        </div>
-      );
+        </div>;
+    )
     }
   };
 </script>

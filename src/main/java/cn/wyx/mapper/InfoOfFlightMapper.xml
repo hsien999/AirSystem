@@ -44,7 +44,8 @@
         left join tb_rule tr on ts.space_id = tr.space_id
         where cityStartName = #{cityStartName}
         and cityEndName = #{cityEndName}
-        and flight_date = #{date};
+        and flight_date = #{date}
+        and tickets_nums > 0;
     </select>
 
     <select id = "findByFlightIdFlightsId" resultMap="InfoOfFlightMap">
@@ -59,8 +60,9 @@
                                      left join tb_mdsp tm on ts.space_id = tm.space_id
                                      left join tb_rule tr on ts.space_id = tr.space_id
         <where>
+                tickets_nums > 0
             <if test="flightId != null and flightId !=''">
-                tf.flight_id = #{flightId}
+                and tf.flight_id = #{flightId}
             </if>
             <if test="flightsId != null and flightsId !=''">
                 and tf.flights_id = #{flightsId}

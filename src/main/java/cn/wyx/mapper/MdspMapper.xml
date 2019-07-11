@@ -27,4 +27,10 @@
         </where>;
     </select>
 
+    <delete id="delete" >
+        delete from tb_mdsp
+        where space_id = #{spaceId}
+        and model_id = #{modelId};
+    </delete>
+
 </mapper>

@@ -157,7 +157,7 @@
           const step = mapping[keyCode];
           this.$refs.spinner.scrollDown(step);
           event.preventDefault();
-          return;
+
         }
       },
 

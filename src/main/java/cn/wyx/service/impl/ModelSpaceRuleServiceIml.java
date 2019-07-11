@@ -124,4 +124,9 @@ public class ModelSpaceRuleServiceIml implements ModelSpaceRuleService {
     public List<Mdsp> findMdsp(Long modelId, String spaceId) {
         return this.mdspMapper.findMdsp(modelId,spaceId);
     }
+
+    @Override
+    public void deleteMdsp(Long modelId, String spaceId) {
+        this.mdspMapper.delete(modelId,spaceId);
+    }
 }

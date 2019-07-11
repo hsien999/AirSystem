@@ -33,40 +33,40 @@ export interface TransferRenderContent {
 /** Transfer Component */
 export declare class ElTransfer extends ElementUIComponent {
   /** Data source */
-  data: TransferData[]
+  data: TransferData[];
 
   /** Whether Transfer is filterable */
-  filterable: boolean
+  filterable: boolean;
 
   /** Placeholder for the filter input */
-  filterPlaceholder: string
+  filterPlaceholder: string;
 
   /** Custom filter method */
-  filterMethod: (query: string, item: TransferData) => boolean
+  filterMethod: (query: string, item: TransferData) => boolean;
 
   /** Order strategy for elements in the target list */
-  targetOrder: string
+  targetOrder: string;
 
   /** Custom list titles */
-  titles: string[]
+  titles: string[];
 
   /** Custom button texts */
-  buttonTexts: string[]
+  buttonTexts: string[];
 
   /** Custom render function for data items */
-  renderContent: TransferRenderContent
+  renderContent: TransferRenderContent;
 
   /** Texts for checking status in list header */
-  format: TransferFormat
+  format: TransferFormat;
 
   /** Prop aliases for data source */
-  props: TransferProps
+  props: TransferProps;
 
   /** Key array of initially checked data items of the left list */
-  leftDefaultChecked: any[]
+  leftDefaultChecked: any[];
 
   /** Key array of initially checked data items of the right list */
-  rightDefaultChecked: any[]
+  rightDefaultChecked: any[];
 
   /** Clear the query text in specified panel */
   clearQuery (which: TransferPanelPosition): void

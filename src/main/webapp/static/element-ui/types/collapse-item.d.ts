@@ -14,10 +14,10 @@ export interface CollapseItemSlots {
 /** Collapse Item Component */
 export declare class ElCollapseItem extends ElementUIComponent {
   /** Unique identification of the panel */
-  name: string | number
+  name: string | number;
 
   /** Title of the panel */
-  title: string
+  title: string;
 
   $slots: CollapseItemSlots
 }

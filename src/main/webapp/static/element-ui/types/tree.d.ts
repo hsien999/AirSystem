@@ -53,67 +53,67 @@ export interface AllowDropMethod {
 /** Tree Component */
 export declare class ElTree extends ElementUIComponent {
   /** Tree data */
-  data: TreeNode[]
+  data: TreeNode[];
 
   /** Text displayed when data is void */
-  emptyText: string
+  emptyText: string;
 
   /** Unique identity key name for nodes, its value should be unique across the whole tree */
-  nodeKey: string
+  nodeKey: string;
 
   /** Configuration options, see the following table */
-  props: object
+  props: object;
 
   /** Method for loading subtree data */
-  load: (node: TreeNode, resolve: Function) => void
+  load: (node: TreeNode, resolve: Function) => void;
 
   /** Render function for tree node */
-  renderContent: RenderContent
+  renderContent: RenderContent;
 
   /** Whether current node is highlighted */
-  highlightCurrent: boolean
+  highlightCurrent: boolean;
 
   /** Whether to expand all nodes by default */
-  defaultExpandAll: boolean
+  defaultExpandAll: boolean;
 
   /** Whether to expand or collapse node when clicking on the node. If false, then expand or collapse node only when clicking on the arrow icon. */
-  expandOnClickNode: boolean
+  expandOnClickNode: boolean;
 
   /** Whether to check or uncheck node when clicking on the node, if false, the node can only be checked or unchecked by clicking on the checkbox. */
-  checkOnClickNode: boolean
+  checkOnClickNode: boolean;
 
   /** Whether to expand father node when a child node is expanded */
-  autoExpandParent: boolean
+  autoExpandParent: boolean;
 
   /** Array of keys of initially expanded nodes */
-  defaultExpandedKeys: any[]
+  defaultExpandedKeys: any[];
 
   /** Whether node is selectable */
-  showCheckbox: boolean
+  showCheckbox: boolean;
 
   /** Whether checked state of a node not affects its father and child nodes when show-checkbox is true */
-  checkStrictly: boolean
+  checkStrictly: boolean;
 
   /** Array of keys of initially checked nodes */
-  defaultCheckedKeys: any[]
+  defaultCheckedKeys: any[];
 
   /** This function will be executed on each node when use filter method. If return false, tree node will be hidden. */
-  filterNodeMethod: FilterNodeMethod
+  filterNodeMethod: FilterNodeMethod;
 
   /** Whether only one node among the same level can be expanded at one time */
-  accordion: boolean
+  accordion: boolean;
 
   /** Horizontal indentation of nodes in adjacent levels in pixels */
-  indent: number
+  indent: number;
 
   /** Whether enable tree nodes drag and drop */
-  draggable: boolean
+  draggable: boolean;
 
   /** Function to be executed before dragging a node */
-  allowDrag: AllowDragMethod
+  allowDrag: AllowDragMethod;
 
   /** Function to be executed before the dragging node is dropped */
-  allowDrop: AllowDropMethod
+  allowDrop: AllowDropMethod;
 
   /**
    * Filter all tree nodes. Filtered nodes will be hidden

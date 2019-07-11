@@ -121,13 +121,13 @@ var View = {
 function resolveProps (route, config) {
   switch (typeof config) {
     case 'undefined':
-      return
+      return;
     case 'object':
-      return config
+      return config;
     case 'function':
-      return config(route)
+      return config(route);
     case 'boolean':
-      return config ? route.params : undefined
+      return config ? route.params : undefined;
     default:
       {
         warn(
@@ -2448,13 +2448,13 @@ var VueRouter = function VueRouter (options) {
   switch (mode) {
     case 'history':
       this.history = new HTML5History(this, options.base);
-      break
+      break;
     case 'hash':
       this.history = new HashHistory(this, options.base, this.fallback);
-      break
+      break;
     case 'abstract':
       this.history = new AbstractHistory(this, options.base);
-      break
+      break;
     default:
       {
         assert(false, ("invalid mode: " + mode));

@@ -75,7 +75,7 @@ export interface InstallationOptions {
 }
 
 /** The version of element-ui */
-export const version: string
+export const version: string;
 
 /**
  * Install all element-ui components into Vue.
@@ -94,16 +94,16 @@ export type ComponentSize = ElementUIComponentSize
 export type HorizontalAlignment = ElementUIHorizontalAlignment
 
 /** Show animation while loading data */
-export const Loading: ElLoading
+export const Loading: ElLoading;
 
 /** Used to show feedback after an activity. The difference with Notification is that the latter is often used to show a system level passive notification. */
-export const Message: ElMessage
+export const Message: ElMessage;
 
 /** A set of modal boxes simulating system message box, mainly for message prompt, success tips, error messages and query information */
-export const MessageBox: ElMessageBox
+export const MessageBox: ElMessageBox;
 
 /** Displays a global notification message at the upper right corner of the page */
-export const Notification: ElNotification
+export const Notification: ElNotification;
 
 // TS cannot merge imported class with namespace, so declare subclasses instead
 

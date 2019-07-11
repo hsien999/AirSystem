@@ -24,40 +24,40 @@ export interface ValidateFieldCallback {
 /** Form Component */
 export declare class ElForm extends ElementUIComponent {
   /** Data of form component */
-  model: object
+  model: object;
 
   /** Validation rules of form */
-  rules: object
+  rules: object;
 
   /** Whether the form is inline */
-  inline: boolean
+  inline: boolean;
 
   /** Whether the form is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Position of label */
-  labelPosition: FormItemLabelPosition
+  labelPosition: FormItemLabelPosition;
 
   /** Width of label, and all form items will inherit from Form */
-  labelWidth: string
+  labelWidth: string;
 
   /** Suffix of the label */
-  labelSuffix: string
+  labelSuffix: string;
 
   /** Whether to show the error message */
-  showMessage: boolean
+  showMessage: boolean;
 
   /** Whether to display the error message inline with the form item */
-  inlineMessage: boolean
+  inlineMessage: boolean;
 
   /** Whether to display an icon indicating the validation result */
-  statusIcon: boolean
+  statusIcon: boolean;
 
   /** Whether to trigger validation when the `rules` prop is changed */
-  validateOnRuleChange: boolean
+  validateOnRuleChange: boolean;
 
   /** Controls the size of components in this form */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /**
    * Validate the whole form

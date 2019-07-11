@@ -42,76 +42,76 @@ export interface HttpRequestOptions {
 /** Upload Component */
 export declare class ElUpload extends ElementUIComponent {
   /** Request URL (required) */
-  action: string
+  action: string;
 
   /** Request headers */
-  headers: object
+  headers: object;
 
   /** Whether uploading multiple files is permitted */
-  multiple: boolean
+  multiple: boolean;
 
   /** Additions options of request */
-  data: object
+  data: object;
 
   /** Key name for uploaded file */
-  name: string
+  name: string;
 
   /** Whether cookies are sent */
-  withCredentials: boolean
+  withCredentials: boolean;
 
   /** Whether to show the uploaded file list */
-  showFileList: boolean
+  showFileList: boolean;
 
   /** Whether to activate drag and drop mode */
-  drag: boolean
+  drag: boolean;
 
   /** Accepted file types, will not work when thumbnail-mode is true */
-  accept: string
+  accept: string;
 
   /** Hook function when clicking the uploaded files */
-  onPreview: (file: ElUploadInternalFileDetail) => void
+  onPreview: (file: ElUploadInternalFileDetail) => void;
 
   /** Hook function when files are removed */
-  onRemove: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void
+  onRemove: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void;
 
   /** Hook function when uploaded successfully */
-  onSuccess: (response: any, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void
+  onSuccess: (response: any, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void;
 
   /** Hook function when some errors occurs */
-  onError: (err: ErrorEvent, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void
+  onError: (err: ErrorEvent, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void;
 
   /** Hook function when some progress occurs */
-  onProgress: (event: ElUploadProgressEvent, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void
+  onProgress: (event: ElUploadProgressEvent, file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail) => void;
 
   /** Hook function when file status change */
-  onChange: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void
+  onChange: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void;
 
   /** Hook function before uploading with the file to be uploaded as its parameter. If false or a Promise is returned, uploading will be aborted */
-  beforeUpload: (file: ElUploadInternalRawFile) => boolean | Promise<File | Blob | boolean>
+  beforeUpload: (file: ElUploadInternalRawFile) => boolean | Promise<File | Blob | boolean>;
 
   /** Whether thumbnail is displayed */
-  thumbnailMode: boolean
+  thumbnailMode: boolean;
 
   /** Default uploaded files */
-  fileList: FileListItem[]
+  fileList: FileListItem[];
 
   /** Type of fileList */
-  listType: ListType
+  listType: ListType;
 
   /** Whether to auto upload file */
-  autoUpload: boolean
+  autoUpload: boolean;
 
   /** Override default xhr behavior, allowing you to implement your own upload-file's request */
-  httpRequest: (options: HttpRequestOptions) => void
+  httpRequest: (options: HttpRequestOptions) => void;
 
   /** Whether to disable upload */
-  disabled: boolean
+  disabled: boolean;
 
   /** Maximum number of uploads allowed */
-  limit: number
+  limit: number;
 
   /** Hook function when limit is exceeded */
-  onExceed: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void
+  onExceed: (file: ElUploadInternalFileDetail, fileList: ElUploadInternalFileDetail[]) => void;
 
   /** Clear the upload file list */
   clearFiles (): void;

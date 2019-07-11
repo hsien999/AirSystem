@@ -4,6 +4,7 @@ import cn.wyx.entity.InfoOfOrder;
 import cn.wyx.entity.Order;
 import cn.wyx.entity.Passenger;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -41,5 +42,5 @@ public interface OrderService extends BaseService<InfoOfOrder> {
      * @param OrderId
      * @param OrderState
      */
-     void setOrderState(String OrderId, String OrderState);
+     void setOrderStateAndPayTime(String OrderId, String OrderState, Timestamp orderPayTime, String payType);
 }

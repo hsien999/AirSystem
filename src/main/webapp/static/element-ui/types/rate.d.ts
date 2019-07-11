@@ -3,49 +3,49 @@ import { ElementUIComponent } from './component'
 /** Rate Component */
 export declare class ElRate extends ElementUIComponent {
   /** Max rating score */
-  max: number
+  max: number;
 
   /** Whether Rate is read-only */
-  disabled: boolean
+  disabled: boolean;
 
   /** Whether picking half start is allowed */
-  allowHalf: boolean
+  allowHalf: boolean;
 
   /** Threshold value between low and medium level. The value itself will be included in low level */
-  lowThreshold: number
+  lowThreshold: number;
 
   /** Threshold value between medium and high level. The value itself will be included in high level */
-  highThreshold: number
+  highThreshold: number;
 
   /** Color array for icons. It should have 3 elements, each of which corresponds with a score level */
-  colors: string[]
+  colors: string[];
 
   /** Color of unselected icons */
-  voidColor: string
+  voidColor: string;
 
   /** Color of unselected read-only icons */
-  disabledVoidColor: string
+  disabledVoidColor: string;
 
   /** Array of class names of icons. It should have 3 elements, each of which corresponds with a score level */
-  iconClasses: string[]
+  iconClasses: string[];
 
   /** Class name of unselected icons */
-  voidIconClass: string
+  voidIconClass: string;
 
   /** Class name of unselected read-only icons */
-  disabledVoidIconClass: string
+  disabledVoidIconClass: string;
 
   /** Whether to display texts */
-  showText: boolean
+  showText: boolean;
 
   /** Whether to display current score. show-score and show-text cannot be true at the same time */
-  showScore: boolean
+  showScore: boolean;
 
   /** Color of texts */
-  textColor: string
+  textColor: string;
 
   /** Text array */
-  texts: string[]
+  texts: string[];
 
   /** Text template when the component is read-only */
   scoreTemplate: string

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JM航空</title>
+    <link rel="stylesheet" href="../static/element-ui/lib/theme-chalk/index.css"/>
+    <link rel="stylesheet" href="../static/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../static/css/index.css"/>
+</head>
+<body>
+<div id="appMain">
+    <el-menu mode="horizontal" :default-active="activeIndex" active-text-color="#409EFF">
+        <el-menu-item index="0" id="logo">JM航空&nbsp;&nbsp;&nbsp; <span
+                class="fa fa-plane fa-2x"></span></el-menu-item>
+        <el-menu-item index="1"><a href="">机票预订</a></el-menu-item>
+        <el-menu-item index="2"><a href="searchFlight.html">航班查询</a></el-menu-item>
+        <el-menu-item id="user" index="3">
+            <img class="el-tooltip" src="../static/image/flag.png"/>
+            <el-dropdown>
+                <span class="el-dropdown-link">{{userChName}}<i class="el-icon-arrow-down el-icon--right"></i></span>
+                <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item><a href="index.html">首页</a></el-dropdown-item>
+                    <el-dropdown-item><a href="user/userCenter" target="_blank">我的订单</a>
+                    </el-dropdown-item>
+                    <el-dropdown-item><a href="https://github.com/Xiant999/AirSystem" target="_blank">GitHub</a>
+                    </el-dropdown-item>
+                    <el-dropdown-item divided><a href="/AirSystem_war_exploded/logout.do">退出</a></el-dropdown-item>
+                </el-dropdown-menu>
+            </el-dropdown>
+        </el-menu-item>
+    </el-menu>
+    <div id="main">
+        <el-col>
+            <el-card shadow="always">
+                <el-steps :active="activeStep" finish-status="success" align-center>
+                    <el-step title="Step1" description="选择航班"></el-step>
+                    <el-step title="Step2" description="填写订单"></el-step>
+                    <el-step title="Step3" description="确认并支付"></el-step>
+                    <el-step title="Step4" description="出票成功"></el-step>
+                </el-steps>
+            </el-card>
+        </el-col>
+        <el-col>
+            <el-card shadow="always">
+                <div class="myCard">
+                    <el-form :inline="true" :model="searchEntity" ref="searchEntity" :rules="rules">
+                        <el-form-item prop="stCity">
+                            <el-cascader
+                                    :props="{ value:'label',expandTrigger:'hover'}"
+                                    :options="citys"
+                                    v-model="searchEntity.stCity"
+                                    :show-all-levels="false"
+                                    placeholder="出发城市">
+                            </el-cascader>
+                        </el-form-item>
+
+                        <el-form-item>
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                <i class="fa fa-exchange fa-stack-1x"></i>
+                            </span>
+                        </el-form-item>
+
+                        <el-form-item prop="edCity">
+
+                            <el-cascader
+                                    :props="{ value:'label',expandTrigger:'hover'}"
+                                    :options="citys"
+                                    v-model="searchEntity.edCity"
+                                    :show-all-levels="false"
+                                    placeholder="到达城市">
+                            </el-cascader>
+                        </el-form-item>
+                        &nbsp;&nbsp;
+                        <el-form-item prop="planTime">
+                            <el-date-picker
+                                    v-model="searchEntity.planTime"
+                                    align="right"
+                                    type="date"
+                                    placeholder="选择日期"
+                                    format="yyyy 年 MM 月 dd 日"
+                                    value-format="yyyy-MM-dd"
+                                    :picker-options="pickerOptions">
+                            </el-date-picker>
+                        </el-form-item>
+                        &nbsp;&nbsp;
+                        <el-form-item>
+                            <el-button
+                                    type="primary"
+                                    icon="el-icon-search"
+                                    @click="search('searchEntity')">查询
+                            </el-button> &nbsp;&nbsp;
+                            <el-button
+                                    icon="el-icon-delete"
+                                    @click="searchEntity={}"
+                                    type="primary" plain>清空
+                            </el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+            </el-card>
+        </el-col>
+
+        <el-col>
+            <el-card v-loading="loading"
+                     element-loading-text="努力查询中"
+                     element-loading-spinner="el-icon-loading"
+                     element-loading-background="rgba(150, 230, 255, 0.8)"
+                     shadow="always"
+                     v-show="loading==true"
+                     style="height:200px;"></el-card>
+            <transition name="el-fade-in-linear">
+                <el-card shadow="always"
+                         v-show="loading==false">
+                    <div class="myCard">
+                        <div v-for="item in InfoOfFlight"
+                             :key="item.flightsId">
+                            <div class="splitLine"><br></div>
+                            <br>
+                            <el-row type="flex" class="topInfo">
+                                <el-col :span="1">
+                                    <div class="fa fa-lg" id="plane"><img
+                                            src="../static/image/logo.png"/>
+                                    </div>
+                                    {{item.flightsId}}
+                                </el-col>
+
+                                <el-col :span="2" :push="3">
+                                    <el-tag type="success" size="x-large">{{item.modelName}}</el-tag>
+                                </el-col>
+                                <el-col :span="2" :push="5">
+                                    <el-tag type="info" size="x-large">{{item.flightsMeals}}</el-tag>
+                                </el-col>
+                            </el-row>
+
+                            <el-row type="flex" class="topInfo">
+                                <el-col :span="1">
+                                    <div class="fa fa-lg" id="upPlane"><img
+                                            src="../static/image/upPlane.png"/>
+                                    </div>
+                                </el-col>
+                                <el-col :span="3" :offest="0">
+                                    <span class="fa fa-2x">{{item.preUpTime | timeFilter}}</span><br>
+                                    <span class="fa fa-1x">{{item.airportUpName}}</span>
+                                </el-col>
+
+                                <!--虚线-->
+                                <el-col :span="3" :offest="0">
+                                    <div class="dotLine">{{item.planTime|sumTimeFilter}}</div>
+                                </el-col>
+
+                                <el-col :span="1" :push="1">
+                                    <div class="fa fa-lg" id="downPlane"><img
+                                            src="../static/image/downPlane.png"/>
+                                    </div>
+                                </el-col>
+                                <el-col :span="3" :push="1">
+                                    <span class="fa fa-2x">{{item.preDownTime | timeFilter}}</span><br>
+                                    <span class="fa fa-1x">{{item.airportDownName}}</span>
+                                </el-col>
+                            </el-row>
+
+                            <el-table :data="item.tickets"
+                                      style="width: 80%;margin-top: 20px"
+                                      max-height="500">
+                                <el-table-column label="舱位"
+                                                 width="200"
+                                                 sortable
+                                                 :sort-method="sortBy1">
+                                    <template slot-scope="scope">
+                                        <b>{{ scope.row.spaceName }}&nbsp;(&nbsp;{{scope.row.spaceId}}&nbsp;)</b>
+                                    </template>
+                                </el-table-column>
+
+                                <el-table-column label="行李|退改规则"
+                                                 width="250"
+                                                 align="center">
+                                    <template slot-scope="scope">
+                                        <el-popover trigger="hover" placement="top"
+                                                    open-delay=300
+                                                    @show="showRules(scope.row.spaceId)"
+                                                    width="150px">
+                                            <p><b>行李限额</b>:免费托运行李额<b>{{baggageAllowance}}</b>kg
+                                                <br>注：仅供参考，以实际情况为准。超额行李可通过购买预付费行李。
+                                            </p>
+                                            <hr>
+                                            <p><b>退改规则</b>:<br>
+                                                <el-table :data="ticketRules"
+                                                          max-height="200">
+                                                    <el-table-column label="退改时间点"
+                                                                     prop="ruleType" width="200">
+                                                    </el-table-column>
+                                                    <el-table-column label="自愿退票手续费率"
+                                                                     prop="ruleRefund" width="150">
+                                                    </el-table-column>
+                                                    <el-table-column label="自愿变更手续费率"
+                                                                     prop="ruleChange" width="150">
+                                                    </el-table-column>
+                                                </el-table>
+                                            <p>注：以上为自愿退票、变更费用标准，仅供参考，以实际情况为准；
+                                                <br>退票、变更费用比例以实际票面价为基数；改期需补齐票面差价。</p>
+                                            <div slot="reference">
+                                                <el-tag size="medium">行李|退改规则</el-tag>
+                                            </div>
+                                        </el-popover>
+                                    </template>
+                                </el-table-column>
+
+                                <el-table-column label="票价"
+                                                 width="200"
+                                                 sortable
+                                                 :sort-method="sortBy2">
+                                    <template slot-scope="scope">
+                                    <span class="fa fa-lg fa-rmb"
+                                          style="color: #f56c6c;">{{scope.row.ticketsPrice}}</span>
+                                    </template>
+                                </el-table-column>
+
+                                <el-table-column label="余票"
+                                                 width="200">
+                                    <template slot-scope="scope">
+                                        <span style="color: #f5774c;">{{scope.row.ticketsNums>10?'余票充足':('仅剩'+scope.row.ticketsNums+'张')}}</span>
+                                    </template>
+                                </el-table-column>
+
+                                <el-table-column label="操作">
+                                    <template slot-scope="scope">
+                                        <el-button
+                                                size="mini"
+                                                round
+                                                type="success"
+                                                @click="orderTicket(item.flightId,scope.row.ticketsId)">预订
+                                        </el-button>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                            <br>
+                        </div>
+                    </div>
+                </el-card>
+            </transition>
+        </el-col>
+
+    </div>
+
+
+</div>
+
+<div class="footer">
+    <el-container>
+        <el-footer>
+            <el-row :gutter="20">
+                <el-col :span="10" :offset="10">
+                    <div class="footer-inner">
+                        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+                            <span class="with-love">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                </span>
+                            <span class="author" itemprop="copyrightHolder">WYX & CZT</span>
+                        </div>
+                        <label style="margin-left: 0px;">整合SpringMVC + Mybatis + Solr &mdash;
+                            简易的航空票务系统</label>
+                    </div>
+                </el-col>
+            </el-row>
+        </el-footer>
+    </el-container>
+</div>
+
+</body>
+<script type="text/javascript" src="../static/vue/vue.js"></script>
+<script type="text/javascript" src="../static/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="../static/vue/vue-resource.js"></script>
+<script type="text/javascript" src="../static/vue/vue-router.js"></script>
+<script type="text/javascript" src="../static/js/orderNav0.js"></script>
+</html>

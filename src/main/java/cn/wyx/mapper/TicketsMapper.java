@@ -21,7 +21,7 @@ public interface TicketsMapper {
      * @param subNum
      * @param ticketsId
      */
-    void decreaseTicketsNum(@Param("subNum") int subNum,@Param("ticketsId") String ticketsId);
+    void decreaseTicketsNum(@Param("subNum") int subNum, @Param("ticketsId") String ticketsId);
 
     /**
      * 创建售票信息
@@ -35,7 +35,6 @@ public interface TicketsMapper {
      * @param ticketsPrice
      * @param ticketsNum
      */
-    void setTicketsPriceAndNum(@Param("ticketsId") String ticketsId,@Param("ticketsPrice") int ticketsPrice,@Param("ticketsNum") int ticketsNum);
-
+    void setTicketsPriceAndNum(@Param("ticketsId") String ticketsId, @Param("ticketsPrice") int ticketsPrice, @Param("ticketsNum") int ticketsNum);
 
 }

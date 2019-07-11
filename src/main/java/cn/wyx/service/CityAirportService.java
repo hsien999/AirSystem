@@ -15,7 +15,7 @@ public interface CityAirportService {
      * @param cityName
      * @param cityAlp
      */
-    void createCity(String cityName,String cityAlp);
+    void createCity(String cityName, String cityAlp);
     /**
      * 获取城市编号
      * @param cityName
@@ -33,7 +33,7 @@ public interface CityAirportService {
      * @param cityName
      * @param airportName
      */
-    void createAirport(String cityName,String airportName);
+    void createAirport(String cityName, String airportName);
 
     /**
      * 修改机场信息

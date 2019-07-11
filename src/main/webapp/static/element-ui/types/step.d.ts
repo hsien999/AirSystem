@@ -19,16 +19,16 @@ export interface StepRenderSlots {
 /** Step Component */
 export declare class ElStep extends ElementUIComponent {
   /** Step title */
-  title: string
+  title: string;
 
   /** Step description */
-  description: string
+  description: string;
 
   /** Step icon */
-  icon: string
+  icon: string;
 
   /** Current status. It will be automatically set by Steps if not configured. */
-  status: StepStatus
+  status: StepStatus;
 
   readonly $slots: StepRenderSlots
 }

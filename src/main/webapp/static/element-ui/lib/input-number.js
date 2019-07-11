@@ -83,25 +83,25 @@ module.exports = function normalizeComponent (
   scopeId,
   moduleIdentifier /* server only */
 ) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
+  var esModule;
+  var scriptExports = rawScriptExports = rawScriptExports || {};
 
   // ES6 modules interop
-  var type = typeof rawScriptExports.default
+  var type = typeof rawScriptExports.default;
   if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
+    esModule = rawScriptExports;
     scriptExports = rawScriptExports.default
   }
 
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
     ? scriptExports.options
-    : scriptExports
+    : scriptExports;
 
   // render functions
   if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options.render = compiledTemplate.render;
+    options.staticRenderFns = compiledTemplate.staticRenderFns;
     options._compiled = true
   }
 
@@ -115,14 +115,14 @@ module.exports = function normalizeComponent (
     options._scopeId = scopeId
   }
 
-  var hook
+  var hook;
   if (moduleIdentifier) { // server build
     hook = function (context) {
       // 2.3 injection
       context =
         context || // cached call
         (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
       // 2.2 with runInNewContext: true
       if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
         context = __VUE_SSR_CONTEXT__
@@ -135,7 +135,7 @@ module.exports = function normalizeComponent (
       if (context && context._registeredComponents) {
         context._registeredComponents.add(moduleIdentifier)
       }
-    }
+    };
     // used by ssr in case component is cached and beforeCreate
     // never gets called
     options._ssrRegister = hook
@@ -144,10 +144,10 @@ module.exports = function normalizeComponent (
   }
 
   if (hook) {
-    var functional = options.functional
+    var functional = options.functional;
     var existing = functional
       ? options.render
-      : options.beforeCreate
+      : options.beforeCreate;
 
     if (!functional) {
       // inject component registration as beforeCreate hook
@@ -157,10 +157,10 @@ module.exports = function normalizeComponent (
     } else {
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
-      options._injectStyles = hook
+      options._injectStyles = hook;
       // register for functioal component in vue file
       options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
+        hook.call(context);
         return existing(h, context)
       }
     }
@@ -207,19 +207,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_number_vue__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_number_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_number_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_591d2a59_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_number_vue__ = __webpack_require__(109);
-var normalizeComponent = __webpack_require__(0)
+var normalizeComponent = __webpack_require__(0);
 /* script */
 
 /* template */
 
 /* template functional */
-  var __vue_template_functional__ = false
+  var __vue_template_functional__ = false;
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = null;
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = null;
 /* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
+var __vue_module_identifier__ = null;
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_number_vue___default.a,
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_591d2a59_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_number_vue__["a" /* default */],
@@ -227,7 +227,7 @@ var Component = normalizeComponent(
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
-)
+);
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -517,9 +517,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     { 'is-disabled': _vm.inputNumberDisabled },
     { 'is-without-controls': !_vm.controls },
     { 'is-controls-right': _vm.controlsAtRight }
-  ],on:{"dragstart":function($event){$event.preventDefault();}}},[(_vm.controls)?_c('span',{directives:[{name:"repeat-click",rawName:"v-repeat-click",value:(_vm.decrease),expression:"decrease"}],staticClass:"el-input-number__decrease",class:{'is-disabled': _vm.minDisabled},attrs:{"role":"button"},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.decrease($event)}}},[_c('i',{class:("el-icon-" + (_vm.controlsAtRight ? 'arrow-down' : 'minus'))})]):_vm._e(),(_vm.controls)?_c('span',{directives:[{name:"repeat-click",rawName:"v-repeat-click",value:(_vm.increase),expression:"increase"}],staticClass:"el-input-number__increase",class:{'is-disabled': _vm.maxDisabled},attrs:{"role":"button"},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.increase($event)}}},[_c('i',{class:("el-icon-" + (_vm.controlsAtRight ? 'arrow-up' : 'plus'))})]):_vm._e(),_c('el-input',{ref:"input",attrs:{"value":_vm.currentInputValue,"disabled":_vm.inputNumberDisabled,"size":_vm.inputNumberSize,"max":_vm.max,"min":_vm.min,"name":_vm.name,"label":_vm.label},on:{"blur":_vm.handleBlur,"focus":_vm.handleFocus,"change":_vm.handleInputChange},nativeOn:{"keydown":[function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"up",38,$event.key)){ return null; }$event.preventDefault();_vm.increase($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"down",40,$event.key)){ return null; }$event.preventDefault();_vm.decrease($event)}]}})],1)}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
+  ],on:{"dragstart":function($event){$event.preventDefault();}}},[(_vm.controls)?_c('span',{directives:[{name:"repeat-click",rawName:"v-repeat-click",value:(_vm.decrease),expression:"decrease"}],staticClass:"el-input-number__decrease",class:{'is-disabled': _vm.minDisabled},attrs:{"role":"button"},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.decrease($event)}}},[_c('i',{class:("el-icon-" + (_vm.controlsAtRight ? 'arrow-down' : 'minus'))})]):_vm._e(),(_vm.controls)?_c('span',{directives:[{name:"repeat-click",rawName:"v-repeat-click",value:(_vm.increase),expression:"increase"}],staticClass:"el-input-number__increase",class:{'is-disabled': _vm.maxDisabled},attrs:{"role":"button"},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.increase($event)}}},[_c('i',{class:("el-icon-" + (_vm.controlsAtRight ? 'arrow-up' : 'plus'))})]):_vm._e(),_c('el-input',{ref:"input",attrs:{"value":_vm.currentInputValue,"disabled":_vm.inputNumberDisabled,"size":_vm.inputNumberSize,"max":_vm.max,"min":_vm.min,"name":_vm.name,"label":_vm.label},on:{"blur":_vm.handleBlur,"focus":_vm.handleFocus,"change":_vm.handleInputChange},nativeOn:{"keydown":[function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"up",38,$event.key)){ return null; }$event.preventDefault();_vm.increase($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"down",40,$event.key)){ return null; }$event.preventDefault();_vm.decrease($event)}]}})],1)};
+var staticRenderFns = [];
+var esExports = { render: render, staticRenderFns: staticRenderFns };
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),

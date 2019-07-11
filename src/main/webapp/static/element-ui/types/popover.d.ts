@@ -23,43 +23,43 @@ export interface ElPopoverDirective extends VNodeDirective {
 /** Popover Component */
 export declare class ElPopover extends ElementUIComponent {
   /** How the popover is triggered */
-  trigger: PopoverTrigger
+  trigger: PopoverTrigger;
 
   /** Popover title */
-  title: string
+  title: string;
 
   /** Popover content, can be replaced with a default slot */
-  content: string
+  content: string;
 
   /** Popover width */
-  width: string | number
+  width: string | number;
 
   /** Popover placement */
-  placement: PopoverPlacement
+  placement: PopoverPlacement;
 
   /** Whether Popover is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Whether popover is visible */
-  value: boolean
+  value: boolean;
 
   /** Popover offset */
-  offset: number
+  offset: number;
 
   /** Popover transition animation */
-  transition: string
+  transition: string;
 
   /** Whether a tooltip arrow is displayed or not. For more info, please refer to Vue-popper */
-  visibleArrow: boolean
+  visibleArrow: boolean;
 
   /** Parameters for popper.js */
-  popperOptions: object
+  popperOptions: object;
 
   /** Custom class name for popover */
-  popperClass: string
+  popperClass: string;
 
   /** Delay of appearance when trigger is hover, in milliseconds */
-  openDelay: number
+  openDelay: number;
 
   $slots: PopoverSlots
 }

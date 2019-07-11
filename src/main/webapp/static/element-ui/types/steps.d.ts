@@ -6,22 +6,22 @@ export type StepsDirection = 'vertical' | 'horizontal'
 /** Guide the user to complete tasks in accordance with the process. Its steps can be set according to the actual application scenario and the number of the steps can't be less than 2. */
 export declare class ElSteps extends ElementUIComponent {
   /** The spacing of each step, will be responsive if omitted. Support percentage. */
-  space: number | string
+  space: number | string;
 
   /** Display direction */
-  direction: StepsDirection
+  direction: StepsDirection;
 
   /** Current activation step */
-  active: number
+  active: number;
 
   /** Status of current step */
-  processStatus: StepStatus
+  processStatus: StepStatus;
 
   /** Status of end step */
-  finishStatus: StepStatus
+  finishStatus: StepStatus;
 
   /** Whether step description is centered */
-  alignCenter: boolean
+  alignCenter: boolean;
 
   /** Whether to apply simple theme */
   simple: boolean

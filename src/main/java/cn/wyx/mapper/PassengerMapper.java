@@ -14,6 +14,5 @@ public interface PassengerMapper {
      * @return
      */
     int insertPassenger(Passenger passenger);
-
     
 }

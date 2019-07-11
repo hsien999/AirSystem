@@ -14,13 +14,13 @@ export interface CardSlots {
 /** Integrate information in a card container */
 export declare class ElCard extends ElementUIComponent {
   /** Title of the card */
-  header: string
+  header: string;
 
   /** CSS style of body */
-  bodyStyle: object
+  bodyStyle: object;
 
   /** When to show card shadows */
-  shadow: string
+  shadow: string;
 
   $slots: CardSlots
 }

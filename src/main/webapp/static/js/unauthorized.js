@@ -19,4 +19,4 @@ new Vue({
             window.location.href = "login.html";
         }, 1000);
     }
-})
+});

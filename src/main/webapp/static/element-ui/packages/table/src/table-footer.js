@@ -42,42 +42,42 @@ export default {
     }
 
     return (
-      <table
-        class="el-table__footer"
-        cellspacing="0"
-        cellpadding="0"
+      <table;
+        class="el-table__footer";
+        cellspacing="0";
+        cellpadding="0";
         border="0">
         <colgroup>
           {
-            this._l(this.columns, column => <col name={ column.id } />)
+            this._l(this.columns, column => <col name={ column.id }; />)
           }
           {
-            this.hasGutter ? <col name="gutter" /> : ''
+            this.hasGutter ?; <col; name="gutter" />; : ''
           }
         </colgroup>
-        <tbody class={ [{ 'has-gutter': this.hasGutter }] }>
+        <tbody; class={ [{ 'has-gutter': this.hasGutter }] }>
           <tr>
             {
               this._l(this.columns, (column, cellIndex) =>
                 <td
                   colspan={ column.colSpan }
                   rowspan={ column.rowSpan }
-                  class={ [column.id, column.headerAlign, column.className || '', this.isCellHidden(cellIndex, this.columns) ? 'is-hidden' : '', !column.children ? 'is-leaf' : '', column.labelClassName] }>
-                  <div class={ ['cell', column.labelClassName] }>
+                  class={ [column.id, column.headerAlign, column.className || '', this.isCellHidden(cellIndex, this.columns) ? 'is-hidden' : '',; !column.children ? 'is-leaf' : '', column.labelClassName;] }>
+                  <div; class={ ['cell', column.labelClassName;] }>
                     {
                       sums[cellIndex]
                     }
                   </div>
-                </td>
+                </td>;
               )
             }
             {
-              this.hasGutter ? <th class="gutter"></th> : ''
+              this.hasGutter ?; <th; class="gutter"></th> : ''
             }
           </tr>
         </tbody>
-      </table>
-    );
+      </table>;
+  )
   },
 
   props: {

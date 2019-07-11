@@ -83,25 +83,25 @@ module.exports = function normalizeComponent (
   scopeId,
   moduleIdentifier /* server only */
 ) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
+  var esModule;
+  var scriptExports = rawScriptExports = rawScriptExports || {};
 
   // ES6 modules interop
-  var type = typeof rawScriptExports.default
+  var type = typeof rawScriptExports.default;
   if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
+    esModule = rawScriptExports;
     scriptExports = rawScriptExports.default
   }
 
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
     ? scriptExports.options
-    : scriptExports
+    : scriptExports;
 
   // render functions
   if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options.render = compiledTemplate.render;
+    options.staticRenderFns = compiledTemplate.staticRenderFns;
     options._compiled = true
   }
 
@@ -115,14 +115,14 @@ module.exports = function normalizeComponent (
     options._scopeId = scopeId
   }
 
-  var hook
+  var hook;
   if (moduleIdentifier) { // server build
     hook = function (context) {
       // 2.3 injection
       context =
         context || // cached call
         (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
       // 2.2 with runInNewContext: true
       if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
         context = __VUE_SSR_CONTEXT__
@@ -135,7 +135,7 @@ module.exports = function normalizeComponent (
       if (context && context._registeredComponents) {
         context._registeredComponents.add(moduleIdentifier)
       }
-    }
+    };
     // used by ssr in case component is cached and beforeCreate
     // never gets called
     options._ssrRegister = hook
@@ -144,10 +144,10 @@ module.exports = function normalizeComponent (
   }
 
   if (hook) {
-    var functional = options.functional
+    var functional = options.functional;
     var existing = functional
       ? options.render
-      : options.beforeCreate
+      : options.beforeCreate;
 
     if (!functional) {
       // inject component registration as beforeCreate hook
@@ -157,10 +157,10 @@ module.exports = function normalizeComponent (
     } else {
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
-      options._injectStyles = hook
+      options._injectStyles = hook;
       // register for functioal component in vue file
       options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
+        hook.call(context);
         return existing(h, context)
       }
     }
@@ -214,19 +214,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_vue__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_deef359c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_main_vue__ = __webpack_require__(336);
-var normalizeComponent = __webpack_require__(0)
+var normalizeComponent = __webpack_require__(0);
 /* script */
 
 /* template */
 
 /* template functional */
-  var __vue_template_functional__ = false
+  var __vue_template_functional__ = false;
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = null;
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = null;
 /* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
+var __vue_module_identifier__ = null;
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_vue___default.a,
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_deef359c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_main_vue__["a" /* default */],
@@ -234,7 +234,7 @@ var Component = normalizeComponent(
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
-)
+);
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -515,9 +515,9 @@ module.exports = require("throttle-debounce/throttle");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"el-carousel",class:{ 'el-carousel--card': _vm.type === 'card' },on:{"mouseenter":function($event){$event.stopPropagation();_vm.handleMouseEnter($event)},"mouseleave":function($event){$event.stopPropagation();_vm.handleMouseLeave($event)}}},[_c('div',{staticClass:"el-carousel__container",style:({ height: _vm.height })},[_c('transition',{attrs:{"name":"carousel-arrow-left"}},[(_vm.arrow !== 'never')?_c('button',{directives:[{name:"show",rawName:"v-show",value:(_vm.arrow === 'always' || _vm.hover),expression:"arrow === 'always' || hover"}],staticClass:"el-carousel__arrow el-carousel__arrow--left",attrs:{"type":"button"},on:{"mouseenter":function($event){_vm.handleButtonEnter('left')},"mouseleave":_vm.handleButtonLeave,"click":function($event){$event.stopPropagation();_vm.throttledArrowClick(_vm.activeIndex - 1)}}},[_c('i',{staticClass:"el-icon-arrow-left"})]):_vm._e()]),_c('transition',{attrs:{"name":"carousel-arrow-right"}},[(_vm.arrow !== 'never')?_c('button',{directives:[{name:"show",rawName:"v-show",value:(_vm.arrow === 'always' || _vm.hover),expression:"arrow === 'always' || hover"}],staticClass:"el-carousel__arrow el-carousel__arrow--right",attrs:{"type":"button"},on:{"mouseenter":function($event){_vm.handleButtonEnter('right')},"mouseleave":_vm.handleButtonLeave,"click":function($event){$event.stopPropagation();_vm.throttledArrowClick(_vm.activeIndex + 1)}}},[_c('i',{staticClass:"el-icon-arrow-right"})]):_vm._e()]),_vm._t("default")],2),(_vm.indicatorPosition !== 'none')?_c('ul',{staticClass:"el-carousel__indicators",class:{ 'el-carousel__indicators--labels': _vm.hasLabel, 'el-carousel__indicators--outside': _vm.indicatorPosition === 'outside' || _vm.type === 'card' }},_vm._l((_vm.items),function(item,index){return _c('li',{staticClass:"el-carousel__indicator",class:{ 'is-active': index === _vm.activeIndex },on:{"mouseenter":function($event){_vm.throttledIndicatorHover(index)},"click":function($event){$event.stopPropagation();_vm.handleIndicatorClick(index)}}},[_c('button',{staticClass:"el-carousel__button"},[(_vm.hasLabel)?_c('span',[_vm._v(_vm._s(item.label))]):_vm._e()])])})):_vm._e()])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"el-carousel",class:{ 'el-carousel--card': _vm.type === 'card' },on:{"mouseenter":function($event){$event.stopPropagation();_vm.handleMouseEnter($event)},"mouseleave":function($event){$event.stopPropagation();_vm.handleMouseLeave($event)}}},[_c('div',{staticClass:"el-carousel__container",style:({ height: _vm.height })},[_c('transition',{attrs:{"name":"carousel-arrow-left"}},[(_vm.arrow !== 'never')?_c('button',{directives:[{name:"show",rawName:"v-show",value:(_vm.arrow === 'always' || _vm.hover),expression:"arrow === 'always' || hover"}],staticClass:"el-carousel__arrow el-carousel__arrow--left",attrs:{"type":"button"},on:{"mouseenter":function($event){_vm.handleButtonEnter('left')},"mouseleave":_vm.handleButtonLeave,"click":function($event){$event.stopPropagation();_vm.throttledArrowClick(_vm.activeIndex - 1)}}},[_c('i',{staticClass:"el-icon-arrow-left"})]):_vm._e()]),_c('transition',{attrs:{"name":"carousel-arrow-right"}},[(_vm.arrow !== 'never')?_c('button',{directives:[{name:"show",rawName:"v-show",value:(_vm.arrow === 'always' || _vm.hover),expression:"arrow === 'always' || hover"}],staticClass:"el-carousel__arrow el-carousel__arrow--right",attrs:{"type":"button"},on:{"mouseenter":function($event){_vm.handleButtonEnter('right')},"mouseleave":_vm.handleButtonLeave,"click":function($event){$event.stopPropagation();_vm.throttledArrowClick(_vm.activeIndex + 1)}}},[_c('i',{staticClass:"el-icon-arrow-right"})]):_vm._e()]),_vm._t("default")],2),(_vm.indicatorPosition !== 'none')?_c('ul',{staticClass:"el-carousel__indicators",class:{ 'el-carousel__indicators--labels': _vm.hasLabel, 'el-carousel__indicators--outside': _vm.indicatorPosition === 'outside' || _vm.type === 'card' }},_vm._l((_vm.items),function(item,index){return _c('li',{staticClass:"el-carousel__indicator",class:{ 'is-active': index === _vm.activeIndex },on:{"mouseenter":function($event){_vm.throttledIndicatorHover(index)},"click":function($event){$event.stopPropagation();_vm.handleIndicatorClick(index)}}},[_c('button',{staticClass:"el-carousel__button"},[(_vm.hasLabel)?_c('span',[_vm._v(_vm._s(item.label))]):_vm._e()])])})):_vm._e()])};
+var staticRenderFns = [];
+var esExports = { render: render, staticRenderFns: staticRenderFns };
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ })

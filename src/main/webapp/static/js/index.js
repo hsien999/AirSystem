@@ -3,7 +3,7 @@ Vue.http.options.emulateJSON = true;
 
 const Notfound = {
     template: '<h2>404</h2>'
-}
+};
 
 const routerObj = new VueRouter({
     mode: 'history',
@@ -15,7 +15,7 @@ const routerObj = new VueRouter({
 
 //Vue实例
 new Vue({
-    el: '#app',
+    el: '#appMain',
     data() {
         return {
             activeIndex: '1',
@@ -28,7 +28,6 @@ new Vue({
                 stCity: [],
                 edCity: [],
                 planTime: '',
-
             },
 
             InfoOfFlight: [
@@ -217,7 +216,7 @@ new Vue({
                         row.ruleType = '起飞前4小时（含）后'
                     }
                 })
-            })
+            });
             this.$http.post('/AirSystem_war_exploded/findBaggageAllowance.do?spaceId=' + spaceId
             ).then(result => {
                 this.baggageAllowance = result.body;
@@ -225,18 +224,30 @@ new Vue({
         },
 
         orderTicket(flightId, ticketsId) {
-            window.location.href = 'user/orderNav1.html?' + 'flightId=' + flightId + '&ticketsId=' + ticketsId;
-            // this.$router.push({
-            //     path: 'user/orderNav1.html',
-            //     query: {
-            //         stCity: this.searchEntity.stCity[2],
-            //         edCity: this.searchEntity.edCity[2],
-            //         searchDate: this.searchEntity.planTime,
-            //         ticketsId: ticketsId,
-            //     }
-            // })
+            console.log('stCity = ' +
+                this.searchEntity.stCity[2] + '&edCity=' + this.searchEntity.edCity[2] + '&searchDate='
+                + this.searchEntity.planTime);
+            this.$http.post('/AirSystem_war_exploded/orderTicket.do?' + 'stCity=' + this.searchEntity.stCity[2] +
+                '&edCity=' + this.searchEntity.edCity[2] + '&searchDate=' + this.searchEntity.planTime + '&flightId=' + flightId +
+                '&ticketsId=' + ticketsId,
+            ).then(result => {
+                if (result.body.success) {
+                    window.location.href = result.body.message;
+                } else {
+                    this.$message({
+                        type: 'error',
+                        message: "请先登录",
+                        duration: 1000
+                    });
+                    setTimeout(() => {
+                        let url = result.body.message;
+                        if (url.indexOf("redUrl=") != -1) {
+                            window.location.href = "login.html?redUrl=" + url.substring(7);
+                        } else window.location.href = "login.html";
+                    }, 1000);
+                }
+            })
         },
-
 
         sortBy1(a, b) {
             return a.spaceId >= b.spaceId ? 1 : -1;
@@ -258,20 +269,20 @@ new Vue({
         //首先加载城市信息
         this.getAllCitys();
 
-        this.$http.post('/AirSystem_war_exploded/findAllInfoOfFlights.do?stCity=' +
-            '厦门' + '&edCity=' + '上海虹桥' + '&searchDate=' + '2019-7-8'
-        ).then(result => {
-            try {
-                this.InfoOfFlight = result.body;
-            } catch (e) {
-                this.$message({
-                    type: 'error',
-                    message: "获取航班信息失败",
-                    duration: 6000
-                });
-                this.$refs.searchEntity.resetFields();
-            }
-        })
+        // this.$http.post('/AirSystem_war_exploded/findAllInfoOfFlights.do?stCity=' +
+        //     '厦门' + '&edCity=' + '上海虹桥' + '&searchDate=' + '2019-7-10'
+        // ).then(result => {
+        //     try {
+        //         this.InfoOfFlight = result.body;
+        //     } catch (e) {
+        //         this.$message({
+        //             type: 'error',
+        //             message: "获取航班信息失败",
+        //             duration: 6000
+        //         });
+        //         this.$refs.searchEntity.resetFields();
+        //     }
+        // })
     }
 
 });

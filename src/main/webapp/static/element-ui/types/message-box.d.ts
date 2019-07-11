@@ -14,30 +14,30 @@ export interface MessageBoxInputValidator {
 }
 
 export declare class ElMessageBoxComponent extends Vue {
-  title: string
-  message: string
-  type: MessageType
-  iconClass: string
-  customClass: string
-  showInput: boolean
-  showClose: boolean
-  inputValue: string
-  inputPlaceholder: string
-  inputType: string
-  inputPattern: RegExp
-  inputValidator: MessageBoxInputValidator
-  inputErrorMessage: string
-  showConfirmButton: boolean
-  showCancelButton: boolean
-  action: MessageBoxCloseAction
-  dangerouslyUseHTMLString: boolean
-  confirmButtonText: string
-  cancelButtonText: string
-  confirmButtonLoading: boolean
-  cancelButtonLoading: boolean
-  confirmButtonClass: string
-  confirmButtonDisabled: boolean
-  cancelButtonClass: string
+  title: string;
+  message: string;
+  type: MessageType;
+  iconClass: string;
+  customClass: string;
+  showInput: boolean;
+  showClose: boolean;
+  inputValue: string;
+  inputPlaceholder: string;
+  inputType: string;
+  inputPattern: RegExp;
+  inputValidator: MessageBoxInputValidator;
+  inputErrorMessage: string;
+  showConfirmButton: boolean;
+  showCancelButton: boolean;
+  action: MessageBoxCloseAction;
+  dangerouslyUseHTMLString: boolean;
+  confirmButtonText: string;
+  cancelButtonText: string;
+  confirmButtonLoading: boolean;
+  cancelButtonLoading: boolean;
+  confirmButtonClass: string;
+  confirmButtonDisabled: boolean;
+  cancelButtonClass: string;
   editorErrorMessage: string
 }
 

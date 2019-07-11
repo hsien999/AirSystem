@@ -20,34 +20,34 @@ export interface TimeSelectOptions {
 /** TimeSelect Component */
 export declare class ElTimeSelect extends ElementUIComponent {
   /** Whether DatePicker is read only */
-  readonly: boolean
+  readonly: boolean;
 
   /** Whether DatePicker is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Whether the input is editable */
-  editable: boolean
+  editable: boolean;
 
   /** Whether to show clear button */
-  clearable: boolean
+  clearable: boolean;
 
   /** Size of Input */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /** Placeholder */
-  placeholder: string
+  placeholder: string;
 
   /** Value of the picker */
-  value: string | Date
+  value: string | Date;
 
   /** Alignment */
-  align: ElementUIHorizontalAlignment
+  align: ElementUIHorizontalAlignment;
 
   /** Custom class name for TimePicker's dropdown */
-  popperClass: string
+  popperClass: string;
 
   /** Additional options, check the table below */
-  pickerOptions: TimeSelectOptions
+  pickerOptions: TimeSelectOptions;
 
   /**
    * Focus the Input component

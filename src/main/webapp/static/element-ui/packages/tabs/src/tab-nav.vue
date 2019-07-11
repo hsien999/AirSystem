@@ -201,8 +201,8 @@
       } = this;
       const scrollBtn = scrollable
         ? [
-          <span class={['el-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled']} on-click={scrollPrev}><i class="el-icon-arrow-left"></i></span>,
-          <span class={['el-tabs__nav-next', scrollable.next ? '' : 'is-disabled']} on-click={scrollNext}><i class="el-icon-arrow-right"></i></span>
+          <span class={['el-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled';]} on-click={scrollPrev}><i; class="el-icon-arrow-left"></i></s;pan>,;
+          <span; class={['el-tabs__nav-next', scrollable.next ? '' : 'is-disabled';]} on-click={scrollNext}><i; class="el-icon-arrow-right"></i></s;pan>;
         ] : null;
 
       const tabs = this._l(panes, (pane, index) => {
@@ -212,55 +212,55 @@
         pane.index = `${index}`;
 
         const btnClose = closable
-          ? <span class="el-icon-close" on-click={(ev) => { onTabRemove(pane, ev); }}></span>
+          ?; <span; class="el-icon-close"; on-click={(ev); => { onTabRemove(pane, ev); }}></span>;
           : null;
 
         const tabLabelContent = pane.$slots.label || pane.label;
         const tabindex = pane.active ? 0 : -1;
         return (
-          <div
-            class={{
-              'el-tabs__item': true,
-              [`is-${ this.rootTabs.tabPosition }`]: true,
-              'is-active': pane.active,
-              'is-disabled': pane.disabled,
-              'is-closable': closable,
-              'is-focus': this.isFocus
+          <div;
+            class={;{
+              'el-tabs__item';: true,
+              [`is-${ this.rootTabs.tabPosition }`];: true,
+              'is-active';: pane.active,
+              'is-disabled';: pane.disabled,
+              'is-closable';: closable,
+              'is-focus';: this.isFocus
             }}
             id={`tab-${tabName}`}
             aria-controls={`pane-${tabName}`}
-            role="tab"
-            aria-selected={ pane.active }
-            ref="tabs"
-            tabindex={tabindex}
-            refInFor
-            on-focus={ ()=> { setFocus(); }}
-            on-blur ={ ()=> { removeFocus(); }}
-            on-click={(ev) => { removeFocus(); onTabClick(pane, tabName, ev); }}
-            on-keydown={(ev) => { if (closable && (ev.keyCode === 46 || ev.keyCode === 8)) { onTabRemove(pane, ev);} }}
+            role="tab";
+            aria-selected={ pane.active };
+            ref="tabs";
+            tabindex={tabindex};
+            refInFor;
+            on-focus={ ();=> { setFocus(); }}
+            on-blur ={ ();=> { removeFocus(); }}
+            on-click={(ev); => { removeFocus(); onTabClick(pane, tabName, ev); }}
+            on-keydown={(ev); => { if (closable && (ev.keyCode === 46 || ev.keyCode === 8)) { onTabRemove(pane, ev);} }}
           >
             {tabLabelContent}
             {btnClose}
-          </div>
-        );
+          </div>;
+      )
       });
       return (
-        <div class={['el-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`]}>
+        <div; class={['el-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`;]}>
           {scrollBtn}
-          <div class={['el-tabs__nav-scroll']} ref="navScroll">
-            <div
-              class={['el-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '']}
-              ref="nav"
-              style={navStyle}
-              role="tablist"
+          <div; class={['el-tabs__nav-scroll']}; ref="navScroll">
+            <div;
+              class={['el-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '';]}
+              ref="nav";
+              style={navStyle};
+              role="tablist";
               on-keydown={ changeTab }
             >
-              {!type ? <tab-bar tabs={panes}></tab-bar> : null}
+              {;!type ?; <tab-bar; tabs={panes}></tab-bar> : null};
               {tabs}
             </div>
           </div>
-        </div>
-      );
+        </div>;
+    )
     },
 
     mounted() {

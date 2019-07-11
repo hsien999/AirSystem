@@ -21,8 +21,9 @@
                         left join tb_space on tb_tickets.space_id = tb_space.space_id
                         left join tb_mdsp on tb_model.model_id = tb_mdsp.model_id
         <where>
+            tickets_nums > 0
             <if test="ticketsId != null and ticketsId != ''">
-                tb_tickets.tickets_id = #{ticketsId}
+                and tb_tickets.tickets_id = #{ticketsId}
             </if>
             <if test="flightId != null and flightId !=''">
                 and tb_flight.flight_id = #{flightId}

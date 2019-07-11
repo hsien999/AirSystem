@@ -16,64 +16,64 @@ export interface AutoSize {
 /** Input Component */
 export declare class ElInput extends ElementUIComponent {
   /** Type of input */
-  type: InputType
+  type: InputType;
 
   /** Binding value */
-  value: string | number
+  value: string | number;
 
   /** Maximum Input text length */
-  maxlength: number
+  maxlength: number;
 
   /** Minimum Input text length */
-  minlength: number
+  minlength: number;
 
   /** Placeholder of Input */
-  placeholder: string
+  placeholder: string;
 
   /** Whether Input is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Size of Input, works when type is not 'textarea' */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /** Prefix icon class */
-  prefixIcon: string
+  prefixIcon: string;
 
   /** Suffix icon class */
-  suffixIcon: string
+  suffixIcon: string;
 
   /** Number of rows of textarea, only works when type is 'textarea' */
-  rows: number
+  rows: number;
 
   /** Whether textarea has an adaptive height, only works when type is 'textarea' */
-  autosize: boolean | AutoSize
+  autosize: boolean | AutoSize;
 
   /** Same as auto-complete in native input */
-  autoComplete: string
+  autoComplete: string;
 
   /** Same as name in native input */
-  name: string
+  name: string;
 
   /** Same as readonly in native input */
-  readonly: boolean
+  readonly: boolean;
 
   /** Same as max in native input */
-  max: any
+  max: any;
 
   /** Same as min in native input */
-  min: any
+  min: any;
 
   /** Same as step in native input */
-  step: any
+  step: any;
 
   /** Control the resizability */
-  resize: Resizability
+  resize: Resizability;
 
   /** Same as autofocus in native input */
-  autofocus: boolean
+  autofocus: boolean;
 
   /** Same as form in native input */
-  form: string
+  form: string;
 
   /**
    * Focus the Input component

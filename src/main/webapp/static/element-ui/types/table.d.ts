@@ -32,85 +32,85 @@ export interface cellCallbackParams {
 /** Table Component */
 export declare class ElTable extends ElementUIComponent {
   /** Table data */
-  data: object[]
+  data: object[];
 
   /** Table's height. By default it has an auto height. If its value is a number, the height is measured in pixels; if its value is a string, the height is affected by external styles */
-  height: string | number
+  height: string | number;
 
   /** Table's max-height. The height of the table starts from auto until it reaches the maxHeight limit. The maxHeight is measured in pixels, same as height */
-  maxHeight: string | number
+  maxHeight: string | number;
 
   /** Whether table is striped */
-  stripe: boolean
+  stripe: boolean;
 
   /** Whether table has vertical border */
-  border: boolean
+  border: boolean;
 
   /** Whether width of column automatically fits its container */
-  fit: boolean
+  fit: boolean;
 
   /** Whether table header is visible */
-  showHeader: boolean
+  showHeader: boolean;
 
   /** Whether current row is highlighted */
-  highlightCurrentRow: boolean
+  highlightCurrentRow: boolean;
 
   /** Key of current row, a set only prop */
-  currentRowKey: string | number
+  currentRowKey: string | number;
 
   /** Function that returns custom class names for a row, or a string assigning class names for every row */
-  rowClassName: string | ((param: rowCallbackParams) => string)
+  rowClassName: string | ((param: rowCallbackParams) => string);
 
   /** Function that returns custom style for a row, or an object assigning custom style for every row */
-  rowStyle: object | ((param: rowCallbackParams) => object)
+  rowStyle: object | ((param: rowCallbackParams) => object);
 
   /** Function that returns custom class names for a cell, or a string assigning class names for every cell */
-  cellClassName: string | ((param: cellCallbackParams) => string)
+  cellClassName: string | ((param: cellCallbackParams) => string);
 
   /** Function that returns custom style for a cell, or an object assigning custom style for every cell */
-  cellStyle: object | ((param: cellCallbackParams) => object)
+  cellStyle: object | ((param: cellCallbackParams) => object);
 
   /** Function that returns custom class names for a row in table header, or a string assigning class names for every row in table header */
-  headerRowClassName: string | ((param: rowCallbackParams) => string)
+  headerRowClassName: string | ((param: rowCallbackParams) => string);
 
   /** Function that returns custom style for a row in table header, or an object assigning custom style for every row in table header */
-  headerRowStyle: object | ((param: rowCallbackParams) => object)
+  headerRowStyle: object | ((param: rowCallbackParams) => object);
 
   /** Function that returns custom class names for a cell in table header, or a string assigning class names for every cell in table header */
-  headerCellClassName: string | ((param: cellCallbackParams) => string)
+  headerCellClassName: string | ((param: cellCallbackParams) => string);
 
   /** Function that returns custom style for a cell in table header, or an object assigning custom style for every cell in table header */
-  headerCellStyle: object | ((param: cellCallbackParams) => object)
+  headerCellStyle: object | ((param: cellCallbackParams) => object);
 
   /** Key of row data, used for optimizing rendering. Required if reserve-selection is on */
-  rowKey: (row: object) => any
+  rowKey: (row: object) => any;
 
   /** Displayed text when data is empty. You can customize this area with `slot="empty"` */
-  emptyText: String
+  emptyText: String;
 
   /** Whether expand all rows by default. Only works when the table has a column `type="expand"` */
-  defaultExpandAll: Boolean
+  defaultExpandAll: Boolean;
 
   /** Set expanded rows by this prop. Prop's value is the keys of expand rows, you should set row-key before using this prop */
-  expandRowKeys: any[]
+  expandRowKeys: any[];
 
   /** Set the default sort column and order */
-  defaultSort: DefaultSortOptions
+  defaultSort: DefaultSortOptions;
 
   /** Tooltip effect property */
-  tooltipEffect: TooltipEffect
+  tooltipEffect: TooltipEffect;
 
   /** Whether to display a summary row */
-  showSummary: boolean
+  showSummary: boolean;
 
   /** Displayed text for the first column of summary row */
-  sumText: string
+  sumText: string;
 
   /** Custom summary method */
-  summaryMethod: (param: SummaryMethodParams) => any[]
+  summaryMethod: (param: SummaryMethodParams) => any[];
 
   /** Controls the behavior of master checkbox in multi-select tables when only some rows are selected */
-  selectOnIndeterminate: boolean
+  selectOnIndeterminate: boolean;
 
   /** Clear selection. Might be useful when `reserve-selection` is on */
   clearSelection (): void

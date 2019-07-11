@@ -30,4 +30,11 @@ public interface MdspMapper {
      * @return
      */
     List<Mdsp> findMdsp(@Param("modelId") Long modelId, @Param("spaceId") String spaceId);
+
+    /**
+     * 删除机型航舱对应
+     * @param modelId
+     * @param spaceId
+     */
+    void delete(@Param("modelId") Long modelId, @Param("spaceId") String spaceId);
 }

@@ -6,37 +6,37 @@ export type MenuTheme = 'light' | 'dark'
 /** Menu that provides navigation for your website */
 export declare class ElMenu extends ElementUIComponent {
   /** Menu display mode */
-  mode: MenuDisplayMode
+  mode: MenuDisplayMode;
 
   /** Whether the menu is collapsed (available only in vertical mode) */
-  collapse: boolean
+  collapse: boolean;
 
   /** Background color of Menu (hex format) */
-  backgroundColor: string
+  backgroundColor: string;
 
   /** Text color of Menu (hex format) */
-  textColor: string
+  textColor: string;
 
   /** Text color of currently active menu item (hex format) */
-  activeTextColor: string
+  activeTextColor: string;
 
   /** Index of currently active menu */
-  defaultActive: string
+  defaultActive: string;
 
   /** Array that contains keys of currently active sub-menus */
-  defaultOpeneds: string[]
+  defaultOpeneds: string[];
 
   /** Whether only one sub-menu can be active */
-  uniqueOpened: boolean
+  uniqueOpened: boolean;
 
   /** How sub-menus are triggered, only works when mode is 'horizontal' */
-  menuTrigger: string
+  menuTrigger: string;
 
   /** Whether vue-router mode is activated. If true, index will be used as 'path' to activate the route action */
-  router: boolean
+  router: boolean;
 
   /** Whether the menu collapse transition is active */
-  collapseTransition: boolean
+  collapseTransition: boolean;
   
   /** Open the specified sub-menu */
   open (index: string): void

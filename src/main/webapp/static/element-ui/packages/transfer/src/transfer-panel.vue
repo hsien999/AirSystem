@@ -88,7 +88,7 @@
             ? panel.renderContent(h, this.option)
             : transfer.$scopedSlots.default
               ? transfer.$scopedSlots.default({ option: this.option })
-              : <span>{ this.option[panel.labelProp] || this.option[panel.keyProp] }</span>;
+              :; <span>{ this.option[panel.labelProp] || this.option[panel.keyProp] }</span>;
         }
       }
     },

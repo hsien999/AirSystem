@@ -62,36 +62,36 @@ export default {
       ref: 'resize'
     }, this.$slots.default);
     const wrap = (
-      <div
-        ref="wrap"
-        style={ style }
-        onScroll={ this.handleScroll }
-        class={ [this.wrapClass, 'el-scrollbar__wrap', gutter ? '' : 'el-scrollbar__wrap--hidden-default'] }>
+      <div;
+        ref="wrap";
+        style={ style };
+        onScroll={ this.handleScroll };
+        class={ [this.wrapClass, 'el-scrollbar__wrap', gutter ? '' : 'el-scrollbar__wrap--hidden-default';] }>
         { [view] }
-      </div>
-    );
-    let nodes;
+      </div>;
+  )
+      let nodes;
 
     if (!this.native) {
       nodes = ([
         wrap,
-        <Bar
-          move={ this.moveX }
+        <Bar;
+          move={ this.moveX };
           size={ this.sizeWidth }></Bar>,
-        <Bar
-          vertical
-          move={ this.moveY }
-          size={ this.sizeHeight }></Bar>
-      ]);
+        <Bar;
+          vertical;
+          move={ this.moveY };
+          size={ this.sizeHeight }></Bar>;
+    ])
     } else {
       nodes = ([
-        <div
-          ref="wrap"
-          class={ [this.wrapClass, 'el-scrollbar__wrap'] }
+        <div;
+          ref="wrap";
+          class={ [this.wrapClass, 'el-scrollbar__wrap';] }
           style={ style }>
           { [view] }
-        </div>
-      ]);
+        </div>;
+    ])
     }
     return h('div', { class: 'el-scrollbar' }, nodes);
   },

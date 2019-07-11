@@ -6,43 +6,43 @@ export type TooltipEffect = 'dark' | 'light'
 /** Tooltip Component */
 export declare class ElTooltip extends ElementUIComponent {
   /** Tooltip theme */
-  effect: TooltipEffect
+  effect: TooltipEffect;
 
   /** Display content, can be overridden by slot#content */
-  content: String
+  content: String;
 
   /** Position of Tooltip */
-  placement: PopoverPlacement
+  placement: PopoverPlacement;
 
   /** Visibility of Tooltip */
-  value: boolean
+  value: boolean;
 
   /** Whether Tooltip is disabled */
-  disabled: boolean
+  disabled: boolean;
 
   /** Offset of the Tooltip */
-  offset: number
+  offset: number;
 
   /** Animation name */
-  transition: string
+  transition: string;
 
   /** Whether an arrow is displayed. For more information, check Vue-popper page */
-  visibleArrow: boolean
+  visibleArrow: boolean;
 
   /** Popper.js parameters */
-  popperOptions: object
+  popperOptions: object;
 
   /** Delay of appearance, in millisecond */
-  openDelay: number
+  openDelay: number;
 
   /** Whether to control Tooltip manually. mouseenter and mouseleave won't have effects if set to true */
-  manual: boolean
+  manual: boolean;
 
   /** Custom class name for Tooltip's popper */
-  popperClass: string
+  popperClass: string;
 
   /** Whether the mouse can enter the tooltip	 */
-  enterable: string
+  enterable: string;
 
   /** Timeout in milliseconds to hide tooltip */
   hideAfter: string

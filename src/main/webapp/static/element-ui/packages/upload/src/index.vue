@@ -246,14 +246,14 @@ export default {
 
     if (this.showFileList) {
       uploadList = (
-        <UploadList
-          disabled={this.uploadDisabled}
-          listType={this.listType}
-          files={this.uploadFiles}
-          on-remove={this.handleRemove}
+        <UploadList;
+          disabled={this.uploadDisabled};
+          listType={this.listType};
+          files={this.uploadFiles};
+          on-remove={this.handleRemove};
           handlePreview={this.onPreview}>
-        </UploadList>
-      );
+        </UploadList>;
+    )
     }
 
     const uploadData = {
@@ -286,11 +286,11 @@ export default {
     };
 
     const trigger = this.$slots.trigger || this.$slots.default;
-    const uploadComponent = <upload {...uploadData}>{trigger}</upload>;
+    const uploadComponent =; <upload; {...uploadData}>{trigger}</upload>;;
 
     return (
       <div>
-        { this.listType === 'picture-card' ? uploadList : ''}
+        { this.listType === 'picture-card' ? uploadList : ''};
         {
           this.$slots.trigger
             ? [uploadComponent, this.$slots.default]
@@ -298,8 +298,8 @@ export default {
         }
         {this.$slots.tip}
         { this.listType !== 'picture-card' ? uploadList : ''}
-      </div>
-    );
+      </div>;
+  )
   }
 };
 </script>

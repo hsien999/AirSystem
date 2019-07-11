@@ -83,25 +83,25 @@ module.exports = function normalizeComponent (
   scopeId,
   moduleIdentifier /* server only */
 ) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
+  var esModule;
+  var scriptExports = rawScriptExports = rawScriptExports || {};
 
   // ES6 modules interop
-  var type = typeof rawScriptExports.default
+  var type = typeof rawScriptExports.default;
   if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
+    esModule = rawScriptExports;
     scriptExports = rawScriptExports.default
   }
 
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
     ? scriptExports.options
-    : scriptExports
+    : scriptExports;
 
   // render functions
   if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options.render = compiledTemplate.render;
+    options.staticRenderFns = compiledTemplate.staticRenderFns;
     options._compiled = true
   }
 
@@ -115,14 +115,14 @@ module.exports = function normalizeComponent (
     options._scopeId = scopeId
   }
 
-  var hook
+  var hook;
   if (moduleIdentifier) { // server build
     hook = function (context) {
       // 2.3 injection
       context =
         context || // cached call
         (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
       // 2.2 with runInNewContext: true
       if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
         context = __VUE_SSR_CONTEXT__
@@ -135,7 +135,7 @@ module.exports = function normalizeComponent (
       if (context && context._registeredComponents) {
         context._registeredComponents.add(moduleIdentifier)
       }
-    }
+    };
     // used by ssr in case component is cached and beforeCreate
     // never gets called
     options._ssrRegister = hook
@@ -144,10 +144,10 @@ module.exports = function normalizeComponent (
   }
 
   if (hook) {
-    var functional = options.functional
+    var functional = options.functional;
     var existing = functional
       ? options.render
-      : options.beforeCreate
+      : options.beforeCreate;
 
     if (!functional) {
       // inject component registration as beforeCreate hook
@@ -157,10 +157,10 @@ module.exports = function normalizeComponent (
     } else {
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
-      options._injectStyles = hook
+      options._injectStyles = hook;
       // register for functioal component in vue file
       options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
+        hook.call(context);
         return existing(h, context)
       }
     }
@@ -207,19 +207,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f5ca3c0e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__ = __webpack_require__(302);
-var normalizeComponent = __webpack_require__(0)
+var normalizeComponent = __webpack_require__(0);
 /* script */
 
 /* template */
 
 /* template functional */
-  var __vue_template_functional__ = false
+  var __vue_template_functional__ = false;
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = null;
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = null;
 /* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
+var __vue_module_identifier__ = null;
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue___default.a,
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f5ca3c0e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__["a" /* default */],
@@ -227,7 +227,7 @@ var Component = normalizeComponent(
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
-)
+);
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -394,9 +394,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       'el-progress--without-text': !_vm.showText,
       'el-progress--text-inside': _vm.textInside,
     }
-  ],attrs:{"role":"progressbar","aria-valuenow":_vm.percentage,"aria-valuemin":"0","aria-valuemax":"100"}},[(_vm.type === 'line')?_c('div',{staticClass:"el-progress-bar"},[_c('div',{staticClass:"el-progress-bar__outer",style:({height: _vm.strokeWidth + 'px'})},[_c('div',{staticClass:"el-progress-bar__inner",style:(_vm.barStyle)},[(_vm.showText && _vm.textInside)?_c('div',{staticClass:"el-progress-bar__innerText"},[_vm._v(_vm._s(_vm.percentage)+"%")]):_vm._e()])])]):_c('div',{staticClass:"el-progress-circle",style:({height: _vm.width + 'px', width: _vm.width + 'px'})},[_c('svg',{attrs:{"viewBox":"0 0 100 100"}},[_c('path',{staticClass:"el-progress-circle__track",attrs:{"d":_vm.trackPath,"stroke":"#e5e9f2","stroke-width":_vm.relativeStrokeWidth,"fill":"none"}}),_c('path',{staticClass:"el-progress-circle__path",style:(_vm.circlePathStyle),attrs:{"d":_vm.trackPath,"stroke-linecap":"round","stroke":_vm.stroke,"stroke-width":_vm.relativeStrokeWidth,"fill":"none"}})])]),(_vm.showText && !_vm.textInside)?_c('div',{staticClass:"el-progress__text",style:({fontSize: _vm.progressTextSize + 'px'})},[(!_vm.status)?[_vm._v(_vm._s(_vm.percentage)+"%")]:_c('i',{class:_vm.iconClass})],2):_vm._e()])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
+  ],attrs:{"role":"progressbar","aria-valuenow":_vm.percentage,"aria-valuemin":"0","aria-valuemax":"100"}},[(_vm.type === 'line')?_c('div',{staticClass:"el-progress-bar"},[_c('div',{staticClass:"el-progress-bar__outer",style:({height: _vm.strokeWidth + 'px'})},[_c('div',{staticClass:"el-progress-bar__inner",style:(_vm.barStyle)},[(_vm.showText && _vm.textInside)?_c('div',{staticClass:"el-progress-bar__innerText"},[_vm._v(_vm._s(_vm.percentage)+"%")]):_vm._e()])])]):_c('div',{staticClass:"el-progress-circle",style:({height: _vm.width + 'px', width: _vm.width + 'px'})},[_c('svg',{attrs:{"viewBox":"0 0 100 100"}},[_c('path',{staticClass:"el-progress-circle__track",attrs:{"d":_vm.trackPath,"stroke":"#e5e9f2","stroke-width":_vm.relativeStrokeWidth,"fill":"none"}}),_c('path',{staticClass:"el-progress-circle__path",style:(_vm.circlePathStyle),attrs:{"d":_vm.trackPath,"stroke-linecap":"round","stroke":_vm.stroke,"stroke-width":_vm.relativeStrokeWidth,"fill":"none"}})])]),(_vm.showText && !_vm.textInside)?_c('div',{staticClass:"el-progress__text",style:({fontSize: _vm.progressTextSize + 'px'})},[(!_vm.status)?[_vm._v(_vm._s(_vm.percentage)+"%")]:_c('i',{class:_vm.iconClass})],2):_vm._e()])};
+var staticRenderFns = [];
+var esExports = { render: render, staticRenderFns: staticRenderFns };
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ })

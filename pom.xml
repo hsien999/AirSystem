@@ -2,14 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn</groupId>
-    <artifactId>ssm-redis-solr</artifactId>
+    <artifactId>AirSystem</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>AirSystem Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <build>
-        <finalName>ssm-redis-solr</finalName>
+        <finalName>AirSystem</finalName>
         <resources>
             <resource>
                 <directory>${basedir}/src/main/java</directory>
@@ -45,8 +45,7 @@
             <version>4.9</version>
         </dependency>
 
-        <!-- shiro 111 -->
-        <!---->
+        <!-- shiro -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>

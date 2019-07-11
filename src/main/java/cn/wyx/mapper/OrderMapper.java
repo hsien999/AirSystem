@@ -4,6 +4,7 @@ import cn.wyx.entity.InfoOfOrder;
 import cn.wyx.entity.Order;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -38,5 +39,5 @@ public interface OrderMapper {
      * @param orderid
      * @param orderState
      */
-    void updateOrderState(@Param("orderId") String orderid, @Param("orderState") String orderState);
+    void updateOrderStateAndPayTime(@Param("orderId") String orderid, @Param("orderState") String orderState, @Param("orderPayTime") Timestamp orderPayTime, @Param("payType") String payType);
 }

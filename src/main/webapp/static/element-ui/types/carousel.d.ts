@@ -8,28 +8,28 @@ export type CarouselType = 'card'
 /** Loop a series of images or texts in a limited space */
 export declare class ElCarousel extends ElementUIComponent {
   /** Height of the carousel */
-  height: number
+  height: number;
 
   /** Index of the initially active slide (starting from 0) */
-  initialIndex: number
+  initialIndex: number;
 
   /** How indicators are triggered */
-  trigger: CarouselIndicatorTrigger
+  trigger: CarouselIndicatorTrigger;
 
   /** Whether automatically loop the slides */
-  autoplay: boolean
+  autoplay: boolean;
 
   /** Interval of the auto loop, in milliseconds */
-  interval: number
+  interval: number;
 
   /** Position of the indicators */
-  indicatorPosition: CarouselIndicatorPosition
+  indicatorPosition: CarouselIndicatorPosition;
 
   /** When arrows are shown */
-  arrow: CarouselArrowVisibility
+  arrow: CarouselArrowVisibility;
 
   /** Type of the Carousel */
-  type: CarouselType
+  type: CarouselType;
 
   /**
    * Manually switch slide by index

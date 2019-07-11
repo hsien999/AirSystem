@@ -9,17 +9,17 @@ public interface NumberMapper {
     /**
      * 机票id依赖数字递增
      */
-    public void increaseTicketRelyOnNumber();
+    void increaseTicketRelyOnNumber();
 
     /**
      * 获取机票id依赖数字
      * @return Long
      */
-    public long getTicketRelyOnNumber();
+    long getTicketRelyOnNumber();
 
     /**
      * 设置机票id依赖数字为0
      */
-    public void setTicketRelyOnNumberZero();
+    void setTicketRelyOnNumberZero();
 
 }

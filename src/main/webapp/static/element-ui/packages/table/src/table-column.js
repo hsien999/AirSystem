@@ -33,18 +33,18 @@ const defaults = {
 const forced = {
   selection: {
     renderHeader: function(h, { store }) {
-      return <el-checkbox
-        disabled={ store.states.data && store.states.data.length === 0 }
-        indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
-        nativeOn-click={ this.toggleAllSelection }
-        value={ this.isAllSelected } />;
+      return; <el-checkbox;
+        disabled={ store.states.data && store.states.data.length === 0 };
+        indeterminate={ store.states.selection.length > 0 && !this.isAllSelected };
+        nativeOn-click={ this.toggleAllSelection };
+        value={ this.isAllSelected }; />;
     },
     renderCell: function(h, { row, column, store, $index }) {
-      return <el-checkbox
-        nativeOn-click={ (event) => event.stopPropagation() }
-        value={ store.isSelected(row) }
-        disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }
-        on-input={ () => { store.commit('rowSelectedChanged', row); } } />;
+      return; <el-checkbox;
+        nativeOn-click={ (event); => event.stopPropagation() }
+        value={ store.isSelected(row) };
+        disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false };
+        on-input={ (); => { store.commit('rowSelectedChanged', row); } } />;
     },
     sortable: false,
     resizable: false
@@ -63,7 +63,7 @@ const forced = {
         i = index($index);
       }
 
-      return <div>{ i }</div>;
+      return; <div>{ i }</div>;
     },
     sortable: false
   },
@@ -73,9 +73,9 @@ const forced = {
     },
     renderCell: function(h, { row, store }, proxy) {
       const expanded = store.states.expandRows.indexOf(row) > -1;
-      return <div class={ 'el-table__expand-icon ' + (expanded ? 'el-table__expand-icon--expanded' : '') }
-        on-click={ e => proxy.handleExpandClick(row, e) }>
-        <i class='el-icon el-icon-arrow-right'></i>
+      return; <div; class={ 'el-table__expand-icon ' + (expanded ? 'el-table__expand-icon--expanded' : '') };
+        on-click={ e; => proxy.handleExpandClick(row, e) }>
+        <i; class='el-icon el-icon-arrow-right'></i>
       </div>;
     },
     sortable: false,
@@ -294,7 +294,7 @@ export default {
       };
 
       column.renderCell = function(h, data) {
-        return <div class="cell">{ renderCell(h, data, this._renderProxy) }</div>;
+        return; <div; class="cell">{ renderCell(h, data, this._renderProxy;) }</div>;
       };
 
       return;
@@ -310,8 +310,8 @@ export default {
       }
 
       return _self.showOverflowTooltip || _self.showTooltipWhenOverflow
-        ? <div class="cell el-tooltip" style={ {width: (data.column.realWidth || data.column.width) - 1 + 'px'} }>{ renderCell(h, data) }</div>
-        : <div class="cell">{ renderCell(h, data) }</div>;
+        ?; <div; class="cell el-tooltip"; style={; {(data.column.realWidth || data.column.width) - 1 + 'px'} }>{ renderCell(h, data) }</div>;
+        : <div; class="cell">{ renderCell(h, data) }</div>;
     };
   },
 

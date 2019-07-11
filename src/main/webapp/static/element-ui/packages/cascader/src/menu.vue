@@ -267,25 +267,25 @@
             itemIndex++;
           }
           return (
-            <li
-              class={{
-                'el-cascader-menu__item': true,
-                'el-cascader-menu__item--extensible': item.children,
-                'is-active': item.value === activeValue[menuIndex],
-                'is-disabled': item.disabled
+            <li;
+              class={;{
+                'el-cascader-menu__item';: true,
+                'el-cascader-menu__item--extensible';: item.children,
+                'is-active';: item.value === activeValue[menuIndex],
+                'is-disabled';: item.disabled
               }}
-              ref={item.value === activeValue[menuIndex] ? 'activeItem' : null}
+              ref={item.value === activeValue[menuIndex] ? 'activeItem' : null};
               {...events}
-              tabindex= { item.disabled ? null : -1 }
-              role="menuitem"
-              aria-haspopup={ !!item.children }
-              aria-expanded={ item.value === activeValue[menuIndex] }
-              id = { itemId }
-              aria-owns = { !item.children ? null : ownsId }
+              tabindex= { item.disabled ? null : -1 };
+              role="menuitem";
+              aria-haspopup={; !!item.children }
+              aria-expanded={ item.value === activeValue[menuIndex] };
+              id = { itemId };
+              aria-owns = {; !item.children ? null : ownsId }
             >
               {item.label}
-            </li>
-          );
+            </li>;
+        )
         });
         let menuStyle = {};
         if (isFlat) {
@@ -304,35 +304,35 @@
         }
 
         return (
-          <ul
-            class={{
-              'el-cascader-menu': true,
-              'el-cascader-menu--flexible': isFlat
+          <ul;
+            class={;{
+              'el-cascader-menu';: true,
+              'el-cascader-menu--flexible';: isFlat
             }}
             {...hoverMenuEvent}
-            style={menuStyle}
-            refInFor
-            ref="menus"
-            role="menu"
+            style={menuStyle};
+            refInFor;
+            ref="menus";
+            role="menu";
             id = { menuId }
           >
-            {items}
+            {items};
             {
               isHoveredMenu
                 ? (<svg
-                  ref="hoverZone"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    height: '100%',
-                    width: '100%',
-                    left: 0,
-                    pointerEvents: 'none'
+                  ref="hoverZone";
+                  style={;{
+                    'absolute',
+                    top;: 0,
+                    height;: '100%',
+                    width;: '100%',
+                    left;: 0,
+                    pointerEvents;: 'none'
                   }}
                 ></svg>) : null
             }
-          </ul>
-        );
+          </ul>;
+      )
       });
 
       if (expandTrigger === 'hover') {
@@ -355,20 +355,20 @@
       }
 
       return (
-        <transition name="el-zoom-in-top" on-before-enter={this.handleMenuEnter} on-after-leave={this.handleMenuLeave}>
-          <div
-            v-show={visible}
+        <transition; name="el-zoom-in-top"; on-before-enter={this.handleMenuEnter}; on-after-leave={this.handleMenuLeave}>
+          <div;
+            v-show={visible};
             class={[
               'el-cascader-menus el-popper',
-              popperClass
+              popperClass;
             ]}
             ref="wrapper"
           >
-            <div x-arrow class="popper__arrow"></div>
+            <div; x-arrow; class="popper__arrow"></div>;
             {menus}
           </div>
-        </transition>
-      );
+        </transition>;
+    )
     }
   };
 </script>

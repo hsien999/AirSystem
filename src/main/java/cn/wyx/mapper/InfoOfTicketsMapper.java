@@ -19,5 +19,5 @@ public interface InfoOfTicketsMapper {
      * @param spaceId
      * @return
      */
-    List<InfoOfTickets> findInfoOfTickets(@Param("ticketsId") String ticketsId, @Param("flightId") String flightId,@Param("spaceId") String spaceId);
+    List<InfoOfTickets> findInfoOfTickets(@Param("ticketsId") String ticketsId, @Param("flightId") String flightId, @Param("spaceId") String spaceId);
 }

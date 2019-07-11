@@ -1,5 +1,6 @@
 package cn.wyx.entity;
 
+import java.io.Serializable;
 import java.sql.Time;
 
 /**
@@ -8,7 +9,7 @@ import java.sql.Time;
  * @Date: 2019/7/8 12:17
  * @Version 1.0
  */
-public class InfoOfFlights {
+public class InfoOfFlights implements Serializable {
     /**
      * 航班号
      */

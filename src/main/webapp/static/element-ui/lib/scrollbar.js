@@ -427,9 +427,8 @@ function renderThumbStyle(_ref) {
   style.webkitTransform = translate;
 
   return style;
-};
-
-/***/ }),
+}
+        /***/ }),
 
 /***/ 38:
 /***/ (function(module, exports) {

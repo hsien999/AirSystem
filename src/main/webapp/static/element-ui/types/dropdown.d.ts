@@ -7,19 +7,19 @@ export type DropdownMenuTrigger = 'hover' | 'click'
 /** Toggleable menu for displaying lists of links and actions */
 export declare class ElDropdown extends ElementUIComponent {
   /** Menu button type. only works when split-button is true */
-  type: ButtonType
+  type: ButtonType;
 
   /** Whether a button group is displayed */
-  splitButton: boolean
+  splitButton: boolean;
 
   /** menu size, also works on the split button */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /** Placement of the menu */
-  placement: DropdownMenuAlignment
+  placement: DropdownMenuAlignment;
 
   /** How to trigger */
-  trigger: DropdownMenuTrigger
+  trigger: DropdownMenuTrigger;
 
   /** Whether to hide menu after clicking menu-item */
   hideOnClick: boolean

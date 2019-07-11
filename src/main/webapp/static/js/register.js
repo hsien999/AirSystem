@@ -3,7 +3,7 @@ Vue.http.options.emulateJSON = true;
 
 //Vue实例
 new Vue({
-    el: '#app',
+    el: '#appReg',
     data() {
         //手机号码验证
         const checkTel = (rule, value, callback) => {
@@ -74,8 +74,8 @@ new Vue({
                     return callback(new Error('请输入正确的证件号'));
                 }
                 //校验码判断
-                const c = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);   //系数
-                const b = new Array('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2');  //校验码对照表
+                const c = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];   //系数
+                const b = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];  //校验码对照表
                 const id_array = value.split("");
                 let sum = 0;
                 for (let k = 0; k < 17; k++) {
@@ -247,7 +247,7 @@ new Vue({
                                     message: result.body.message,
                                     duration: 6000
                                 });
-                                this.activeStep = 2;
+                                this.activeStep = 3;
                             } else {
                                 this.$message({
                                     type: 'warning',
@@ -266,4 +266,4 @@ new Vue({
             if (this.activeStep-- < 0) this.activeStep = 0;
         },
     },
-})
+});

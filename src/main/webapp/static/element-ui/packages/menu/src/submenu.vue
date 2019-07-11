@@ -266,70 +266,68 @@
       } = this;
 
       const popupMenu = (
-        <transition name={menuTransitionName}>
-          <div
-            ref="menu"
-            v-show={opened}
-            class={[`el-menu--${mode}`, popperClass]}
-            on-mouseenter={this.handleMouseenter}
-            on-mouseleave={this.handleMouseleave}
+        <transition; name={menuTransitionName}>
+          <div;
+            ref="menu";
+            v-show={opened};
+            class={[`el-menu--${mode}`, popperClass;]}
+            on-mouseenter={this.handleMouseenter};
+            on-mouseleave={this.handleMouseleave};
             on-focus={this.handleMouseenter}>
-            <ul
-              role="menu"
-              class={['el-menu el-menu--popup', `el-menu--popup-${currentPlacement}`]}
-              style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
+            <ul;
+              role="menu";
+              class={['el-menu el-menu--popup', `el-menu--popup-${currentPlacement}`;]}
+              style={;{ rootMenu.backgroundColor || '' }}>
               {$slots.default}
             </ul>
           </div>
-        </transition>
-      );
-
-      const inlineMenu = (
+        </transition>;
+    )
+        const inlineMenu = (
         <el-collapse-transition>
-          <ul
-            role="menu"
-            class="el-menu el-menu--inline"
-            v-show={opened}
-            style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
+          <ul;
+            role="menu";
+            class="el-menu el-menu--inline";
+            v-show={opened};
+            style={;{ rootMenu.backgroundColor || '' }}>
             {$slots.default}
           </ul>
-        </el-collapse-transition>
-      );
-
-      const submenuTitleIcon = (
+        </el-collapse-transition>;
+    )
+        const submenuTitleIcon = (
         rootMenu.mode === 'horizontal' && isFirstLevel ||
         rootMenu.mode === 'vertical' && !rootMenu.collapse
       ) ? 'el-icon-arrow-down' : 'el-icon-arrow-right';
 
       return (
-        <li
-          class={{
-            'el-submenu': true,
-            'is-active': active,
-            'is-opened': opened,
-            'is-disabled': disabled
+        <li;
+          class={;{
+            'el-submenu';: true,
+            'is-active';: active,
+            'is-opened';: opened,
+            'is-disabled';: disabled
           }}
-          role="menuitem"
-          aria-haspopup="true"
-          aria-expanded={opened}
-          on-mouseenter={this.handleMouseenter}
-          on-mouseleave={this.handleMouseleave}
+          role="menuitem";
+          aria-haspopup="true";
+          aria-expanded={opened};
+          on-mouseenter={this.handleMouseenter};
+          on-mouseleave={this.handleMouseleave};
           on-focus={this.handleMouseenter}
         >
-          <div
-            class="el-submenu__title"
-            ref="submenu-title"
-            on-click={this.handleClick}
-            on-mouseenter={this.handleTitleMouseenter}
-            on-mouseleave={this.handleTitleMouseleave}
-            style={[paddingStyle, titleStyle, { backgroundColor }]}
+          <div;
+            class="el-submenu__title";
+            ref="submenu-title";
+            on-click={this.handleClick};
+            on-mouseenter={this.handleTitleMouseenter};
+            on-mouseleave={this.handleTitleMouseleave};
+            style={[paddingStyle, titleStyle,; { backgroundColor }]}
           >
             {$slots.title}
-            <i class={[ 'el-submenu__icon-arrow', submenuTitleIcon ]}></i>
-          </div>
+            <i; class={[ 'el-submenu__icon-arrow', submenuTitleIcon; ]}></i>
+          </div>;
           {this.isMenuPopup ? popupMenu : inlineMenu}
-        </li>
-      );
+        </li>;
+    )
     }
   };
 </script>

@@ -444,7 +444,7 @@
          * Exposed for legacy reasons
          */
         _lifecycleHooks: LIFECYCLE_HOOKS
-    })
+    });
 
     /*  */
 
@@ -840,7 +840,7 @@
                 case 'push':
                 case 'unshift':
                     inserted = args;
-                    break
+                    break;
                 case 'splice':
                     inserted = args.slice(2);
                     break
@@ -5005,11 +5005,11 @@
             }
             return vnode || (slot && slot[0])
         }
-    }
+    };
 
     var builtInComponents = {
         KeepAlive: KeepAlive
-    }
+    };
 
     /*  */
 
@@ -5384,7 +5384,7 @@
         destroy: function destroy (vnode) {
             registerRef(vnode, true);
         }
-    }
+    };
 
     function registerRef (vnode, isRemoval) {
         var key = vnode.data.ref;
@@ -6176,7 +6176,7 @@
         destroy: function unbindDirectives (vnode) {
             updateDirectives(vnode, emptyNode);
         }
-    }
+    };
 
     function updateDirectives (oldVnode, vnode) {
         if (oldVnode.data.directives || vnode.data.directives) {
@@ -6287,7 +6287,7 @@
     var baseModules = [
         ref,
         directives
-    ]
+    ];
 
     /*  */
 
@@ -6389,7 +6389,7 @@
     var attrs = {
         create: updateAttrs,
         update: updateAttrs
-    }
+    };
 
     /*  */
 
@@ -6427,7 +6427,7 @@
     var klass = {
         create: updateClass,
         update: updateClass
-    }
+    };
 
     /*  */
 
@@ -6470,14 +6470,14 @@
                 }
             } else {
                 switch (c) {
-                    case 0x22: inDouble = true; break         // "
-                    case 0x27: inSingle = true; break         // '
-                    case 0x60: inTemplateString = true; break // `
-                    case 0x28: paren++; break                 // (
-                    case 0x29: paren--; break                 // )
-                    case 0x5B: square++; break                // [
-                    case 0x5D: square--; break                // ]
-                    case 0x7B: curly++; break                 // {
+                    case 0x22: inDouble = true; break;         // "
+                    case 0x27: inSingle = true; break;         // '
+                    case 0x60: inTemplateString = true; break; // `
+                    case 0x28: paren++; break;                 // (
+                    case 0x29: paren--; break;                 // )
+                    case 0x5B: square++; break;                // [
+                    case 0x5D: square--; break;                // ]
+                    case 0x7B: curly++; break;                 // {
                     case 0x7D: curly--; break                 // }
                 }
                 if (c === 0x2f) { // /
@@ -7095,7 +7095,7 @@
     var events = {
         create: updateDOMListeners,
         update: updateDOMListeners
-    }
+    };
 
     /*  */
 
@@ -7189,7 +7189,7 @@
     var domProps = {
         create: updateDOMProps,
         update: updateDOMProps
-    }
+    };
 
     /*  */
 
@@ -7350,7 +7350,7 @@
     var style = {
         create: updateStyle,
         update: updateStyle
-    }
+    };
 
     /*  */
 
@@ -7912,7 +7912,7 @@
                 rm();
             }
         }
-    } : {}
+    } : {};
 
     var platformModules = [
         attrs,
@@ -7921,7 +7921,7 @@
         domProps,
         style,
         transition
-    ]
+    ];
 
     /*  */
 
@@ -8132,12 +8132,12 @@
                 el.style.display = el.__vOriginalDisplay;
             }
         }
-    }
+    };
 
     var platformDirectives = {
         model: directive,
         show: show
-    }
+    };
 
     /*  */
 
@@ -8326,7 +8326,7 @@
 
             return rawChild
         }
-    }
+    };
 
     /*  */
 
@@ -8467,7 +8467,7 @@
                 return (this._hasMove = info.hasTransform)
             }
         }
-    }
+    };
 
     function callPendingCbs (c) {
         /* istanbul ignore if */
@@ -8500,7 +8500,7 @@
     var platformComponents = {
         Transition: Transition,
         TransitionGroup: TransitionGroup
-    }
+    };
 
     /*  */
 
@@ -8647,7 +8647,7 @@
         staticKeys: ['staticClass'],
         transformNode: transformNode,
         genData: genData
-    }
+    };
 
     /*  */
 
@@ -8691,7 +8691,7 @@
         staticKeys: ['staticStyle'],
         transformNode: transformNode$1,
         genData: genData$1
-    }
+    };
 
     /*  */
 
@@ -8703,7 +8703,7 @@
             decoder.innerHTML = html;
             return decoder.textContent
         }
-    }
+    };
 
     /*  */
 
@@ -9767,13 +9767,13 @@
 
     var model$2 = {
         preTransformNode: preTransformNode
-    }
+    };
 
     var modules$1 = [
         klass$1,
         style$1,
         model$2
-    ]
+    ];
 
     /*  */
 
@@ -9795,7 +9795,7 @@
         model: model,
         text: text,
         html: html
-    }
+    };
 
     /*  */
 
@@ -10106,7 +10106,7 @@
         on: on,
         bind: bind$1,
         cloak: noop
-    }
+    };
 
     /*  */
 

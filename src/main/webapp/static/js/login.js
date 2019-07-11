@@ -1,7 +1,18 @@
+
 //设置全局表单提交格式
 Vue.http.options.emulateJSON = true;
 
+const Notfound = {
+    template: '<h2>404</h2>'
+};
 
+const routerObj = new VueRouter({
+    mode: 'history',
+    routes: [{
+        path: "*",
+        component: Notfound
+    },]
+});
 // Vue实例
 new Vue({
     el: '#app',
@@ -13,9 +24,11 @@ new Vue({
                 remember: ''
             },
             loading: {}, //loading动画
-            activeIndex: '1'
+            activeIndex: '1',
+            redUrl: '',
         };
     },
+    router: routerObj,
     methods: {
         /**
          * loading加载动画
@@ -44,7 +57,9 @@ new Vue({
                     }).then(result => {
                         // 判断用户是否登录成功，后端返回JSON数据
                         if (result.body.success) {
-                            window.location.href = "index.html";
+                            console.log(this.$route.query.redUrl);
+                            // if (this.redUrl != undefined && this.redUrl != '') window.location.href = this.$route.query.redUrl;
+                            // else window.location.href = "user/orderNav0.html";
                             this.loading.close(); //关闭动画加载
                         } else {
                             // 弹出错误信息框
@@ -69,13 +84,15 @@ new Vue({
                             duration: 6000
                         }),
                     );
-                    return false;
                 }
             });
         },
         loginEnter(login) {
             this.submitForm(login);
         },
-
+    },
+    created() {
+        // this.redUrl = this.$route.query.redUrl;
+        console.log(this.redUrl);
     }
 });

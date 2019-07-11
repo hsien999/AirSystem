@@ -82,6 +82,13 @@ public interface ModelSpaceRuleService {
     void createMdsp(Mdsp mdsp);
 
     /**
+     * 删除对应关系
+     * @param modelId
+     * @param spaceId
+     */
+    void deleteMdsp(Long modelId, String spaceId);
+
+    /**
      * 设置机型-舱位对应的座位数
      * @param mdsp
      */
@@ -94,7 +101,7 @@ public interface ModelSpaceRuleService {
      * @param spaceId
      * @return
      */
-    List<Mdsp> findMdsp(Long modelId,String spaceId);
+    List<Mdsp> findMdsp(Long modelId, String spaceId);
 
     /**
      * 创建新的退改规则
@@ -121,5 +128,5 @@ public interface ModelSpaceRuleService {
      * @param ruleType
      * @return
      */
-    Rule findRuleBySpaceIdAndRuleType(String spaceId,String ruleType);
+    Rule findRuleBySpaceIdAndRuleType(String spaceId, String ruleType);
 }

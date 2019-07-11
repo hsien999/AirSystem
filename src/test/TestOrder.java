@@ -42,6 +42,6 @@ public class TestOrder {
     @Test
     public void setOrderState()
     {
-        this.orderService.setOrderState("o1","处理中");
+//        this.orderService.setOrderStateAndPayTime(null, "已支付", Timestamp.valueOf("2019-07-11 08:48:19"));
     }
 }

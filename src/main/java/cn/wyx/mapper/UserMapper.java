@@ -50,4 +50,9 @@ public interface UserMapper {
      * 验证是否存在该证件号
      */
     int validateCerId(String CerId);
+
+    /**
+     * 查找用户姓名
+     */
+    String getChName(Long id);
 }

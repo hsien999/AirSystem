@@ -3,35 +3,35 @@ package cn.wyx.entity;
 import java.io.Serializable;
 
 /**
- *乘机人信息
+ * 乘机人信息
  */
 public class Passenger implements Serializable {
     /**
-     *乘客人编号
+     * 乘客人编号
      */
     private Long passengerId;
     /**
-     *机票编号
+     * 机票编号
      */
     private String ticketId;
     /**
-     *乘客人姓名
+     * 乘客人姓名
      */
     private String passengerName;
     /**
-     *证件号
+     * 证件号
      */
     private String passengerCerid;
     /**
-     *证件类型
+     * 证件类型
      */
     private String passengerCertype;
     /**
-     *乘客人手机号码
+     * 乘客人手机号码
      */
     private String passengerTel;
     /**
-     *乘客类型
+     * 乘客类型
      */
     private String passengerTyep;
 
