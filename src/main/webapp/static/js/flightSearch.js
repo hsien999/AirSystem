@@ -21,6 +21,7 @@ new Vue({
             activeIndex: '2',
             choice: '按航班线路',
             loading: false,
+            userChName: '',
 
             searchEntity: {
                 stCity: [],
@@ -183,6 +184,24 @@ new Vue({
             });
 
         },
+        getUserChName() {
+            this.$http.post('/AirSystem_war_exploded/security/authentication.do'
+            ).then(result => {
+                if (result.body.success) {
+                    if (result.body.message !== undefined && result.body.message != null)
+                        this.userChName = "欢迎您，" + result.body.message;
+                } else {
+                    this.$message({
+                        type: 'error',
+                        message: "请先登录",
+                        duration: 1000
+                    });
+                    setTimeout(() => {
+                        window.location.href = "login.html";
+                    }, 1000);
+                }
+            })
+        },
 
         sortBy1(a, b) {
             return a.flightsId >= b.flightsId ? 1 : -1;
@@ -201,6 +220,7 @@ new Vue({
         this.init();
         //首先加载城市信息
         this.getAllCitys();
+        this.getUserChName();
     }
 });
 

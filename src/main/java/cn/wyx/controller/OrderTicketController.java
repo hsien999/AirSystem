@@ -7,7 +7,6 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -55,7 +54,6 @@ public class OrderTicketController {
      * @param ticketsId
      * @return
      */
-    @ResponseBody
     @RequestMapping("/findTicketsInfo")
     public InfoOfTickets findTicketsInfo(@RequestParam(value = "ticketsId") String ticketsId) {
         try {
@@ -76,7 +74,6 @@ public class OrderTicketController {
      * @param flightId
      * @return
      */
-    @ResponseBody
     @RequestMapping("/findFlightInfo")
     public InfoOfFlight findInfOfFlight(@RequestParam(value = "flightId") String flightId) {
         try {

@@ -58,6 +58,11 @@ public class UserServiceIml implements UserService {
     }
 
     @Override
+    public Long getId(String userTel) {
+        return this.userMapper.getId(userTel);
+    }
+
+    @Override
     public String getChName(Long id) {
         return this.userMapper.getChName(id);
     }

@@ -122,7 +122,6 @@
         <property name="rememberMeParam" value="rememberMe"/>
     </bean>
 
-
     <!-- Shiro的Web过滤器 -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <!-- Shiro的安全管理器，所有关于安全的操作都会经过SecurityManager -->
@@ -131,7 +130,7 @@
         <property name="loginUrl" value="/index.html"/>
         <!-- 权限验证失败跳转的页面，需要配合Spring的ExceptionHandler异常处理机制使用 -->
         <!--<property name="unauthorizedUrl" value="/unauthorized.jsp"/>-->
-        <property name="unauthorizedUrl" value="/login.html"/>
+        <property name="unauthorizedUrl" value="/index.html"/>
         <property name="filters">
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
@@ -161,7 +160,6 @@
                 /image/** = anon
                 /js/** = anon
                 /vue/** = anon
-
                 <!--                /user/** = authc-->
 
                 /register.html = anon
@@ -170,7 +168,7 @@
                 /login = anon
                 /index = anon
 
-                <!-- Shiro提供了退出登录的配置`logout`，会生成路径为`/logout`的请求地址，访问这个地址即会退出当前账户并清空缓存 -->
+                <!-- Shiro提供了退出登录的配置`logout`，生成路径为`/logout`的请求地址，访问这个地址即会退出当前账户并清空缓存 -->
                 /logout = logout
 
                 <!-- user表示身份通过或通过记住我通过的用户都能访问系统   authc => 身份验证-->

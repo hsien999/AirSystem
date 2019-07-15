@@ -9,10 +9,8 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -23,7 +21,7 @@ import java.util.Scanner;
  * @Date: 2019/7/2 17:21
  * @Version 1.0
  */
-@RestController
+@Controller
 public class LoginRegisterController {
 
     @Autowired
@@ -38,6 +36,7 @@ public class LoginRegisterController {
      * @param password
      * @return
      */
+    @ResponseBody
     @RequestMapping("/login")
     public Result login(
             @RequestParam(value = "username", required = false) String username,
@@ -60,7 +59,6 @@ public class LoginRegisterController {
 //                System.out.println("是否remember：" + subject.isRemembered());
                 //登录，即身份校验，由通过Spring注入的UserRealm会自动校验输入的用户名和密码在数据库中是否有对应的值
                 subject.login(token);
-//                System.out.println("用户是否登录：" + subject.isAuthenticated());
                 return new Result(true, "success");
             } catch (UnknownAccountException e) {
                 e.printStackTrace();
@@ -94,6 +92,7 @@ public class LoginRegisterController {
      * @param user
      * @return
      */
+    @ResponseBody
     @RequestMapping("/register")
     public Result Register(@RequestBody User user) {
         System.out.println("register");
@@ -117,6 +116,7 @@ public class LoginRegisterController {
      * @param tel
      * @return
      */
+    @ResponseBody
     @RequestMapping("/validateTel")
     public Result validateTel(@RequestParam(value = "tel") String tel) {
         boolean success = false;
@@ -143,6 +143,7 @@ public class LoginRegisterController {
      * @param cerId
      * @return
      */
+    @ResponseBody
     @RequestMapping("/validateCerId")
     public Result validateCerId(@RequestParam(value = "cerId") String cerId) {
         try {
@@ -157,6 +158,12 @@ public class LoginRegisterController {
         return new Result(false, "未知错误");
     }
 
+    /**
+     * 获取乘常用乘机人
+     * @param userId
+     * @return
+     */
+    @ResponseBody
     @RequestMapping("/findUserPass")
     public List<UserPass> findUserPass(@RequestParam(value = "userId") Long userId) {
         try {
@@ -173,8 +180,14 @@ public class LoginRegisterController {
      *
      * @return
      */
-    @RequestMapping("user//logout")
+    @RequestMapping("/logout")
     public void findUserPass(ModelAndView modelAndView) {
-        modelAndView.setViewName("index.html");
+        try {
+            modelAndView.setViewName("index.html");
+            Subject subject = SecurityUtils.getSubject();
+            if (subject != null) subject.logout();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

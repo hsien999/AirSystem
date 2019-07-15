@@ -55,4 +55,9 @@ public interface UserMapper {
      * 查找用户姓名
      */
     String getChName(Long id);
+
+    /**
+     * 查找ID
+     */
+    Long getId(String userTel);
 }

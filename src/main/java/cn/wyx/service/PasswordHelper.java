@@ -8,6 +8,8 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.stereotype.Component;
 
 /**
+ * 自定义密码加密
+ *
  * @Author: wyx
  * @Date: 2019/7/2 17:21
  * @Version 1.0

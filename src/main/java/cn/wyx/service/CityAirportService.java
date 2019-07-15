@@ -22,6 +22,13 @@ public interface CityAirportService {
      * @return
      */
     City getCityByName(String cityName);
+
+    /**
+     * 通过首字母查找所有城市
+     * @param cityName
+     * @return
+     */
+    List<City> getCityByAlp(String cityName);
     /**
      * 设置城市信息
      * @param city
@@ -54,4 +61,10 @@ public interface CityAirportService {
      * @return
      */
     Airport findAirportByAirportName(String airportName);
+
+    /**
+     * 获取所有城市
+     * @return
+     */
+    List<City>findAllCity();
 }

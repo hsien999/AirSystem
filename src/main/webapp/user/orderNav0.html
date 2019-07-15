@@ -10,8 +10,8 @@
 <body>
 <div id="appMain">
     <el-menu mode="horizontal" :default-active="activeIndex" active-text-color="#409EFF">
-        <el-menu-item index="0" id="logo">JM航空&nbsp;&nbsp;&nbsp; <span
-                class="fa fa-plane fa-2x"></span></el-menu-item>
+        <el-menu-item index="0" id="logo">JM航空&nbsp;&nbsp;&nbsp;
+            <span class="fa fa-plane fa-2x"></span></el-menu-item>
         <el-menu-item index="1"><a href="">机票预订</a></el-menu-item>
         <el-menu-item index="2"><a href="searchFlight.html">航班查询</a></el-menu-item>
         <el-menu-item id="user" index="3">
@@ -19,12 +19,11 @@
             <el-dropdown>
                 <span class="el-dropdown-link">{{userChName}}<i class="el-icon-arrow-down el-icon--right"></i></span>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item><a href="index.html">首页</a></el-dropdown-item>
-                    <el-dropdown-item><a href="user/userCenter" target="_blank">我的订单</a>
+                    <el-dropdown-item><a href="userCenter.html">我的订单</a>
                     </el-dropdown-item>
                     <el-dropdown-item><a href="https://github.com/Xiant999/AirSystem" target="_blank">GitHub</a>
                     </el-dropdown-item>
-                    <el-dropdown-item divided><a href="/AirSystem_war_exploded/logout.do">退出</a></el-dropdown-item>
+                    <el-dropdown-item divided><a href="/AirSystem_war_exploded/logout">退出</a></el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </el-menu-item>

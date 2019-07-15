@@ -28,7 +28,9 @@
                                      left join tb_flight tf on tb_flights.flights_id = tf.flights_id
                                      left join tb_model t on tb_flights.model_id = t.model_id
         <where>
-            flight_date = #{date}
+            <if test="date != null">
+                flight_date = #{date}
+            </if>
             <if test="cityStartName != null and cityStartName!= '' and cityEndName != null and cityEndName!= '' ">
                 and cityStartName = #{cityStartName}
                 and cityEndName = #{cityEndName}

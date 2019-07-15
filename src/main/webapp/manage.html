@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理页面</title>
+    <link rel="stylesheet" href="static/element-ui/lib/theme-chalk/index.css"/>
+    <link rel="stylesheet" href="static/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/css/manage.css"/>
+</head>
+
+<body>
+
+<div id="app">
+    <!-- 头栏-->
+    <el-container style="height: 100%; border: 1px solid #eee">
+        <el-header>
+            <el-menu mode="horizontal" :default-active="defaultActive">
+                <el-menu-item index="1" id="logo" style="color: #354e7b;">
+                     <span><i class="pull-left fa-2x">JM航空</i>&nbsp;&nbsp;&nbsp;
+                        <span class="fa fa-plane fa-2x"></span>
+                     </span>
+                </el-menu-item>
+            </el-menu>
+        </el-header>
+
+
+        <!-- 导航 -->
+        <el-container>
+            <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+                <el-menu :default-openeds="['1','2','3']">
+                    <el-submenu index="1">
+                        <template slot="title"><i class="el-icon-message"></i>基本信息管理</template>
+                        <el-menu-item-group>
+                            <template slot="title">地点管理</template>
+                            <el-menu-item index="1-1">
+                                <el-button type="text" @click="setSelectItem(0)">城市</el-button>
+                            </el-menu-item>
+                            <el-menu-item index="1-2">
+                                <el-button type="text" @click="setSelectItem(1)">机场</el-button>
+                            </el-menu-item>
+                        </el-menu-item-group>
+                        <el-menu-item-group title="机型舱位管理">
+                            <el-menu-item index="1-3">
+                                <el-button type="text" @click="setSelectItem(2)">机型</el-button>
+                            </el-menu-item>
+                            <el-menu-item index="1-3">
+                                <el-button type="text" @click="setSelectItem(3)">舱型</el-button>
+                            </el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+                    <el-submenu index="2">
+                        <template slot="title"><i class="el-icon-menu"></i>航班管理</template>
+                        <el-menu-item-group>
+                            <!--                        <template slot="title">分组一</template>-->
+                            <el-menu-item index="2-1">
+                                <el-button type="text" @click="setSelectItem(4)">添加航班</el-button>
+                            </el-menu-item>
+                            <el-menu-item index="2-2">
+                                <el-button type="text" @click="setSelectItem(5)">查询及修改航班</el-button>
+                            </el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+                    <el-submenu index="3">
+                        <template slot="title"><i class="el-icon-setting"></i>执飞航班管理</template>
+                        <el-menu-item-group>
+                            <!--                        <template slot="title">分组一</template>-->
+                            <el-menu-item index="3-1">
+                                <el-button type="text" @click="setSelectItem(6)">查询及修改执飞航班</el-button>
+                            </el-menu-item>
+<!--                            <el-menu-item index="3-2">-->
+<!--                                <el-button type="text" @click="setSelectItem(7)">查询及修改执飞航班</el-button>-->
+<!--                            </el-menu-item>-->
+                        </el-menu-item-group>
+                    </el-submenu>
+                </el-menu>
+            </el-aside>
+
+            <!-- 小头栏 -->
+            <el-container>
+                <el-header style="text-align: right; font-size: 12px">
+
+                </el-header>
+                <el-main>
+                    <el-form :inline="true" :model="city" ref="city" v-show="selectItem == 0">
+                        <el-form-item label="城市名" prop="cityName" :rules="[{ required: true, message: '城市名不能为空'}]">
+                            <el-input v-model="city.cityName" placeholder="城市名"></el-input>
+                        </el-form-item>
+                        <el-form-item label="城市名首字母" prop="cityAlp" :rules="[{ required: true, message: '城市名首字母不能为空'}]">
+                            <el-select v-model="city.cityAlp" placeholder="城市名首字母">
+                                <el-option
+                                        v-for="item in spaceOptions2"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="insertCity('city')">添加</el-button>
+                        </el-form-item>
+
+                        <el-tabs type="border-card">
+                            <el-tab-pane label="ABCDE">
+                                <el-tabs type="border-card">
+                                    <el-button round @click="findCityByAlp('A')">A</el-button>
+                                    <el-button round @click="findCityByAlp('B')">B</el-button>
+                                    <el-button round @click="findCityByAlp('C')">C</el-button>
+                                    <el-button round @click="findCityByAlp('D')">D</el-button>
+                                    <el-button round @click="findCityByAlp('E')">E</el-button>
+                                </el-tabs>
+                            </el-tab-pane>
+                            <el-tab-pane label="FGHJ">
+                                <el-tabs type="border-card">
+                                    <el-button round @click="findCityByAlp('F')">F</el-button>
+                                    <el-button round @click="findCityByAlp('G')">G</el-button>
+                                    <el-button round @click="findCityByAlp('H')">H</el-button>
+                                    <el-button round @click="findCityByAlp('J')">J</el-button>
+                                </el-tabs>
+                            </el-tab-pane>
+                            <el-tab-pane label="KLMN">
+                                <el-tabs type="border-card">
+                                    <el-button round @click="findCityByAlp('K')">K</el-button>
+                                    <el-button round @click="findCityByAlp('L')">L</el-button>
+                                    <el-button round @click="findCityByAlp('M')">M</el-button>
+                                    <el-button round @click="findCityByAlp('N')">N</el-button>
+                                </el-tabs>
+                            </el-tab-pane>
+                            <el-tab-pane label="PQRST">
+                                <el-tabs type="border-card">
+                                    <el-button round @click="findCityByAlp('P')">P</el-button>
+                                    <el-button round @click="findCityByAlp('Q')">Q</el-button>
+                                    <el-button round @click="findCityByAlp('R')">R</el-button>
+                                    <el-button round @click="findCityByAlp('S')">S</el-button>
+                                    <el-button round @click="findCityByAlp('T')">T</el-button>
+                                </el-tabs>
+                            </el-tab-pane>
+                            <el-tab-pane label="WXYZ">
+                                <el-tabs type="border-card">
+                                    <el-button round @click="findCityByAlp('W')">W</el-button>
+                                    <el-button round @click="findCityByAlp('X')">X</el-button>
+                                    <el-button round @click="findCityByAlp('Y')">Y</el-button>
+                                    <el-button round @click="findCityByAlp('Z')">Z</el-button>
+                                </el-tabs>
+                            </el-tab-pane>
+                        </el-tabs>
+
+                        <template>
+                            <el-table
+                                    :data="tableCity"
+                                    stripe
+                                    style="width: 100%">
+                                <el-table-column
+                                        prop="cityName"
+                                        label="城市名"
+                                        width="250">
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                    </el-form>
+
+                    <!-- 机场管理组件 -->
+                    <el-form :inline="true" :model="airport" ref="airport" class="demo-form-inline" v-show="selectItem == 1">
+                        <el-form-item label="城市名" prop="cityName">
+                            <el-cascader
+                                    :options="cityOptions" v-model="airport.cityName" placeholder="城市名" filterable
+                                    :show-all-levels="false" :rules="[{ required: true, message: '不能为空'}]"
+                            ></el-cascader>
+                        </el-form-item>
+                        <el-form-item label="机场名" prop="airportName" :rules="[{ required: true, message: '不能为空'}]">
+                            <el-input v-model="airport.airportName" placeholder="机场名"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="addAirport('airport')">添加</el-button>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="getAirportByCityName()">查询该城市的所有机场</el-button>
+                        </el-form-item>
+                        <template>
+                            <el-table
+                                    :data="tableAirport2"
+                                    stripe
+                                    style="width: 100%">
+                                <el-table-column
+                                        prop="airportName"
+                                        label="该城市所有机场"
+                                        width="180">
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                    </el-form>
+
+                    <!-- 机型管理组件 -->
+                    <el-form :inline="true" :model="model" ref="model" class="demo-form-inline" v-show="selectItem == 2">
+                        <el-form-item label="机型" prop="modelName">
+                            <el-input v-model="model.modelName" placeholder="机型名" :rules="[{ required: true, message: '不能为空'}]"></el-input>
+                        </el-form-item>
+                        <el-form-item label="时速" prop="modelSpeed">
+                            <el-input v-model="model.modelSpeed" placeholder="时速" :rules="[{ required: true, message: '不能为空'}]"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="addModel('model')">添加机型</el-button>
+                        </el-form-item>
+                    </el-form>
+
+                    <el-form  :inline="true" :model="modelSpace" ref="modelSpace" class="demo-form-inline" v-show="selectItem == 2">
+                        <el-row>
+                            <el-form-item label="机型" prop = "modelId">
+                                <el-select v-model="modelSpace.modelId" placeholder="机型名" :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-option
+                                            v-for="item in modelOptions"
+                                            :key="item.value"
+                                            :label="item.label"
+                                            :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+
+                            <el-form-item label="舱位" prop = "spaceId">
+                                <el-select v-model="modelSpace.spaceId" placeholder="舱位" :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-option
+                                            v-for="item in spaceOptions"
+                                            :key="item.value"
+                                            :label="item.label"
+                                            :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+                            <el-form-item label="座位数" prop="nums">
+                                <el-input v-model="modelSpace.nums" placeholder="座位数" :rules="[{ required: true, message: '不能为空'}]"></el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button type="primary" @click="addMdsp('modelSpace')">给机型添加舱位</el-button>
+                            </el-form-item>
+                        </el-row>
+
+
+                        <el-tabs type="border-card">
+                            <el-tab-pane label="所有机型">
+                                <template>
+                                    <el-table
+                                            :data="tableModel"
+                                            stripe
+                                            style="width: 100%">
+                                        <el-table-column
+                                                prop="modelName"
+                                                label="机型名"
+                                                width="180">
+                                        </el-table-column>
+                                        <el-table-column
+                                                prop="modelSpeed"
+                                                label="时速"
+                                                width="180">
+                                        </el-table-column>
+                                    </el-table>
+                                </template>
+                            </el-tab-pane>
+                            <el-tab-pane label="该机型对应舱位信息">
+                                <template>
+                                    <el-table
+                                            :data="tableSpace2"
+                                            stripe
+                                            style="width: 100%">
+                                        <el-table-column
+                                                prop="spaceId"
+                                                label="舱位编号"
+                                                width="180">
+                                        </el-table-column>
+                                        <el-table-column
+                                                prop="spaceName"
+                                                label="舱位名称"
+                                                width="180">
+                                        </el-table-column>
+                                        <!--                                        <el-table-column-->
+                                        <!--                                                prop="nums"-->
+                                        <!--                                                label="座位数"-->
+                                        <!--                                                width="180">-->
+                                        <!--                                        </el-table-column>-->
+                                        <!--                                        <el-table-column label="操作" align="center" min-width="100">-->
+                                        <!--                                            　-->
+                                        <!--                                            <template slot-scope="scope">-->
+                                        <!--                                                <el-button type="info" @click="modifyUser(scope.row.phone)">修改座位数-->
+                                        <!--                                                </el-button>-->
+                                        <!--                                                　　　　　　-->
+                                        <!--                                                <el-button type="info" @click="deleteUser(scope.row.phone)">删除-->
+                                        <!--                                                </el-button>-->
+                                        <!--                                                　　　　-->
+                                        <!--                                            </template>-->
+                                        <!--                                            　-->
+                                        <!--                                        </el-table-column>-->
+
+                                    </el-table>
+                                </template>
+                            </el-tab-pane>
+                        </el-tabs>
+                    </el-form>
+
+                    <!-- 舱型管理组件 -->
+                    <el-form :inline="true" :model="spaceGroup" ref="spaceGroup" class="demo-form-inline"
+                             v-show="selectItem == 3">
+                        <el-form-item label="舱型编号" prop="space.spaceId" :rules="[{required: true, message: '舱型编号不能为空'}]"
+                                      @change="fun">
+                            <el-select v-model="spaceGroup.space.spaceId" placeholder="单个大小字母">
+                                <el-option
+                                        v-for="item in spaceOptions2"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="舱型名称" prop="space.spaceName" :rules="[{ required: true, message: '舱型名称不能为空'}]">
+                            <el-input v-model="spaceGroup.space.spaceName" placeholder="舱型名称"></el-input>
+                        </el-form-item>
+                        <el-form-item label="行李免运限重" prop="space.baggageAllowance"
+                                      :rules="[{ required: true, message: '行李免运限重不能为空'}]">
+                            <el-input v-model="spaceGroup.space.baggageAllowance" placeholder="单位kg"></el-input>
+                        </el-form-item>
+                        <el-form-item label="舱位折扣" prop="space.spaceDiscount"
+                                      :rules="[{ required: true, message: '不能为空'}]">
+                            <el-input v-model="spaceGroup.space.spaceDiscount" placeholder="百分比"></el-input>
+                        </el-form-item>
+
+                        <el-row>
+                            <el-col>
+                                <el-form-item label="起飞前4小时退票手续费" prop="rule1.ruleRefund"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule1.ruleRefund" placeholder="单位%"></el-input>
+                                </el-form-item>
+                                <el-form-item label="起飞前4小时改签手续费" prop="rule1.ruleChange"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule1.ruleChange" placeholder="单位%"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col>
+                                <el-form-item label="起飞前4-48小时退票手续费" prop="rule2.ruleRefund"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule2.ruleRefund" placeholder="单位%"></el-input>
+                                </el-form-item>
+                                <el-form-item label="起飞前4-48小时改签手续费" prop="rule2.ruleChange"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule2.ruleChange" placeholder="单位%"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col>
+                                <el-form-item label="起飞前48小时-7天退票手续费" prop="rule3.ruleRefund"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule3.ruleRefund" placeholder="单位%"></el-input>
+                                </el-form-item>
+                                <el-form-item label="起飞前48小时-7天改签手续费" prop="rule3.ruleChange"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule3.ruleChange" placeholder="单位%"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col>
+                                <el-form-item label="起飞前七天退票手续费" prop="rule4.ruleRefund"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule4.ruleRefund" placeholder="单位%"></el-input>
+                                </el-form-item>
+                                <el-form-item label="起飞前七天改签手续费" prop="rule4.ruleChange"
+                                              :rules="[{ required: true, message: '不能为空'}]">
+                                    <el-input v-model="spaceGroup.rule4.ruleChange" placeholder="单位%"></el-input>
+                                </el-form-item>
+                            </el-col>
+                        </el-row>
+
+                        <el-form-item>
+                            <el-button type="primary" @click="insertSpaceGroup('spaceGroup')">添加</el-button>
+                        </el-form-item>
+
+                        <el-form-item>
+                            <el-button type="primary" @click="showAllSpace()">显示所有舱型</el-button>
+                        </el-form-item>
+
+                        <template>
+                            <el-table
+                                    :data="tableSpace"
+                                    stripe
+                                    style="width: 100%">
+                                <el-table-column
+                                        prop="spaceId"
+                                        label="舱型Id"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="spaceName"
+                                        label="舱型名称"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="baggageAllowance"
+                                        label="行李限额"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="spaceDiscount"
+                                        label="舱型折扣"
+                                        width="180">
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                    </el-form>
+
+                    <!-- 添加航班组件 -->
+                    <el-form :inline="true" :model="infoOfFlights" ref="infoOfFlights" class="demo-form-inline" v-show="selectItem == 4 ">
+
+                        <el-form-item label="起点机场" prop="airportUpName"  :rules="[{ required: true, message: '不能为空'}]">
+                            <el-select v-model="infoOfFlights.airportUpName" placeholder="起点机场">
+                                <el-option
+                                        v-for="item in airportUpOptions"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.label">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+
+                        <el-form-item label="终点机场" prop="airportDownName"  :rules="[{ required: true, message: '不能为空'}]">
+                            <el-select v-model="infoOfFlights.airportDownName" placeholder="终点机场">
+                                <el-option
+                                        v-for="item in airportDownOptions"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.label">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="航线距离" prop="airRouteLength" :rules="[{ required: true, message: '不能为空'}]">
+                            <el-input v-model="infoOfFlights.airRouteLength" placeholder="公里"></el-input>
+                        </el-form-item>
+
+                        <el-row>
+                            <el-form-item label="航班编号" prop="flightsId"  :rules="[{ required: true, message: '不能为空'}]">
+                                <el-input v-model="infoOfFlights.flightsId" placeholder="航班编号"></el-input>
+                            </el-form-item>
+                            <el-form-item label="机型" prop="modelId"  :rules="[{ required: true, message: '不能为空'}]">
+                                <el-select v-model="infoOfFlights.modelId" placeholder="机型">
+                                    <el-option
+                                            v-for="item in modelOptions"
+                                            :key="item.value"
+                                            :label="item.label"
+                                            :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+                            <el-form-item label="餐食" prop="flightsMeals"  :rules="[{ required: true, message: '不能为空'}]">
+                                <el-input v-model="infoOfFlights.flightsMeals" placeholder="餐食"></el-input>
+                            </el-form-item>
+
+                            <el-form-item label="起飞时间" prop="planUpTime" :rules="[{ required: true, message: '不能为空'}]">
+                                <el-time-picker
+                                        v-model="infoOfFlights.planUpTime"
+                                        :picker-options="{}"
+                                        value-format="HH:mm:ss"
+                                        placeholder="起飞时间">
+                                </el-time-picker>
+                            </el-form-item>
+
+                            <el-form-item label="飞行时间" prop="planTime" :rules="[{ required: true, message: '不能为空'}]">
+                                <el-input v-model="infoOfFlights.planTime" placeholder="单位分钟"></el-input>
+                            </el-form-item>
+                        </el-row>
+
+                        <el-form-item>
+                            <el-button type="primary" @click="insertFlights('infoOfFlights')">添加</el-button>
+                        </el-form-item>
+
+                    </el-form>
+
+                    <!-- 查询及修改航班组件 -->
+                    <el-form :inline="true" :model="formInline" class="demo-form-inline" v-show="selectItem == 5   ">
+                        <el-form-item label="航班号">
+                            <el-input v-model="formInline.cityName" placeholder="航班号"></el-input>
+                        </el-form-item>
+                        <el-form-item label="起点城市">
+                            <el-select v-model="formInline.airportName" placeholder="终点城市"></el-select>
+                        </el-form-item>
+                        <el-form-item label="起点机场">
+                            <el-select v-model="formInline.airportName" placeholder="起点机场"></el-select>
+                        </el-form-item>
+                        <el-form-item label="终点城市">
+                            <el-select v-model="formInline.airportName" placeholder="终点城市"></el-select>
+                        </el-form-item>
+                        <el-form-item label="终点机场">
+                            <el-select v-model="formInline.airportName" placeholder="终点机场"></el-select>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="onSubmit">查询</el-button>
+                        </el-form-item>
+
+                        <template>
+                            <el-table
+                                    :data="tableFlights"
+                                    stripe
+                                    style="width: 100%">
+                                <el-table-column
+                                        prop="flightsId"
+                                        label="航班号"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="modelName"
+                                        label="机型"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="flightsMeals"
+                                        label="餐食"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="startCity"
+                                        label="起点城市"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="upAirport"
+                                        label="起点机场"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="endCity"
+                                        label="终点城市"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="downAirport"
+                                        label="终点机场"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="length"
+                                        label="航线距离"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="planUpTime"
+                                        label="计划起飞时间"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="planDownTime"
+                                        label="计划到达时间"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        label="操作"
+                                        width="180">
+                                    <template slot-scope="scope">
+                                        <el-button type="info" @click="modifyUser(scope.row.phone)">修改</el-button>
+                                        　　　
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                    </el-form>
+
+                    <!-- 添加执飞航班组件 -->
+
+                    <!--查询-->
+                    <el-form :inline="true" :model="searchEntity1"
+                             ref="searchEntity1" label-width="150px" status-icon>
+                        <el-form-item label="航班号" prop="flightsId"
+                                      :rules="[{ required: true, message: '航班号不能为空'}]" required>
+                            <el-input v-model="searchEntity1.flightsId"></el-input>
+                        </el-form-item>
+                        &nbsp;&nbsp;&nbsp;
+                        <el-form-item>
+                            <el-button
+                                    type="primary"
+                                    icon="el-icon-search"
+                                    @click="search1('searchEntity1')">查询
+                            </el-button> &nbsp;&nbsp;
+                            <el-button
+                                    icon="el-icon-delete"
+                                    @click="searchEntity1={}"
+                                    type="primary" plain>清空
+                            </el-button>
+                        </el-form-item>
+                    </el-form>
+
+                    <!--添加-->
+                    <el-form :inline="true" :model="newFlight" ref="newFlight" v-show="selectItem == 6  ">
+                        <el-form-item label="执飞日期" prop="flightDate"
+                                      :rules="[{ required: true, message: '请选择日期',trigger: 'blur'}]">
+                            <el-date-picker
+                                    v-model="newFlight.flightDate"
+                                    type="date"
+                                    format="yyyy-MM-dd"
+                                    value-format="yyyy-MM-dd"
+                                    placeholder="选择日期"
+                                    :picker-options="pickerOptions">
+                            </el-date-picker>
+                        </el-form-item>
+                        <el-form-item label="预计起飞时间" prop="preUpTime"
+                                      :rules="[{ required: true, message: '请选择起飞时间',trigger: 'blur'}]">
+                            <el-time-picker
+                                    v-model="newFlight.preUpTime"
+                                    value-format="HH:mm:ss"
+                                    placeholder="预计起飞时间">
+                            </el-time-picker>
+                        </el-form-item>
+                        <el-form-item label="预计到达时间" prop="preDownTime"
+                                      :rules="[{ required: true, message: '请选择到达时间',trigger: 'blur'}]">
+                            <el-time-picker
+                                    v-model="newFlight.preDownTime"
+                                    value-format="HH:mm:ss"
+                                    placeholder="预计到达时间">
+                            </el-time-picker>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="insertFlight('newFlight')">添加执飞航班</el-button>
+                        </el-form-item>
+                    </el-form>
+
+                    <!--显示-->
+                    <el-tabs type="border-card">
+                        <el-tab-pane label="航班信息">
+                            <template>
+                                <el-table
+                                        :data="infoOfFlights"
+                                        stripe
+                                        style="width: 100%">
+                                    <el-table-column
+                                            prop="flightsId"
+                                            label="航班号"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="modelName"
+                                            label="机型"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="cityStartName"
+                                            label="起点城市"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="airportUpName"
+                                            label="起点机场"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="cityEndName"
+                                            label="终点城市"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="airportDownName"
+                                            label="终点机场"
+                                            width="150">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="planUpTime"
+                                            label="计划起飞时间"
+                                            width="180">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="planDownTime"
+                                            label="计划到达时间"
+                                            width="150">
+                                    </el-table-column>
+
+                                </el-table>
+                            </template>
+                        </el-tab-pane>
+
+                        <el-tab-pane label="执飞航班信息">
+                            <template>
+                                <el-table
+                                        :data="searchResult1"
+                                        stripe
+                                        style="width: 100%">
+<!--                                    <el-table-column-->
+<!--                                            label="执飞航班号"-->
+<!--                                            width="220">-->
+<!--                                        <template slot-scope="scope">-->
+<!--                                            {{scope.row.flightId }}-->
+<!--                                        </template>-->
+<!--                                    </el-table-column>-->
+                                    <el-table-column
+                                            prop="date"
+                                            label="执飞日期"
+                                            width="180">
+                                        <template slot-scope="scope">
+                                            {{scope.row.date | timeStampFilter}}
+                                        </template>
+                                    </el-table-column>
+
+                                    <el-table-column
+                                            prop="actUpTime"
+                                            label="实际起飞时间"
+                                            width="180">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="actDownTime"
+                                            label="实际到达时间"
+                                            width="180">
+                                    </el-table-column>
+                                    <el-table-column
+                                            prop="state"
+                                            label="航班状态"
+                                            width="180">
+                                    </el-table-column>
+                                    <el-table-column
+                                            label="更新状态"
+                                            width="180">
+                                        <template slot-scope="scope">
+                                            <el-button icon="el-icon-edit" round
+                                                       size="small" type="primary"
+                                                       @click="handleUpdateFlight(scope.row.flightId)">更新状态
+                                            </el-button>
+                                        </template>
+                                    </el-table-column>
+                                </el-table>
+                            </template>
+                        </el-tab-pane>
+                    </el-tabs>
+                    </el-form>
+
+
+                    <!--更改执飞航班对话框-->
+                    <el-dialog title="添加常用乘机人" :visible.sync="showUpdate" width="50%" :close-on-click-modal="false"
+                               :close-on-press-escape="false">
+                        <el-form :model="upDateFlight" ref="upDateFlight" label-width="150px" status-icon>
+                            <el-form-item label="预计起飞时间" prop="preUpTime"
+                                          :rules="[{ required: true, message: '请选择预计起飞时间',trigger: 'blur'}]">
+                                <el-time-picker
+                                        v-model="upDateFlight.preUpTime"
+                                        value-format="HH:mm:ss"
+                                        placeholder="预计起飞时间">
+                                </el-time-picker>
+                            </el-form-item>
+
+                            <el-form-item label="预计到达时间" prop="preDownTime"
+                                          :rules="[{ required: true, message: '请选择预计到达时间',trigger: 'blur'}]">
+                                <el-time-picker
+                                        v-model="upDateFlight.preDownTime"
+                                        value-format="HH:mm:ss"
+                                        placeholder="预计到达时间">
+                                </el-time-picker>
+                            </el-form-item>
+
+                            <el-form-item label="实际起飞时间" prop="actUpTime">
+                                <el-time-picker
+                                        v-model="upDateFlight.actUpTime"
+                                        value-format="HH:mm:ss"
+                                        placeholder="实际起飞时间">
+                                </el-time-picker>
+                            </el-form-item>
+
+                            <el-form-item label="实际到达时间" prop="actDownTime">
+                                <el-time-picker
+                                        v-model="upDateFlight.actDownTime"
+                                        value-format="HH:mm:ss"
+                                        placeholder="实际到达时间">
+                                </el-time-picker>
+                            </el-form-item>
+
+                            <el-form-item label="状态" prop="state"
+                                          :rules="[{ required: true, message: '请选择执飞状态',trigger: 'blur'}]">
+                                <el-radio-group v-model="upDateFlight.state">
+                                    <el-radio label="计划">计划</el-radio>
+                                    <el-radio label="取消">取消</el-radio>
+                                    <el-radio label="到达">到达</el-radio>
+                                </el-radio-group>
+                            </el-form-item>
+
+                            <el-form-item label="航班信息" prop="state"
+                                          :rules="[{ required: true, message: '请选择执飞状态',trigger: 'blur'}]">
+                                <el-input
+                                        type="textarea" maxlength="20"
+                                        :autosize="{ minRows: 2, maxRows: 4}"
+                                        placeholder="请输入信息"
+                                        v-model="upDateFlight.flightInfo">
+                                </el-input>
+                            </el-form-item>
+
+                        </el-form>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button @click="showUpdate=false">取 消</el-button>
+                            <el-button type="primary" @click="doUpdateFlight('upDateFlight')">更新</el-button>
+                        </div>
+                    </el-dialog>
+
+
+                </el-main>
+
+            </el-container>
+
+        </el-container>
+    </el-container>
+</div>
+
+</body>
+
+<script type="text/javascript" src="static/vue/vue.js"></script>
+<script type="text/javascript" src="static/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="static/vue/vue-resource.js"></script>
+<script type="text/javascript" src="static/js/manage.js"></script>
+
+</html>

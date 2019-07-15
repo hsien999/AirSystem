@@ -17,6 +17,7 @@ const routerObj = new VueRouter({
 new Vue({
     el: '#appMain',
     data() {
+
         return {
             activeIndex: '1',
             activeStep: 0,
@@ -225,23 +226,7 @@ new Vue({
         },
 
         orderTicket(flightId, ticketsId) {
-            this.$http.post('/AirSystem_war_exploded/sureOrder.do?' + 'stCity=' + this.searchEntity.stCity[2] +
-                '&edCity=' + this.searchEntity.edCity[2] + '&searchDate=' + this.searchEntity.planTime + '&flightId=' + flightId +
-                '&ticketsId=' + ticketsId,
-            ).then(result => {
-                if (result.body.success) {
-                    window.location.href = result.body.message;
-                } else {
-                    this.$message({
-                        type: 'error',
-                        message: "请先登录",
-                        duration: 1000
-                    });
-                    setTimeout(() => {
-                        window.location.href = result.body.message;
-                    }, 1000);
-                }
-            })
+            window.location.href = "/AirSystem_war_exploded/user/orderNav1.html?" + "&flightId=" + flightId + "&ticketsId=" + ticketsId;
         },
         getUserChName() {
             this.$http.post('/AirSystem_war_exploded/security/authentication.do'
@@ -256,7 +241,7 @@ new Vue({
                         duration: 1000
                     });
                     setTimeout(() => {
-                        window.location.href = result.body.message;
+                        window.location.href = "login.html";
                     }, 1000);
                 }
             })

@@ -36,6 +36,11 @@ public class CityAirportServiceIml implements CityAirportService {
     }
 
     @Override
+    public List<City> getCityByAlp(String cityName) {
+        return this.cityMapper.getCitiesByAlp(cityName);
+    }
+
+    @Override
     public void setCity(City city) {
         this.cityMapper.setCity(city);
     }
@@ -56,6 +61,11 @@ public class CityAirportServiceIml implements CityAirportService {
     @Override
     public List<Airport> findAirportByCityName(String cityName) {
         return this.airportMapper.findAirportByCityName(cityName);
+    }
+
+    @Override
+    public List<City> findAllCity() {
+        return cityMapper.getAllCity();
     }
 
     @Override

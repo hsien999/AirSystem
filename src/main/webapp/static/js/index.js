@@ -268,21 +268,6 @@ new Vue({
         this.init();
         //首先加载城市信息
         this.getAllCitys();
-
-        // this.$http.post('/AirSystem_war_exploded/findAllInfoOfFlights.do?stCity=' +
-        //     '厦门' + '&edCity=' + '上海虹桥' + '&searchDate=' + '2019-7-10'
-        // ).then(result => {
-        //     try {
-        //         this.InfoOfFlight = result.body;
-        //     } catch (e) {
-        //         this.$message({
-        //             type: 'error',
-        //             message: "获取航班信息失败",
-        //             duration: 6000
-        //         });
-        //         this.$refs.searchEntity.resetFields();
-        //     }
-        // })
     }
 
 });

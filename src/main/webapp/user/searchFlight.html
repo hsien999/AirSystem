@@ -17,7 +17,16 @@
         <el-menu-item index="2"><a href="">航班查询</a></el-menu-item>
         <el-menu-item id="user" index="3">
             <img class="el-tooltip" src="../static/image/flag.png"/>
-            <a href="logout">登陆</a>
+            <el-dropdown>
+                <span class="el-dropdown-link">{{userChName}}<i class="el-icon-arrow-down el-icon--right"></i></span>
+                <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item><a href="userCenter.html">我的订单</a>
+                    </el-dropdown-item>
+                    <el-dropdown-item><a href="https://github.com/Xiant999/AirSystem" target="_blank">GitHub</a>
+                    </el-dropdown-item>
+                    <el-dropdown-item divided><a href="/AirSystem_war_exploded/logout">退出</a></el-dropdown-item>
+                </el-dropdown-menu>
+            </el-dropdown>
         </el-menu-item>
     </el-menu>
 

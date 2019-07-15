@@ -71,4 +71,16 @@
         from tb_user
         where user_cerid = #{CerId};
     </select>
+
+    <select id="getChName" resultType="java.lang.String" parameterType="java.lang.Long">
+        select user_chname
+        from tb_user
+        where user_id = #{id};
+    </select>
+
+    <select id="getId" resultType="java.lang.Long" parameterType="java.lang.String">
+        select user_id
+        from tb_user
+        where user_tel = #{userTel};
+    </select>
 </mapper>

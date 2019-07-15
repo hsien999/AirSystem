@@ -1,4 +1,3 @@
-
 //设置全局表单提交格式
 Vue.http.options.emulateJSON = true;
 
@@ -57,9 +56,10 @@ new Vue({
                     }).then(result => {
                         // 判断用户是否登录成功，后端返回JSON数据
                         if (result.body.success) {
-                            console.log(this.$route.query.redUrl);
-                            // if (this.redUrl != undefined && this.redUrl != '') window.location.href = this.$route.query.redUrl;
-                            // else window.location.href = "user/orderNav0.html";
+                            // console.log(this.$route.query.redUrl);
+                            this.redUrl = this.$route.query.redUrl;
+                            if (this.redUrl !== undefined && this.redUrl !== '') window.location.href = this.redUrl;
+                            else window.location.href = "user/orderNav0.html";
                             this.loading.close(); //关闭动画加载
                         } else {
                             // 弹出错误信息框

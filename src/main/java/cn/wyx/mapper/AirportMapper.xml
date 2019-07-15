@@ -3,9 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.wyx.mapper.AirportMapper">
-    <insert id="create" >
+    <insert id="create">
         insert into tb_airport (city_id, airport_name)
-        values (#{cityId},#{airportName})
+        values (#{cityId}, #{airportName})
     </insert>
 
     <update id="setAirport" parameterType="cn.wyx.entity.Airport">
@@ -16,12 +16,19 @@
 
     <select id="findAirportByCityName" parameterType="java.lang.String" resultType="cn.wyx.entity.Airport">
         select * from tb_airport
-            right join tb_city on tb_airport.city_id = tb_city.city_id
-        where city_name = #{cityName};
+        right join tb_city on tb_airport.city_id = tb_city.city_id
+        <where>
+            <if test="cityName!=null and cityName!=''">
+                city_name=cityName
+            </if>
+        </where>
+
     </select>
 
     <select id="findAirportByAirportName" parameterType="java.lang.String" resultType="cn.wyx.entity.Airport">
-        select * from tb_airport where airport_name = #{airportName};
+        select *
+        from tb_airport
+        where airport_name = #{airportName};
     </select>
 
 </mapper>

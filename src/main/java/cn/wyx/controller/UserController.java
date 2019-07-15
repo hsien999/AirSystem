@@ -8,7 +8,6 @@ import cn.wyx.service.UserPassService;
 import cn.wyx.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.annotation.RequiresUser;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,9 +36,9 @@ public class UserController {
     @Autowired
     private InfoOfOldFlightService infoOfOldFlightService;
 
-
     @RequestMapping("/sureOrder")
     public InfoOfOrder sureOrder(@RequestBody OrderTicketData orderTicketData) {
+        System.out.println("执行了 sureOrder ====");
         if (orderTicketData == null) return null;
         String ticketsId = orderTicketData.getTicketsId();
         Order order = orderTicketData.getOrder();
@@ -150,4 +149,110 @@ public class UserController {
         }
         return null;
     }
+
+    @RequestMapping("/savePass")
+    public Result savePass(@RequestBody UserPass userPass) {
+        try {
+            Subject subject = SecurityUtils.getSubject();
+            String userTel = (String) subject.getPrincipal();
+            Long userId = this.userService.getId(userTel);
+            userPass.setUserId(userId);
+            this.userPassService.create(userPass);
+            return new Result(true, "添加成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "添加失败");
+    }
+
+    @RequestMapping("/updatePass")
+    public Result updatePass(@RequestBody UserPass userPass) {
+        try {
+            Subject subject = SecurityUtils.getSubject();
+            String userTel = (String) subject.getPrincipal();
+            Long userId = this.userService.getId(userTel);
+            userPass.setUserId(userId);
+            this.userPassService.update(userPass);
+            return new Result(true, "添加成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "添加失败");
+    }
+
+    @RequestMapping("/delPass")
+    public Result delPass(@RequestParam Long userpassId) {
+        try {
+            this.userPassService.delete(userpassId);
+            return new Result(true, "删除成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "删除失败");
+    }
+
+    @RequestMapping("/updateUserPass")
+    public Result updateUserPass(@RequestBody UserPass userPass) {
+        try {
+            this.userPassService.update(userPass);
+            return new Result(true, "更新成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "更新失败");
+    }
+
+
+    @RequestMapping("/findUserPassById")
+    public UserPass findUserPassById(@RequestParam Long userpassId) {
+        try {
+            UserPass userPass = this.userPassService.findById(userpassId);
+            return userPass;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping("/findAllInfoOfOrderById")
+    public List<InfoOfOrder> findAllInfoOfOrderById() {
+        try {
+            Subject subject = SecurityUtils.getSubject();
+            String userTel = (String) subject.getPrincipal();
+            Long userId = this.userService.getId(userTel);
+            List<InfoOfOrder> infoOfOrders = this.orderService.findAllInfoOfOrderById(userId);
+            System.out.println(infoOfOrders);
+            return infoOfOrders;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping("/findInfoOfOrderByOrderId")
+    public InfoOfOrder findInfoOfOrderByOrderId(@RequestParam String orderId) {
+        try {
+            InfoOfOrder infoOfOrder = this.orderService.findInfoOfOrderByOrderId(orderId);
+            System.out.println(infoOfOrder);
+            return infoOfOrder;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping("/changePass")
+    public Result changePass(@RequestParam String newPass) {
+        try {
+            Subject subject = SecurityUtils.getSubject();
+            String userTel = (String) subject.getPrincipal();
+            Long userId = this.userService.getId(userTel);
+            this.userService.changePassword(userId, newPass);
+            return new Result(true, "更改成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(true, "更改失败");
+    }
+
 }

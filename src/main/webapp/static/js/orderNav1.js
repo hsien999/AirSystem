@@ -89,6 +89,7 @@ new Vue({
             loading: {},
             contactPeo: [],
             orderArr: [],
+            userChName: '',
 
             //再次确认登陆信息
             auth: {
@@ -311,6 +312,7 @@ new Vue({
 
         },
         searchTicket() {
+            if (this.$route.query.ticketsId === undefined) return;
             this.$http.post('/AirSystem_war_exploded/findTicketsInfo.do?ticketsId=' +
                 this.$route.query.ticketsId
             ).then(result => {
@@ -327,6 +329,7 @@ new Vue({
             });
         },
         searchFlight() {
+            if (this.$route.query.flightId === undefined) return;
             this.$http.post('/AirSystem_war_exploded/findFlightInfo.do?flightId=' + this.$route.query.flightId
             ).then(result => {
                 if (result.body == null || JSON.stringify(result.body) === '{}') {
@@ -503,6 +506,24 @@ new Vue({
                 }
             });
         },
+        getUserChName() {
+            this.$http.post('/AirSystem_war_exploded/security/authentication.do'
+            ).then(result => {
+                if (result.body.success) {
+                    if (result.body.message !== undefined && result.body.message != null)
+                        this.userChName = "欢迎您，" + result.body.message;
+                } else {
+                    this.$message({
+                        type: 'error',
+                        message: "请先登录",
+                        duration: 1000
+                    });
+                    setTimeout(() => {
+                        window.location.href = "login.html";
+                    }, 1000);
+                }
+            })
+        },
 
     },
     filters: {
@@ -559,6 +580,6 @@ new Vue({
         this.searchTicket();
         this.searchFlight();
         this.searchUserPass();
+        this.getUserChName();
     }
-})
-;
+});
