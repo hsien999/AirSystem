@@ -123,3 +123,6 @@ drop database air_system;
 
 create database air_system;
 delete from tb_airroute where 1=1;
+
+update tb_space set space_discount = 1
+where space_id  = 'Z';
