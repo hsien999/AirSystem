@@ -1,2 +1,2 @@
 # AirSystem
-基于VueJs+ElemenUI+SSM+Shiro的航空票务管理系统（前后台）
+VueJs+ElemenUI+SSM+Shiro based airline ticket management system (front and back office)
